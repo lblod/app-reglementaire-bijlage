@@ -18,6 +18,30 @@ defmodule Dispatcher do
   #
   # Run `docker-compose restart dispatcher` after updating
   # this file.
+  
+
+  #########
+  # login
+  ########
+  match "/mock/sessions/*path" do
+    forward conn, path, "http://mocklogin/sessions/"
+  end
+
+  match "/sessions/*path" do
+    forward conn, path, "http://login/sessions/"
+  end
+
+  match "/gebruikers/*path" do
+    forward conn, path, "http://cache/gebruikers/"
+  end
+
+  match "/accounts/*path" do
+    forward conn, path, "http://cache/accounts/"
+  end
+
+  post "/remote-login/*path" do
+    forward conn, [], "http://remotelogin/remote-login"
+  end
 
   match "/*_", %{ last_call: true } do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )

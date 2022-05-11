@@ -16,6 +16,12 @@ services:
     volumes:
       - ./config/dispatcher:/config
   database:
+    image: semtech/mu-authorization:0.6.0-beta.7
+    environment:
+      MU_SPARQL_ENDPOINT: "http://triplestore:8890/sparql"
+    volumes:
+      - ./config/authorization:/config
+  triplestore:
     image: redpencil/virtuoso:1.0.0
     environment:
       SPARQL_UPDATE: "true"
@@ -31,3 +37,17 @@ services:
       - database:database
     volumes:
       - ./config/resources:/config
+  cache:
+    image: semtech/mu-cache:2.0.2
+    links:
+      - resource:backend
+    restart: always
+  migrations:
+    image: semtech/mu-migrations-service:0.7.0
+    links:
+      - triplestore:database
+    volumes:
+      - ./config/migrations:/data/migrations
+    environment:
+      MU_SPARQL_TIMEOUT: "600"
+    restart: always

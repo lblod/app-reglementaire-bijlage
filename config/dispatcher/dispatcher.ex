@@ -20,15 +20,15 @@ defmodule Dispatcher do
   # this file.
   
   match "/reglementen/*path" do
-    forward conn, path, "http://cache/reglementen/"
+    forward conn, path, "http://resource/reglementen/"
   end
 
   match "/editor-documents/*path" do
-    forward conn, path, "http://cache/editor-documents/"
+    forward conn, path, "http://resource/editor-documents/"
   end
 
   match "/document-containers/*path" do
-    forward conn, path, "http://cache/document-containers/"
+    forward conn, path, "http://resource/document-containers/"
   end
 
   #########

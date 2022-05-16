@@ -43,11 +43,11 @@ defmodule Dispatcher do
   end
 
   match "/gebruikers/*path" do
-    forward conn, path, "http://cache/gebruikers/"
+    forward conn, path, "http://resource/gebruikers/"
   end
 
   match "/accounts/*path" do
-    forward conn, path, "http://cache/accounts/"
+    forward conn, path, "http://resource/accounts/"
   end
 
   post "/remote-login/*path" do

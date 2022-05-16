@@ -19,6 +19,17 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
   
+  match "/reglementen/*path" do
+    forward conn, path, "http://cache/reglementen/"
+  end
+
+  match "/editor-documents/*path" do
+    forward conn, path, "http://cache/editor-documents/"
+  end
+
+  match "/document-containers/*path" do
+    forward conn, path, "http://cache/document-containers/"
+  end
 
   #########
   # login

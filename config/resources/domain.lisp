@@ -3,6 +3,8 @@
 ;; reading in the domain.json
 ;; (read-domain-file "domain.json")
 
+(read-domain-file "master-editor.lisp")
+
 (define-resource gebruiker ()
   :class (s-prefix "foaf:Person")
   :resource-base (s-url "http://data.lblod.info/id/gebruiker/")
@@ -83,3 +85,11 @@
   :resource-base (s-url "http://data.lblod.info/id/bestuursorganen/")
   :features '(include-uri)
   :on-path "bestuursorganen")
+
+(define-resource reglement ()
+  :class (s-prefix "ext:Reglement")
+  :has-one `((document-container :via , (s-prefix "ext:hasDocumentContainer")
+                                  :as "document"))
+  :resource-base (s-url "http://data.lblod.info/id/reglement/")
+  :features '(include-uri)
+  :on-path "reglementen")

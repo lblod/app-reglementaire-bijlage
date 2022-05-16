@@ -16,13 +16,18 @@ defmodule Acl.UserGroups.Config do
       # // PUBLIC
       %GroupSpec{
         name: "public",
-        useage: [:read],
+        useage: [:read, :write],
         access: %AlwaysAccessible{},
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/public",
                     constraint: %ResourceConstraint{
                       resource_types: [
                         "http://xmlns.com/foaf/0.1/OnlineAccount",
+                        "http://mu.semte.ch/vocabularies/ext/EditorDocumentFolder",
+                        "http://mu.semte.ch/vocabularies/ext/EditorDocumentStatus",
+                        "http://mu.semte.ch/vocabularies/ext/EditorDocument",
+                        "http://mu.semte.ch/vocabularies/ext/Reglement",
+                        "http://mu.semte.ch/vocabularies/ext/DocumentContainer",
                       ]
                     } } ] },
 

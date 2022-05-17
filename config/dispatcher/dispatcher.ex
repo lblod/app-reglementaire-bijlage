@@ -19,8 +19,8 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
   
-  match "/reglementen/*path" do
-    forward conn, path, "http://resource/reglementen/"
+  match "/regulatory-statements/*path" do
+    forward conn, path, "http://resource/regulatory-statements/"
   end
 
   match "/editor-documents/*path" do
@@ -42,12 +42,16 @@ defmodule Dispatcher do
     forward conn, path, "http://login/sessions/"
   end
 
-  match "/gebruikers/*path" do
-    forward conn, path, "http://resource/gebruikers/"
+  match "/users/*path" do
+    forward conn, path, "http://resource/users/"
   end
 
   match "/accounts/*path" do
     forward conn, path, "http://resource/accounts/"
+  end
+
+  match "/groups/*path" do
+    forward conn, path, "http://resource/groups/"
   end
 
   post "/remote-login/*path" do

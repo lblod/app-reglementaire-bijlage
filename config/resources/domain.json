@@ -1,7 +1,20 @@
 {
   "version": "0.1",
   "prefixes": {
+    "ext": "http://mu.semte.ch/vocabularies/ext/"
   },
   "resources": {
+    "regulatory-statements": {
+      "name": "regulatory-statement",
+      "class": "ext:Reglement",
+      "relationships": {
+        "document": {
+          "predicate": "ext:hasDocumentContainer",
+          "target": "document-container",
+          "cardinality": "one"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/reglement/"
+    }
   }
 }

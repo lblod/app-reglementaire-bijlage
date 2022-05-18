@@ -1,0 +1,208 @@
+{
+  "version": "0.1",
+  "prefixes": {
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "besluit": "http://data.vlaanderen.be/ns/besluit#",
+      "dct": "http://purl.org/dc/terms/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "ext": "http://mu.semte.ch/vocabularies/ext/",
+      "pav": "http://purl.org/pav/",
+      "tmp": "http://mu.semte.ch/vocabularies/tmp/"
+  },
+  "resources": {
+      "editor-documents": {
+        "name": "editor-document",
+        "class": "ext:EditorDocument",
+        "attributes": {
+            "title": {
+                "type": "string",
+                "predicate": "dct:title"
+            },
+            "content": {
+                "type": "string",
+                "predicate": "ext:editorDocumentContent"
+            },
+            "context": {
+                "type": "string",
+                "predicate": "ext:editorDocumentContext"
+            },
+            "created-on": {
+              "type": "datetime",
+              "predicate": "pav:createdOn"
+            },
+            "updated-on": {
+              "type": "datetime",
+              "predicate": "pav:lastUpdateOn"
+            },
+            "starred": {
+              "type": "boolean",
+              "predicate": "tmp:starred"
+            },
+            "origin": {
+              "type": "string",
+              "predicate": "pav:providedBy"
+            }
+        },
+        "relationships": {
+            "previous-version": {
+                "predicate": "pav:previousVersion",
+                "target": "editor-document",
+                "cardinality": "one"
+            },
+            "next-version": {
+              "predicate": "pav:previousVersion",
+              "target": "editor-document",
+              "cardinality": "one",
+              "inverse": true
+          }
+        },
+        "new-resource-base": "http://data.lblod.info/editor-documents/"
+      },
+      "document-containers": {
+        "name": "document-container",
+        "class": "ext:DocumentContainer",
+        "attributes": {
+        },
+        "relationships": {
+            "current-version": {
+                "predicate": "pav:hasCurrentVersion",
+                "target": "editor-document",
+                "cardinality": "one"
+            },
+            "status": {
+              "predicate": "ext:editorDocumentStatus",
+              "target": "concept",
+              "cardinality": "one"
+            },
+            "folder": {
+              "predicate": "ext:editorDocumentFolder",
+              "target": "editor-document-folder",
+              "cardinality": "one"
+            },
+            "publisher": {
+              "predicate": "dct:publisher",
+              "target": "bestuurseenheid",
+              "cardinality": "one"
+            },
+            "revisions": {
+              "predicate": "pav:hasVersion",
+              "target": "editor-document",
+              "cardinality": "many"
+            },
+            "attachments": {
+              "predicate": "ext:hasAttachments",
+              "target": "attachment",
+              "cardinality": "many"
+            }
+        },
+        "new-resource-base": "http://data.lblod.info/document-containers/"
+      },
+      "editor-document-statuses": {
+        "name": "editor-document-status",
+        "class": "ext:EditorDocumentStatus",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "predicate": "ext:EditorDocumentStatusName"
+          }
+        },
+        "new-resource-base": "http://data.lblod.info/editor-document-statuses/"
+      },
+      "editor-document-folders": {
+        "name": "editor-document-folder",
+        "class": "ext:EditorDocumentFolder",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "predicate": "ext:EditorDocumentFolderName"
+          }
+        },
+        "new-resource-base": "http://data.lblod.info/editor-document-folders/"
+      },
+      "attachments": {
+        "name": "attachment",
+        "class": "ext:Attachment",
+        "attributes": {
+          "decision": {
+            "type": "uri",
+            "predicate": "dct:isPartOf"
+          }
+        },
+        "relationships": {
+          "document-container": {
+            "predicate": "ext:hasAttachments",
+            "target": "document-container",
+            "cardinality": "one",
+            "inverse": true
+          },
+          "file": {
+            "predicate": "ext:hasFile",
+            "target": "file",
+            "cardinality": "one"
+          },
+          "type": {
+            "predicate": "ext:attachmentType",
+            "target": "concept",
+            "cardinality": "one"
+          }
+        },
+        "new-resource-base": "http://lblod.data.gift/attachment/"
+      },
+      "concepts": {
+        "name": "concept",
+        "class": "skos:Concept",
+        "attributes": {
+          "label": {
+            "type": "string",
+            "predicate": "skos:prefLabel"
+          },
+          "notation": {
+            "type": "string",
+            "predicate": "skos:notation"
+          },
+          "search-label": {
+            "type": "string",
+            "predicate": "ext:searchLabel"
+          }
+        },
+        "relationships": {
+          "concept-schemes": {
+            "predicate": "skos:inScheme",
+            "target": "concept-scheme",
+            "cardinality": "many"
+          },
+          "top-concept-schemes": {
+            "predicate": "skos:topConceptOf",
+            "target": "concept-scheme",
+            "cardinality": "many"
+          }
+        },
+        "new-resource-base": "http://lblod.data.gift/concept-schemes/"
+      },
+      "concept-schemes": {
+        "name": "concept-scheme",
+        "class": "skos:ConceptScheme",
+        "attributes": {
+          "label": {
+            "type": "string",
+            "predicate": "skos:prefLabel"
+          }
+        },
+        "relationships": {
+          "concepts": {
+            "predicate": "skos:inScheme",
+            "target": "concept-scheme",
+            "cardinality": "many",
+            "inverse": true
+          },
+          "top-concepts": {
+            "predicate": "skos:topConceptOf",
+            "target": "concept-scheme",
+            "cardinality": "many",
+            "inverse": true
+          }
+        },
+        "new-resource-base": "http://lblod.data.gift/concept-schemes/"
+      }
+  }
+}

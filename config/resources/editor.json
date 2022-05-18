@@ -79,7 +79,7 @@
             },
             "publisher": {
               "predicate": "dct:publisher",
-              "target": "bestuurseenheid",
+              "target": "administrative-unit",
               "cardinality": "one"
             },
             "revisions": {

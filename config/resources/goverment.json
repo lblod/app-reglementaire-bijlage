@@ -11,7 +11,7 @@
   },
   "resources": {
     "administrative-units": {
-      "name": "adminstrative-unit",
+      "name": "administrative-unit",
       "class": "besluit:Bestuurseenheid",
       "relationships": {
         "classification": {

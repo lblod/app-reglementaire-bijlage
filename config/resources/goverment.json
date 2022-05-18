@@ -11,16 +11,17 @@
   },
   "resources": {
     "administrative-units": {
+      "name": "adminstrative-unit",
       "class": "besluit:Bestuurseenheid",
       "relationships": {
         "classification": {
           "predicate": "org:classification",
-          "target": "administrative-unit-classification-codes",
+          "target": "administrative-unit-classification-code",
           "cardinality": "one"
         },
         "governing-bodies": {
           "predicate": "besluit:bestuurt",
-          "target": "governing-bodies",
+          "target": "governing-body",
           "cardinality": "many",
           "inverse": true
         }
@@ -28,6 +29,7 @@
       "new-resource-base": "http://data.lblod.info/id/bestuurseenheden/"
     },
     "administrative-unit-classification-codes": {
+      "name": "administrative-unit-classification-code",
       "class": "code:BestuurseenheidClassificatieCode",
       "attributes": {
         "label": {
@@ -38,6 +40,7 @@
       "new-resource-base": "http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/"
     },
     "governing-bodies": {
+      "name": "governing-body",
       "class": "besluit:Bestuursorgaan",
       "attributes": {
         "start-date": {

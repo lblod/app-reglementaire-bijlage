@@ -61,8 +61,6 @@
       "document-containers": {
         "name": "document-container",
         "class": "ext:DocumentContainer",
-        "attributes": {
-        },
         "relationships": {
             "current-version": {
                 "predicate": "pav:hasCurrentVersion",

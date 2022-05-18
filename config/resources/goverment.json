@@ -12,7 +12,6 @@
   "resources": {
     "administrative-units": {
       "class": "besluit:Bestuurseenheid",
-      "super": ["organizations"],
       "relationships": {
         "classification": {
           "predicate": "org:classification",

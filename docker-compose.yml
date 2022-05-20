@@ -5,6 +5,9 @@ x-logging: &default-logging
     max-size: "10m"
     max-file: "3"
 services:
+  frontend:
+    image: lblod/frontend-reglementaire-bijlage:latest
+    restart: always
   identifier:
     image: semtech/mu-identifier:1.9.1
     environment:
@@ -14,7 +17,7 @@ services:
     restart: always
     logging: *default-logging
   dispatcher:
-    image: semtech/mu-dispatcher:2.0.0
+    image: semtech/mu-dispatcher:2.1.0-beta.1
     links:
       - resource:resource
     volumes:
@@ -40,7 +43,7 @@ services:
     restart: always
     logging: *default-logging
   resource:
-    image: semtech/mu-cl-resources:1.21.1
+    image: semtech/mu-cl-resources:feature-nicer-error-on-unfound-resource-specification
     links:
       - database:database
     volumes:

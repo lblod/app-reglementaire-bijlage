@@ -4,6 +4,18 @@
     "ext": "http://mu.semte.ch/vocabularies/ext/"
   },
   "resources": {
+    "resources": {
+      "name": "resource",
+      "class": "rdfs:Resource",
+      "new-resource-base": "http://data.lblod.info/resources/",
+      "relationships": {
+        "used": {
+          "predicate": "ext:used",
+          "target": "concept",
+          "cardinality": "many"
+        }
+      }
+    },
     "regulatory-statements": {
       "name": "regulatory-statement",
       "class": "ext:Reglement",
@@ -15,6 +27,113 @@
         }
       },
       "new-resource-base": "http://data.lblod.info/id/reglement/"
+    },
+    "skos-concepts": {
+      "name": "skosConcept",
+      "class": "skos:Concept",
+      "attributes": {
+        "label":{
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        }
+      },
+      "relationships":{
+        "inScheme":{
+          "predicate": "skos:inScheme",
+          "target": "conceptScheme",
+          "cardinality": "one"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://lblod.data.gift/concepts/"
+    },
+    "concept-schemes":{
+      "name": "conceptScheme",
+      "class": "skos:ConceptScheme",
+      "attributes": {
+        "label": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        }
+      },
+      "relationships": {
+        "concepts": {
+          "predicate": "skos:inScheme",
+          "target": "skosConcept",
+          "cardinality": "many",
+          "inverse": true
+        },
+        "top-concepts": {
+          "predicate": "skos:topConceptOf",
+          "target": "concept",
+          "cardinality": "many"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/concept-schemes/"
+    },
+    "concepts":{
+      "name": "concept",
+      "class": "ext:Concept",
+      "attributes": {
+        "valid": {
+          "type": "boolean",
+          "predicate": "ext:valid"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/concepts/"
+    },
+    "mappings": {
+      "name": "mapping",
+      "class": "ext:Mapping",
+      "attributes": {
+        "variable": {
+          "type": "string",
+          "predicate": "ext:variable"
+        },
+        "type": {
+          "type": "string",
+          "predicate": "ext:variableType"
+        }
+      },
+      "relationships": {
+        "instruction": {
+          "predicate": "ext:instructionVariable",
+          "target": "template",
+          "cardinality": "one"
+        },
+        "codeList": {
+          "predicate": "ext:codeList",
+          "target": "codeList",
+          "cardinality": "one"
+        },
+        "expects": {
+          "predicate": "ext:expects",
+          "target": "shape",
+          "cardinality": "one"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/mappings/"
+    },
+    "code-lists": {
+      "name": "codeList",
+      "class": "lblodmow:Codelist",
+      "super": ["conceptScheme"],
+      "relationships":{
+        "type":{
+          "predicate": "dct:type",
+          "target": "skosConcept",
+          "cardinality": "one"
+        },
+        "mappings": {
+          "predicate": "ext:codeList",
+          "target": "mapping",
+          "cardinality": "many",
+          "inverse": true
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://lblod.data.gift/concept-schemes/"
     }
   }
 }

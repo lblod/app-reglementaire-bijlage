@@ -49,7 +49,7 @@ services:
       MU_APPLICATION_AUTH_CLIENT_ID: "69069b1c-0bd0-4679-a9af-5a265c544c1c"
       MU_APPLICATION_AUTH_REDIRECT_URI: "https://reglementairebijlagen.lblod.info/authorization/callback"
       MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
-      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_reglementaireBijlagen_rol_3d"
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lblod_rol_3d"
     restart: always
     logging: *default-logging
     labels:

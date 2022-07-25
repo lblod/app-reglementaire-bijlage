@@ -14,7 +14,7 @@ INSERT {
   ?account a foaf:OnlineAccount;
            mu:uuid ?uuidAccount;
            foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-           ext:sessionRole "beheerder".
+           ext:sessionRole "Beheerder".
            }
   GRAPH ?g {
   ?persoon a foaf:Person;
@@ -26,7 +26,7 @@ INSERT {
   ?account a foaf:OnlineAccount;
            mu:uuid ?uuidAccount;
            foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-           ext:sessionRole "beheerder".
+           ext:sessionRole "Beheerder".
            }
 }
 WHERE {

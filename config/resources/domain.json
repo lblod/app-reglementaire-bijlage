@@ -4,18 +4,6 @@
     "ext": "http://mu.semte.ch/vocabularies/ext/"
   },
   "resources": {
-    "resources": {
-      "name": "resource",
-      "class": "rdfs:Resource",
-      "new-resource-base": "http://data.lblod.info/resources/",
-      "relationships": {
-        "used": {
-          "predicate": "ext:used",
-          "target": "concept",
-          "cardinality": "many"
-        }
-      }
-    },
     "regulatory-statements": {
       "name": "regulatory-statement",
       "class": "ext:Reglement",
@@ -35,6 +23,14 @@
         "label":{
           "type": "string",
           "predicate": "skos:prefLabel"
+        },
+        "notation": {
+          "type": "string",
+          "predicate": "skos:notation"
+        },
+        "search-label": {
+          "type": "string",
+          "predicate": "ext:searchLabel"
         }
       },
       "relationships":{

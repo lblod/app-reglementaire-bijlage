@@ -55,6 +55,7 @@ services:
       MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lblod_rol_3d"
       MU_APPLICATION_AUTH_GROUPID_CLAIM: "vo_ovocode"
       MU_APPLICATION_AUTH_USERID_CLAIM: "vo_id"
+      MU_APPLICATION_AUTH_SCOPE: "openid vo profile abb_lblod"
     restart: always
     logging: *default-logging
     labels:

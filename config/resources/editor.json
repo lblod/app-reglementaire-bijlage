@@ -69,7 +69,7 @@
             },
             "status": {
               "predicate": "ext:editorDocumentStatus",
-              "target": "concept",
+              "target": "skosConcept",
               "cardinality": "one"
             },
             "folder": {
@@ -140,67 +140,11 @@
           },
           "type": {
             "predicate": "ext:attachmentType",
-            "target": "concept",
+            "target": "skosConcep",
             "cardinality": "one"
           }
         },
         "new-resource-base": "http://lblod.data.gift/attachment/"
-      },
-      "concepts": {
-        "name": "concept",
-        "class": "skos:Concept",
-        "attributes": {
-          "label": {
-            "type": "string",
-            "predicate": "skos:prefLabel"
-          },
-          "notation": {
-            "type": "string",
-            "predicate": "skos:notation"
-          },
-          "search-label": {
-            "type": "string",
-            "predicate": "ext:searchLabel"
-          }
-        },
-        "relationships": {
-          "concept-schemes": {
-            "predicate": "skos:inScheme",
-            "target": "concept-scheme",
-            "cardinality": "many"
-          },
-          "top-concept-schemes": {
-            "predicate": "skos:topConceptOf",
-            "target": "concept-scheme",
-            "cardinality": "many"
-          }
-        },
-        "new-resource-base": "http://lblod.data.gift/concept-schemes/"
-      },
-      "concept-schemes": {
-        "name": "concept-scheme",
-        "class": "skos:ConceptScheme",
-        "attributes": {
-          "label": {
-            "type": "string",
-            "predicate": "skos:prefLabel"
-          }
-        },
-        "relationships": {
-          "concepts": {
-            "predicate": "skos:inScheme",
-            "target": "concept-scheme",
-            "cardinality": "many",
-            "inverse": true
-          },
-          "top-concepts": {
-            "predicate": "skos:topConceptOf",
-            "target": "concept-scheme",
-            "cardinality": "many",
-            "inverse": true
-          }
-        },
-        "new-resource-base": "http://lblod.data.gift/concept-schemes/"
       }
   }
 }

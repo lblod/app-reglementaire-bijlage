@@ -63,6 +63,23 @@ defmodule Dispatcher do
   post "/remote-login/*path" do
     forward conn, [], "http://remotelogin/remote-login"
   end
+  
+  match "/code-lists/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/code-lists/"
+  end
+  
+  match "/concept-schemes/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/concept-schemes/"
+  end
+
+  match "/skos-concepts/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/skos-concepts/"
+  end
+
+  match "/concepts/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/concepts/"
+  end
+
 
   ###############################################################
   # frontend layer

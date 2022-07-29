@@ -45,7 +45,7 @@ defmodule Acl.UserGroups.Config do
                   SELECT DISTINCT ?session_group WHERE {
                     <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group;
                                  ext:sessionRole ?role.
-                    FILTER(?role in (\"Beheerder\",\"Superadmin\"))
+                    FILTER(?role in (\"ABBLBLODGebruiker-Superadmin\",\"ABBLBLODGebruiker-Beheerder\",\"ABBLBLODGebruiker-Gebruiker\"))
                     }" },
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/organizations/",

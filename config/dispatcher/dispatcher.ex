@@ -33,6 +33,10 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/document-containers/"
   end
 
+  match "/administrative-units/*path" do
+    forward conn, path, "http://resource/administrative-units/"
+  end
+
   #########
   # login
   ########

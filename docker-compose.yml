@@ -91,3 +91,7 @@ services:
       MU_SPARQL_TIMEOUT: "600"
     restart: always
     logging: *default-logging
+  sparql-cache:
+    image: redpencil/varnish-post:1.0.0
+    environment:
+      BACKEND_HOST: database

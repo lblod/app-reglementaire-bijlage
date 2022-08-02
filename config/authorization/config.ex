@@ -44,7 +44,8 @@ defmodule Acl.UserGroups.Config do
                   PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
                   SELECT DISTINCT ?session_group WHERE {
                     <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group;
-                                 ext:sessionRole \"beheerder\".
+                                 ext:sessionRole ?role.
+                    FILTER(?role in (\"ABBLBLODGebruiker-Superadmin\",\"ABBLBLODGebruiker-Beheerder\",\"ABBLBLODGebruiker-Gebruiker\"))
                     }" },
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/organizations/",
@@ -57,6 +58,12 @@ defmodule Acl.UserGroups.Config do
                         "http://mu.semte.ch/vocabularies/ext/EditorDocument",
                         "http://mu.semte.ch/vocabularies/ext/Reglement",
                         "http://mu.semte.ch/vocabularies/ext/DocumentContainer",
+                        "http://www.w3.org/2004/02/skos/core#Concept",
+                        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                        "http://mu.semte.ch/vocabularies/ext/Concept",
+                        "http://mu.semte.ch/vocabularies/ext/Mapping",
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
+
                       ] } } ] },
 
       # // CLEANUP

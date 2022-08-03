@@ -27,7 +27,8 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/OnlineAccount", # added here to fetch them for mock-login
                         "http://xmlns.com/foaf/0.1/Person",  # added here to fetch them for mock-login
                         "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
-                        "http://www.w3.org/2004/02/skos/core#"
+                        "http://www.w3.org/2004/02/skos/core#",
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
                       ]
                     } },
                     %GraphSpec{
@@ -62,7 +63,6 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                         "http://mu.semte.ch/vocabularies/ext/Concept",
                         "http://mu.semte.ch/vocabularies/ext/Mapping",
-                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
 
                       ] } } ] },
 

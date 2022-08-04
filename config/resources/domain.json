@@ -121,6 +121,11 @@
           "target": "skosConcept",
           "cardinality": "one"
         },
+        "publisher": {
+          "predicate": "dct:publisher",
+          "target": "administrative-unit",
+          "cardinality": "one"
+        },
         "mappings": {
           "predicate": "ext:codeList",
           "target": "mapping",

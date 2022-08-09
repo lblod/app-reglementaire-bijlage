@@ -58,7 +58,7 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                         "http://mu.semte.ch/vocabularies/ext/Concept",
                         "http://mu.semte.ch/vocabularies/ext/Mapping",
-                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
 
                       ] } } ] },
 

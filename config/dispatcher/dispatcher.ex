@@ -2,7 +2,8 @@ defmodule Dispatcher do
   use Matcher
   define_accept_types [
     html: [ "text/html", "application/xhtml+html" ],
-    json: [ "application/json", "application/vnd.api+json" ]
+    json: [ "application/json", "application/vnd.api+json" ],
+    sparql: [ "application/sparql-results+json" ],
   ]
 
    define_layers [ :api_services, :api, :frontend, :not_found ]
@@ -20,6 +21,18 @@ defmodule Dispatcher do
   #
   # Run `docker-compose restart dispatcher` after updating
   # this file.
+
+  ###############
+  # SPARQL
+  ###############
+  
+ match "/sparql", %{ layer: :api, accept: %{ sparql: true } } do
+    forward conn, [], "http://sparql-cache/sparql"
+  end
+
+   ###############################################################
+  # domain.json
+  ###############################################################
   
   match "/regulatory-statements/*path" do
     forward conn, path, "http://resource/regulatory-statements/"

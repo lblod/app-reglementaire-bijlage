@@ -18,7 +18,7 @@ defmodule Acl.UserGroups.Config do
       # // PUBLIC
       %GroupSpec{
         name: "public",
-        useage: [:read, :write],
+        useage: [:read],
         access: %AlwaysAccessible{},
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/public",
@@ -27,15 +27,10 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/OnlineAccount", # added here to fetch them for mock-login
                         "http://xmlns.com/foaf/0.1/Person",  # added here to fetch them for mock-login
                         "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
-                        "http://www.w3.org/2004/02/skos/core#",
-                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
                       ]
-                    } },
-                    %GraphSpec{
-                    graph: "http://mu.semte.ch/graphs/sessions",
-                    constraint: %ResourceFormatConstraint{
-                      resource_prefix: "http://mu.semte.ch/sessions/"
-                    } } ] },
+                    } }
+                ]
+      },
       %GroupSpec{
         name: "org-wf",
         useage: [:read, :write, :read_for_write],
@@ -63,6 +58,7 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                         "http://mu.semte.ch/vocabularies/ext/Concept",
                         "http://mu.semte.ch/vocabularies/ext/Mapping",
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
 
                       ] } } ] },
 
@@ -70,7 +66,7 @@ defmodule Acl.UserGroups.Config do
       #
       %GraphCleanup{
         originating_graph: "http://mu.semte.ch/application",
-        useage: [:write],
+        useage: [:read, :write],
         name: "clean"
       }
     ]

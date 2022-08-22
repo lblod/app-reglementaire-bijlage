@@ -22,6 +22,10 @@
                 "type": "string",
                 "predicate": "ext:editorDocumentContent"
             },
+            "templateVersion": {
+              "type": "string",
+              "predicate": "ext:editorDocumentTemplateVersion"
+            },
             "context": {
                 "type": "string",
                 "predicate": "ext:editorDocumentContext"

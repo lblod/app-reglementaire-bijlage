@@ -95,3 +95,21 @@ services:
     image: redpencil/varnish-post:1.0.0
     environment:
       BACKEND_HOST: database
+  publisher:
+    image: lblod/reglement-publish-service:0.0.1
+    environment: 
+      NODE_ENV: "development"
+    links:
+      - database:database
+    volumes:
+      - /Users/oscar.rodriguez/dev/redpencil/reglement-publish-service:/app/
+      - ./data/files/:/share/
+    ports:
+      - "8080:80"
+  file:
+    image: semtech/mu-file-service:3.1.0
+    restart: always
+    links:
+      - database:database
+    volumes:
+      - ./data/files/:/share/

@@ -27,6 +27,7 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/OnlineAccount", # added here to fetch them for mock-login
                         "http://xmlns.com/foaf/0.1/Person",  # added here to fetch them for mock-login
                         "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
+                        "http://redpencil.data.gift/vocabularies/tasks/Task",
                       ]
                     } }
                 ]

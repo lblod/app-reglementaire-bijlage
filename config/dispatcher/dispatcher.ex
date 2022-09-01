@@ -97,6 +97,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://publisher/publish/"
   end
 
+  match "/preview/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/preview/"
+  end
+
   match "/publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://publisher/publication-tasks/"
   end

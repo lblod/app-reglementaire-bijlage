@@ -11,6 +11,10 @@
         "published-version":{
           "type": "url",
           "predicate": "ext:publishedVersion"
+        },
+        "folder":{
+          "type": "string",
+          "predicate": "ext:regulatoryStatementFolder"
         }
       },
       "relationships": {

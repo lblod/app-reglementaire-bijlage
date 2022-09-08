@@ -1,4 +1,20 @@
 
+
+## 1.0.0-beta.2 (2022-09-08)
+
+#### :rocket: Enhancement
+* [#9](https://github.com/lblod/app-reglementaire-bijlage/pull/9) Feature/publication ([@lagartoverde](https://github.com/lagartoverde))
+
+#### :bug: Bug Fix
+* [#8](https://github.com/lblod/app-reglementaire-bijlage/pull/8) bump acmidm-login-service ([@elpoelma](https://github.com/elpoelma))
+
+#### :house: Internal
+* [#10](https://github.com/lblod/app-reglementaire-bijlage/pull/10) Bump frontend version to 1.0.0-beta.3 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 2
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 1.0.0-beta.1 (2022-08-10)
 
 #### :rocket: Enhancement

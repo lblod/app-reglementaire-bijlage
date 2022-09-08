@@ -7,6 +7,16 @@
     "regulatory-statements": {
       "name": "regulatory-statement",
       "class": "ext:Reglement",
+      "attributes": {
+        "published-version":{
+          "type": "url",
+          "predicate": "ext:publishedVersion"
+        },
+        "folder":{
+          "type": "string",
+          "predicate": "ext:regulatoryStatementFolder"
+        }
+      },
       "relationships": {
         "document": {
           "predicate": "ext:hasDocumentContainer",

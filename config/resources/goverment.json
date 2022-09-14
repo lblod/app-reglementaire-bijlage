@@ -26,6 +26,7 @@
           "inverse": true
         }
       },
+      "features": ["include-uri"],
       "new-resource-base": "http://data.lblod.info/id/bestuurseenheden/"
     },
     "administrative-unit-classification-codes": {
@@ -37,6 +38,7 @@
           "predicate": "skos:prefLabel"
         }
       },
+      "features": ["include-uri"],
       "new-resource-base": "http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/"
     },
     "governing-bodies": {
@@ -75,6 +77,7 @@
           "inverse": true
         }
       },
+      "features": ["include-uri"],
       "new-resource-base": "http://data.lblod.info/id/bestuursorganen/"
     }
   }

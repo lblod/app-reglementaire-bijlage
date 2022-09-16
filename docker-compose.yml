@@ -102,8 +102,6 @@ services:
       - database:database
     volumes:
       - ./data/files/:/share/
-    ports:
-      - "8080:80"
   file:
     image: semtech/mu-file-service:3.1.0
     restart: always

@@ -1,5 +1,17 @@
 
 
+
+## 1.0.0 (2022-09-22)
+
+#### :house: Internal
+* [#12](https://github.com/lblod/app-reglementaire-bijlage/pull/12) Add migrations to clear bestuurseenheden and set up mock account for abb ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 3
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
+
 ## 1.0.0-beta.4 (2022-09-16)
 
 ## 1.0.0-beta.3 (2022-09-16)

@@ -25,15 +25,19 @@ defmodule Dispatcher do
   ###############
   # SPARQL
   ###############
-  
+
  match "/sparql", %{ layer: :api, accept: %{ sparql: true } } do
     forward conn, [], "http://sparql-cache/sparql"
   end
 
+ match "/raw-sparql", %{ layer: :api, accept: %{ sparql: true } } do
+   forward conn, [], "http://database:8890/sparql"
+ end
+
    ###############################################################
   # domain.json
   ###############################################################
-  
+
   match "/regulatory-statements/*path" do
     forward conn, path, "http://resource/regulatory-statements/"
   end
@@ -76,11 +80,11 @@ defmodule Dispatcher do
   post "/remote-login/*path" do
     forward conn, [], "http://remotelogin/remote-login"
   end
-  
+
   match "/code-lists/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://resource/code-lists/"
   end
-  
+
   match "/concept-schemes/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://resource/concept-schemes/"
   end

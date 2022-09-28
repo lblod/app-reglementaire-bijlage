@@ -27,7 +27,32 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/OnlineAccount", # added here to fetch them for mock-login
                         "http://xmlns.com/foaf/0.1/Person",  # added here to fetch them for mock-login
                         "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
-                        "http://redpencil.data.gift/vocabularies/tasks/Task",
+                        "http://www.w3.org/2004/02/skos/core#Concept",
+                        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
+                      ]
+                    } }
+                ]
+      },
+      %GroupSpec{
+        name: "authenticated-write-to-public",
+        useage: [:read, :write, :read_for_write],
+        access: %AccessByQuery{
+          vars: [],
+          query: "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+          PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+          SELECT DISTINCT ?session_group WHERE {
+          <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group;
+          ext:sessionRole ?role.
+          FILTER(?role in (\"ABBLBLODGebruiker-Superadmin\",\"ABBLBLODGebruiker-Beheerder\",\"ABBLBLODGebruiker-Gebruiker\"))
+          }" },
+        graphs: [ %GraphSpec{
+                    graph: "http://mu.semte.ch/graphs/public",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://www.w3.org/2004/02/skos/core#Concept",
+                        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
                       ]
                     } }
                 ]
@@ -55,12 +80,8 @@ defmodule Acl.UserGroups.Config do
                         "http://mu.semte.ch/vocabularies/ext/EditorDocument",
                         "http://mu.semte.ch/vocabularies/ext/Reglement",
                         "http://mu.semte.ch/vocabularies/ext/DocumentContainer",
-                        "http://www.w3.org/2004/02/skos/core#Concept",
-                        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                         "http://mu.semte.ch/vocabularies/ext/Concept",
                         "http://mu.semte.ch/vocabularies/ext/Mapping",
-                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
-
                       ] } } ] },
 
       # // CLEANUP

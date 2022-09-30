@@ -1,6 +1,19 @@
 
 
 
+## 1.0.1 (2022-09-30)
+
+#### :rocket: Enhancement
+* [#14](https://github.com/lblod/app-reglementaire-bijlage/pull/14) make sure codelists and concepts are added to the public graph ([@nvdk](https://github.com/nvdk))
+* [#15](https://github.com/lblod/app-reglementaire-bijlage/pull/15) add raw sparql endpoint (without cache) for use within the frontend ([@nvdk](https://github.com/nvdk))
+
+#### :house: Internal
+* [#17](https://github.com/lblod/app-reglementaire-bijlage/pull/17) :cloud: Upgrade frontend to 1.0.3 ([@nvdk](https://github.com/nvdk))
+* [#16](https://github.com/lblod/app-reglementaire-bijlage/pull/16) :cloud: Upgrade frontend to 1.0.2 ([@nvdk](https://github.com/nvdk))
+
+#### Committers: 1
+- Niels V ([@nvdk](https://github.com/nvdk))
+
 ## 1.0.0 (2022-09-22)
 
 #### :house: Internal

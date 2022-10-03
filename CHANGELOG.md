@@ -1,6 +1,19 @@
 
 
 
+
+## 1.1.0 (2022-10-03)
+
+#### :bug: Bug Fix
+* [#18](https://github.com/lblod/app-reglementaire-bijlage/pull/18) fix(publish): fix generation of template previews ([@abeforgit](https://github.com/abeforgit))
+
+#### :house: Internal
+* [#19](https://github.com/lblod/app-reglementaire-bijlage/pull/19) chore(deps): bump frontend to v1.1.0 ([@abeforgit](https://github.com/abeforgit))
+
+#### Committers: 1
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+
+
 ## 1.0.1 (2022-09-30)
 
 #### :rocket: Enhancement

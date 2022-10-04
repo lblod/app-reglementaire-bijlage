@@ -2,6 +2,17 @@
 
 
 
+
+## 1.1.1 (2022-10-04)
+
+#### :house: Internal
+* [#21](https://github.com/lblod/app-reglementaire-bijlage/pull/21) :wq ([@abeforgit](https://github.com/abeforgit))
+* [#20](https://github.com/lblod/app-reglementaire-bijlage/pull/20) chore(deps): bump frontend to v1.1.1 ([@abeforgit](https://github.com/abeforgit))
+
+#### Committers: 1
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+
+
 ## 1.1.0 (2022-10-03)
 
 #### :bug: Bug Fix

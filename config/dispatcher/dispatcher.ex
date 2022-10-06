@@ -109,8 +109,8 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://publisher/invalidate/"
   end
 
-  match "/publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/publication-tasks/"
+  match "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
   end
 
 

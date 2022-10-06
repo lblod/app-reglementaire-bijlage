@@ -8,10 +8,7 @@
       "name": "regulatory-statement",
       "class": "ext:Reglement",
       "attributes": {
-        "published-version":{
-          "type": "url",
-          "predicate": "ext:publishedVersion"
-        },
+        
         "folder":{
           "type": "string",
           "predicate": "ext:regulatoryStatementFolder"
@@ -22,9 +19,26 @@
           "predicate": "ext:hasDocumentContainer",
           "target": "document-container",
           "cardinality": "one"
+        },
+        "published-version":{
+          "type": "url",
+          "predicate": "ext:publishedVersion",
+          "target": "publishedRegulatoryAttachmentContainer",
+          "cardinality": "one"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/reglement/"
+    },
+    "published-regulatory-attachment-container": {
+      "name": "publishedRegulatoryAttachmentContainer",
+      "class": "ext:PublishedRegulatoryAttachmentContainer",
+      "attributes": {
+        "validThrough": {
+          "type": "datetime",
+          "predicate": "schema:validThrough"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment-container/"
     },
     "skos-concepts": {
       "name": "skosConcept",

@@ -52,7 +52,8 @@ defmodule Acl.UserGroups.Config do
                       resource_types: [
                         "http://www.w3.org/2004/02/skos/core#Concept",
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
+                        "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer"
                       ]
                     } }
                 ]

@@ -99,10 +99,15 @@ services:
       BACKEND_HOST: database
   publisher:
     image: lblod/reglement-publish-service:1.2.1
+    environment: 
+      NODE_ENV: "development"
     links:
       - database:database
     volumes:
       - ./data/files/:/share/
+      - /Users/oscar.rodriguez/dev/redpencil/reglement-publish-service:/app/
+    ports:
+      - "8080:80"
   file:
     image: semtech/mu-file-service:3.1.0
     restart: always

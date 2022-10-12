@@ -4,6 +4,20 @@
 
 
 
+
+## 1.2.0 (2022-10-12)
+
+#### :rocket: Enhancement
+* [#23](https://github.com/lblod/app-reglementaire-bijlage/pull/23) Added created on property to skos concept ([@lagartoverde](https://github.com/lagartoverde))
+
+#### :house: Internal
+* [#25](https://github.com/lblod/app-reglementaire-bijlage/pull/25) Replace lerna changelog plugin by new version ([@elpoelma](https://github.com/elpoelma))
+* [#24](https://github.com/lblod/app-reglementaire-bijlage/pull/24) Bump frontend image to version 1.2.0 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 2
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 1.1.2 (2022-10-05)
 
 #### :house: Internal

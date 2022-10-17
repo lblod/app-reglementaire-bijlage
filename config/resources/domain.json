@@ -74,6 +74,10 @@
         "search-label": {
           "type": "string",
           "predicate": "ext:searchLabel"
+        },
+        "created-on": {
+          "type": "datetime",
+          "predicate": "pav:createdOn"
         }
       },
       "relationships":{

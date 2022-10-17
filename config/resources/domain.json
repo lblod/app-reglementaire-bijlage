@@ -29,7 +29,7 @@
       },
       "new-resource-base": "http://data.lblod.info/id/reglement/"
     },
-    "published-regulatory-attachment-container": {
+    "published-regulatory-attachment-containers": {
       "name": "publishedRegulatoryAttachmentContainer",
       "class": "ext:PublishedRegulatoryAttachmentContainer",
       "attributes": {
@@ -38,7 +38,26 @@
           "predicate": "schema:validThrough"
         }
       },
+      "relationships": {
+        "current-version": {
+          "predicate": "ext:currentVersion",
+          "target": "published-regulatory-attachment",
+          "cardinality": "one"
+        }
+      },
       "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment-container/"
+    },
+    "published-regulatory-attachments": {
+      "name": "publishedRegulatoryAttachment",
+      "class": "ext:PublishedRegulatoryAttachment",
+      "relationships": {
+        "content": {
+          "predicate": "ext:content",
+          "target": "file",
+          "cardinality": "one"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment/"
     },
     "skos-concepts": {
       "name": "skosConcept",

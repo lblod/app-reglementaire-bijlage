@@ -111,10 +111,7 @@ services:
   file:
     image: semtech/mu-file-service:3.3.0
     restart: always
-    environment:
-      LOG_LEVEL: "debug"
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/public"
     links:
-      - virtuoso:database
+      - database:database
     volumes:
       - ./data/files/:/share/

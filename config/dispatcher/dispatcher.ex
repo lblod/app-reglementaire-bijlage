@@ -115,14 +115,12 @@ defmodule Dispatcher do
   ########
 
   get "/files/:id/download" do
-    IO.puts "Files download"
     Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
   end
-  # get "/files/*path", %{ accept: %{json: true}, layer: :api} do
-  #   Proxy.forward conn, path, "http://resource/files/"
-  # end
+  get "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/files/"
+  end
   patch "/files/*path", %{ accept: %{json: true}, layer: :api} do
-    IO.puts "Files not download"
     Proxy.forward conn, path, "http://resource/files/"
   end
   post "/files/*path", %{ accept: %{upload: true}, layer: :api} do

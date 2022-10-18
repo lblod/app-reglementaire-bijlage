@@ -109,9 +109,12 @@ services:
     ports:
       - "8080:80"
   file:
-    image: semtech/mu-file-service:3.1.0
+    image: semtech/mu-file-service:3.3.0
     restart: always
+    environment:
+      LOG_LEVEL: "debug"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/public"
     links:
-      - database:database
+      - virtuoso:database
     volumes:
       - ./data/files/:/share/

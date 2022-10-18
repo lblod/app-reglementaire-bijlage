@@ -29,7 +29,9 @@ defmodule Acl.UserGroups.Config do
                         "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
                         "http://www.w3.org/2004/02/skos/core#Concept",
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist"
+                        "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
+                        "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                       ]
                     } }
                 ]
@@ -53,7 +55,8 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/2004/02/skos/core#Concept",
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                         "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
-                        "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer"
+                        "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                       ]
                     } }
                 ]

@@ -73,7 +73,7 @@
             },
             "status": {
               "predicate": "ext:editorDocumentStatus",
-              "target": "skosConcept",
+              "target": "skos-concept",
               "cardinality": "one"
             },
             "folder": {

@@ -97,20 +97,39 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/concepts/"
   end
 
-  match "/publish/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/publish/"
+  match "/published-regulatory-attachment-containers/*path" do 
+    Proxy.forward conn, path, "http://resource/published-regulatory-attachment-containers/"
   end
 
-  match "/preview/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/preview/"
+  match "/published-regulatory-attachments/*path" do
+    Proxy.forward conn, path, "http://resource/published-regulatory-attachments/"
   end
 
-  match "/invalidate/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/invalidate/"
-  end
 
   match "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
+  end
+
+  #########
+  # files
+  ########
+
+  get "/files/:id/download" do
+    IO.puts "Files download"
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  # get "/files/*path", %{ accept: %{json: true}, layer: :api} do
+  #   Proxy.forward conn, path, "http://resource/files/"
+  # end
+  patch "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    IO.puts "Files not download"
+    Proxy.forward conn, path, "http://resource/files/"
+  end
+  post "/files/*path", %{ accept: %{upload: true}, layer: :api} do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+  delete "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://file/files/"
   end
 
 

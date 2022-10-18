@@ -144,7 +144,7 @@
           },
           "type": {
             "predicate": "ext:attachmentType",
-            "target": "skosConcep",
+            "target": "skos-concept",
             "cardinality": "one"
           }
         },

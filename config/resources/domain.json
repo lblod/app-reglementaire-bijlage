@@ -105,7 +105,7 @@
       "relationships": {
         "concepts": {
           "predicate": "skos:inScheme",
-          "target": "skosConcept",
+          "target": "skos-concept",
           "cardinality": "many",
           "inverse": true
         },
@@ -164,7 +164,7 @@
     "code-lists": {
       "name": "code-list",
       "class": "lblodmow:Codelist",
-      "super": ["conceptScheme"],
+      "super": ["concept-scheme"],
       "relationships": {
         "type": {
           "predicate": "dct:type",

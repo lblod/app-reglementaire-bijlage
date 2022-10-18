@@ -12,12 +12,6 @@ defmodule Dispatcher do
   @json %{ accept: %{ json: true } }
   @html %{ accept: %{ html: true } }
 
-  # In order to forward the 'themes' resource to the
-  # resource service, use the following forward rule:
-  #
-  # match "/themes/*path", @json do
-  #   Proxy.forward conn, path, "http://resource/themes/"
-  # end
   #
   # Run `docker-compose restart dispatcher` after updating
   # this file.
@@ -114,7 +108,7 @@ defmodule Dispatcher do
   # files
   ########
 
-  get "/files/:id/download" do
+  get "/files/:id/download", %{ layer: :api} do
     Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
   end
   get "/files/*path", %{ accept: %{json: true}, layer: :api} do

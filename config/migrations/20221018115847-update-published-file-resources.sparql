@@ -1,0 +1,19 @@
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+        ?virtualFile nie:dataSource ?physicalFile.
+  }
+}
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+        ?physicalFile nie:dataSource ?virtualFile.
+  }
+}
+WHERE {
+GRAPH <http://mu.semte.ch/graphs/public> {
+          ?virtualFile a nfo:FileDataObject;
+                       nie:dataSource ?physicalFile.
+        } 
+};

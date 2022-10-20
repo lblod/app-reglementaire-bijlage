@@ -12,12 +12,6 @@ defmodule Dispatcher do
   @json %{ accept: %{ json: true } }
   @html %{ accept: %{ html: true } }
 
-  # In order to forward the 'themes' resource to the
-  # resource service, use the following forward rule:
-  #
-  # match "/themes/*path", @json do
-  #   Proxy.forward conn, path, "http://resource/themes/"
-  # end
   #
   # Run `docker-compose restart dispatcher` after updating
   # this file.
@@ -97,20 +91,37 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/concepts/"
   end
 
-  match "/publish/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/publish/"
+  match "/published-regulatory-attachment-containers/*path" do 
+    Proxy.forward conn, path, "http://resource/published-regulatory-attachment-containers/"
   end
 
-  match "/preview/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/preview/"
+  match "/published-regulatory-attachments/*path" do
+    Proxy.forward conn, path, "http://resource/published-regulatory-attachments/"
   end
 
-  match "/invalidate/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/invalidate/"
+
+  match "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
   end
 
-  match "/publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/publication-tasks/"
+  #########
+  # files
+  ########
+
+  get "/files/:id/download", %{ layer: :api} do
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  get "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/files/"
+  end
+  patch "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://resource/files/"
+  end
+  post "/files/*path", %{ accept: %{upload: true}, layer: :api} do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+  delete "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://file/files/"
   end
 
 

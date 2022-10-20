@@ -6,7 +6,7 @@ x-logging: &default-logging
     max-file: "3"
 services:
   frontend:
-    image: lblod/frontend-reglementaire-bijlage:1.2.0
+    image: lblod/frontend-reglementaire-bijlage:2.0.0
     restart: always
     environment:
       EMBER_OAUTH_API_REDIRECT_URL: "https://reglementairebijlagen.lblod.info/authorization/callback"
@@ -98,13 +98,17 @@ services:
     environment:
       BACKEND_HOST: database
   publisher:
-    image: lblod/reglement-publish-service:1.2.1
+    image: lblod/reglement-publish-service:2.0.0
+    environment: 
+      NODE_ENV: "development"
     links:
       - database:database
     volumes:
       - ./data/files/:/share/
+    ports:
+      - "8080:80"
   file:
-    image: semtech/mu-file-service:3.1.0
+    image: semtech/mu-file-service:3.3.0
     restart: always
     links:
       - database:database

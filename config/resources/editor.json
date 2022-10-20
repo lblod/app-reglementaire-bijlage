@@ -73,7 +73,7 @@
             },
             "status": {
               "predicate": "ext:editorDocumentStatus",
-              "target": "skosConcept",
+              "target": "skos-concept",
               "cardinality": "one"
             },
             "folder": {
@@ -144,7 +144,7 @@
           },
           "type": {
             "predicate": "ext:attachmentType",
-            "target": "skosConcep",
+            "target": "skos-concept",
             "cardinality": "one"
           }
         },

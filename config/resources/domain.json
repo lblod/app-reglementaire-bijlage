@@ -81,6 +81,10 @@
         "created-on": {
           "type": "datetime",
           "predicate": "pav:createdOn"
+        },
+        "position": {
+          "type": "number",
+          "predicate": "schema:position"
         }
       },
       "relationships": {

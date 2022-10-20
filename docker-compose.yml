@@ -98,14 +98,13 @@ services:
     environment:
       BACKEND_HOST: database
   publisher:
-    image: lblod/reglement-publish-service:1.2.1
+    image: lblod/reglement-publish-service:2.0.0
     environment: 
       NODE_ENV: "development"
     links:
       - database:database
     volumes:
       - ./data/files/:/share/
-      - /Users/oscar.rodriguez/dev/redpencil/reglement-publish-service:/app/
     ports:
       - "8080:80"
   file:

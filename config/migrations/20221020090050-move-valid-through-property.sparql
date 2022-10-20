@@ -1,0 +1,21 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX schema: <http://schema.org/>
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+        ?reglement schema:validThrough ?validThrough.
+  }
+}
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+        ?publishedReglementContainer schema:validThrough ?validThrough.
+  }
+}
+WHERE {
+GRAPH ?g {
+          ?reglement a ext:Reglement.
+        } 
+GRAPH <http://mu.semte.ch/graphs/public> {
+  ?reglement schema:validThrough ?validThrough;
+             ext:publishedVersion ?publishedReglementContainer.
+}
+};

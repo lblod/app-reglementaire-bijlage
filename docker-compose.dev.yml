@@ -23,6 +23,9 @@ services:
     restart: "no"
   mocklogin:
     image: lblod/mock-login-service:latest
+  publisher:
+    ports:
+      - "8080:80"
   yasgui:
     image: erikap/yasgui
     ports:

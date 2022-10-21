@@ -5,6 +5,17 @@
 
 
 
+
+## 2.0.0 (2022-10-21)
+
+#### :rocket: Enhancement
+* [#27](https://github.com/lblod/app-reglementaire-bijlage/pull/27) Feature: json api compliant publisher ([@elpoelma](https://github.com/elpoelma))
+* [#28](https://github.com/lblod/app-reglementaire-bijlage/pull/28) Add position to concept model ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 2
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 1.2.0 (2022-10-12)
 
 #### :rocket: Enhancement

@@ -6,6 +6,15 @@
 
 
 
+
+## 2.0.1 (2022-10-21)
+
+#### :bug: Bug Fix
+* [#29](https://github.com/lblod/app-reglementaire-bijlage/pull/29) Move publisher port expose from main compose file to dev compose file ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 2.0.0 (2022-10-21)
 
 #### :rocket: Enhancement

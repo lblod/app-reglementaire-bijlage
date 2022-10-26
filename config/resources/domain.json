@@ -169,6 +169,12 @@
       "name": "code-list",
       "class": "lblodmow:Codelist",
       "super": ["concept-scheme"],
+      "attributes": {
+        "created-on": {
+          "type": "datetime",
+          "predicate": "pav:createdOn"
+        }
+      },
       "relationships": {
         "type": {
           "predicate": "dct:type",

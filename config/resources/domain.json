@@ -8,43 +8,23 @@
     "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
   },
   "resources": {
-    "regulatory-statements": {
-      "name": "regulatory-statement",
-      "class": "ext:Reglement",
-      "attributes": {
-        "folder": {
-          "type": "string",
-          "predicate": "ext:regulatoryStatementFolder"
-        }
-      },
-      "relationships": {
-        "document": {
-          "predicate": "ext:hasDocumentContainer",
-          "target": "document-container",
-          "cardinality": "one"
-        },
-        "published-version": {
-          "type": "url",
-          "predicate": "ext:publishedVersion",
-          "target": "published-regulatory-attachment-container",
-          "cardinality": "one"
-        }
-      },
-      "new-resource-base": "http://data.lblod.info/id/reglement/"
-    },
     "published-regulatory-attachment-containers": {
       "name": "published-regulatory-attachment-container",
-      "class": "ext:PublishedRegulatoryAttachmentContainer",
-      "attributes": {
-        "valid-through": {
-          "type": "datetime",
-          "predicate": "schema:validThrough"
-        }
-      },
+      "class": "gn:ReglementaireBijlageTemplate",
       "relationships": {
         "current-version": {
-          "predicate": "ext:currentVersion",
+          "predicate": "pav:hasCurrentVersion",
           "target": "published-regulatory-attachment",
+          "cardinality": "one"
+        },
+        "versions": {
+          "predicate": "pav:hasVersion",
+          "target": "published-regulatory-attachment",
+          "cardinality": "many"
+        },
+        "derivedFrom": {
+          "predicate": "prov:derivedFrom",
+          "target": "document-container",
           "cardinality": "one"
         }
       },
@@ -52,12 +32,24 @@
     },
     "published-regulatory-attachments": {
       "name": "published-regulatory-attachment",
-      "class": "ext:PublishedRegulatoryAttachment",
+      "class": "gn:ReglementaireBijlageTemplateVersie",
+      "super": ["file"],
       "relationships": {
-        "content": {
-          "predicate": "ext:content",
-          "target": "file",
+        "previous-version": {
+          "predicate": "pav:previousVersion",
+          "target": "published-regulatory-attachment",
           "cardinality": "one"
+        },
+        "derivedFrom": {
+          "predicate": "prov:derivedFrom",
+          "target": "editor-document",
+          "cardinality": "one"
+        }
+      },
+      "attributes": {
+        "validThrough": {
+          "type": "string",
+          "predicate": "schema:validThrough"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment/"

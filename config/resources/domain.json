@@ -8,6 +8,42 @@
     "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
   },
   "resources": {
+    "files": {
+      "name": "file",
+      "class": "nfo:FileDataObject",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "predicate": "nfo:fileName"
+        },
+        "format": {
+          "type": "string",
+          "predicate": "dct:format"
+        },
+        "size": {
+          "type": "number",
+          "predicate": "nfo:fileSize"
+        },
+        "extension": {
+          "type": "string",
+          "predicate": "dbpedia:fileExtension"
+        },
+        "created": {
+          "type": "datetime",
+          "predicate": "dct:created"
+        }
+      },
+      "relationships": {
+        "download": {
+          "predicate": "nie:dataSource",
+          "target": "file",
+          "cardinality": "one",
+          "inverse": true
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.example.com/files/"
+    },
     "published-regulatory-attachment-containers": {
       "name": "published-regulatory-attachment-container",
       "class": "gn:ReglementaireBijlageTemplate",
@@ -22,7 +58,7 @@
           "target": "published-regulatory-attachment",
           "cardinality": "many"
         },
-        "derivedFrom": {
+        "derived-from": {
           "predicate": "prov:derivedFrom",
           "target": "document-container",
           "cardinality": "one"
@@ -40,7 +76,7 @@
           "target": "published-regulatory-attachment",
           "cardinality": "one"
         },
-        "derivedFrom": {
+        "derived-from": {
           "predicate": "prov:derivedFrom",
           "target": "editor-document",
           "cardinality": "one"
@@ -181,42 +217,6 @@
       },
       "features": ["include-uri"],
       "new-resource-base": "http://lblod.data.gift/concept-schemes/"
-    },
-    "files": {
-      "name": "file",
-      "class": "nfo:FileDataObject",
-      "attributes": {
-        "name": {
-          "type": "string",
-          "predicate": "nfo:fileName"
-        },
-        "format": {
-          "type": "string",
-          "predicate": "dct:format"
-        },
-        "size": {
-          "type": "number",
-          "predicate": "nfo:fileSize"
-        },
-        "extension": {
-          "type": "string",
-          "predicate": "dbpedia:fileExtension"
-        },
-        "created": {
-          "type": "datetime",
-          "predicate": "dct:created"
-        }
-      },
-      "relationships": {
-        "download": {
-          "predicate": "nie:dataSource",
-          "target": "file",
-          "cardinality": "one",
-          "inverse": true
-        }
-      },
-      "features": ["include-uri"],
-      "new-resource-base": "http://data.example.com/files/"
     }
   }
 }

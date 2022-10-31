@@ -83,7 +83,7 @@
         }
       },
       "attributes": {
-        "validThrough": {
+        "valid-through": {
           "type": "string",
           "predicate": "schema:validThrough"
         }

@@ -30,7 +30,7 @@
         },
         "created": {
           "type": "datetime",
-          "predicate": "dct:created"
+          "predicate": "nfo:fileCreated"
         }
       },
       "relationships": {

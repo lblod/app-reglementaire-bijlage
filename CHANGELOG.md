@@ -7,6 +7,15 @@
 
 
 
+
+## 3.0.0 (2022-11-03)
+
+#### :rocket: Enhancement
+* [#30](https://github.com/lblod/app-reglementaire-bijlage/pull/30) Feature/new rdfa model ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 1
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 2.0.1 (2022-10-21)
 
 #### :bug: Bug Fix

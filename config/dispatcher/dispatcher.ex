@@ -40,6 +40,10 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/editor-documents/"
   end
 
+  match "/editor-document-folders/*path" do
+    forward conn, path, "http://resource/editor-document-folders/"
+  end
+
   match "/document-containers/*path" do
     forward conn, path, "http://resource/document-containers/"
   end

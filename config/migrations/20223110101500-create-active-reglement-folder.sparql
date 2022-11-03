@@ -1,0 +1,9 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+INSERT DATA {
+GRAPH <http://mu.semte.ch/graphs/public> {
+ <http://data.lblod.info/editor-document-folders/7A4CA4A9-D7A4-4A99-B2FB-39B6D535FC1D> a ext:EditorDocumentFolder;
+mu:uuid "7A4CA4A9-D7A4-4A99-B2FB-39B6D535FC1D";
+ext:EditorDocumentFolderName 'active'.
+}
+}

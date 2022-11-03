@@ -58,6 +58,12 @@
               "target": "editor-document",
               "cardinality": "one",
               "inverse": true
+          },
+          "published-version": {
+            "predicate": "prov:derivedFrom",
+            "target": "published-regulatory-attachment",
+            "cardinality": "one",
+            "inverse": true
           }
         },
         "new-resource-base": "http://data.lblod.info/editor-documents/"
@@ -95,6 +101,12 @@
               "predicate": "ext:hasAttachments",
               "target": "attachment",
               "cardinality": "many"
+            },
+            "published-version": {
+              "predicate": "prov:derivedFrom",
+              "target": "published-regulatory-attachment-container",
+              "cardinality": "one",
+              "inverse": true
             }
         },
         "new-resource-base": "http://data.lblod.info/document-containers/"

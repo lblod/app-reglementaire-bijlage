@@ -8,43 +8,59 @@
     "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
   },
   "resources": {
-    "regulatory-statements": {
-      "name": "regulatory-statement",
-      "class": "ext:Reglement",
+    "files": {
+      "name": "file",
+      "class": "nfo:FileDataObject",
       "attributes": {
-        "folder": {
+        "name": {
           "type": "string",
-          "predicate": "ext:regulatoryStatementFolder"
+          "predicate": "nfo:fileName"
+        },
+        "format": {
+          "type": "string",
+          "predicate": "dct:format"
+        },
+        "size": {
+          "type": "number",
+          "predicate": "nfo:fileSize"
+        },
+        "extension": {
+          "type": "string",
+          "predicate": "dbpedia:fileExtension"
+        },
+        "created": {
+          "type": "datetime",
+          "predicate": "nfo:fileCreated"
         }
       },
       "relationships": {
-        "document": {
-          "predicate": "ext:hasDocumentContainer",
-          "target": "document-container",
-          "cardinality": "one"
-        },
-        "published-version": {
-          "type": "url",
-          "predicate": "ext:publishedVersion",
-          "target": "published-regulatory-attachment-container",
-          "cardinality": "one"
+        "download": {
+          "predicate": "nie:dataSource",
+          "target": "file",
+          "cardinality": "one",
+          "inverse": true
         }
       },
-      "new-resource-base": "http://data.lblod.info/id/reglement/"
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.example.com/files/"
     },
     "published-regulatory-attachment-containers": {
       "name": "published-regulatory-attachment-container",
-      "class": "ext:PublishedRegulatoryAttachmentContainer",
-      "attributes": {
-        "valid-through": {
-          "type": "datetime",
-          "predicate": "schema:validThrough"
-        }
-      },
+      "class": "gn:ReglementaireBijlageTemplate",
       "relationships": {
         "current-version": {
-          "predicate": "ext:currentVersion",
+          "predicate": "pav:hasCurrentVersion",
           "target": "published-regulatory-attachment",
+          "cardinality": "one"
+        },
+        "versions": {
+          "predicate": "pav:hasVersion",
+          "target": "published-regulatory-attachment",
+          "cardinality": "many"
+        },
+        "derived-from": {
+          "predicate": "prov:derivedFrom",
+          "target": "document-container",
           "cardinality": "one"
         }
       },
@@ -52,12 +68,24 @@
     },
     "published-regulatory-attachments": {
       "name": "published-regulatory-attachment",
-      "class": "ext:PublishedRegulatoryAttachment",
+      "class": "gn:ReglementaireBijlageTemplateVersie",
+      "super": ["file"],
       "relationships": {
-        "content": {
-          "predicate": "ext:content",
-          "target": "file",
+        "previous-version": {
+          "predicate": "pav:previousVersion",
+          "target": "published-regulatory-attachment",
           "cardinality": "one"
+        },
+        "derived-from": {
+          "predicate": "prov:derivedFrom",
+          "target": "editor-document",
+          "cardinality": "one"
+        }
+      },
+      "attributes": {
+        "valid-through": {
+          "type": "string",
+          "predicate": "schema:validThrough"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment/"
@@ -169,6 +197,12 @@
       "name": "code-list",
       "class": "lblodmow:Codelist",
       "super": ["concept-scheme"],
+      "attributes": {
+        "created-on": {
+          "type": "datetime",
+          "predicate": "pav:createdOn"
+        }
+      },
       "relationships": {
         "type": {
           "predicate": "dct:type",
@@ -189,42 +223,6 @@
       },
       "features": ["include-uri"],
       "new-resource-base": "http://lblod.data.gift/concept-schemes/"
-    },
-    "files": {
-      "name": "file",
-      "class": "nfo:FileDataObject",
-      "attributes": {
-        "name": {
-          "type": "string",
-          "predicate": "nfo:fileName"
-        },
-        "format": {
-          "type": "string",
-          "predicate": "dct:format"
-        },
-        "size": {
-          "type": "number",
-          "predicate": "nfo:fileSize"
-        },
-        "extension": {
-          "type": "string",
-          "predicate": "dbpedia:fileExtension"
-        },
-        "created": {
-          "type": "datetime",
-          "predicate": "nfo:fileCreated"
-        }
-      },
-      "relationships": {
-        "download": {
-          "predicate": "nie:dataSource",
-          "target": "file",
-          "cardinality": "one",
-          "inverse": true
-        }
-      },
-      "features": ["include-uri"],
-      "new-resource-base": "http://data.example.com/files/"
     }
   }
 }

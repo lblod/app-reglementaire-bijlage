@@ -9,6 +9,15 @@
 
 
 
+
+## 3.0.2 (2022-11-04)
+
+#### :house: Internal
+* [#32](https://github.com/lblod/app-reglementaire-bijlage/pull/32) update frontend ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 1
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 3.0.1 (2022-11-04)
 
 #### :house: Internal

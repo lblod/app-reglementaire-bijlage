@@ -98,7 +98,7 @@ services:
     environment:
       BACKEND_HOST: database
   publisher:
-    image: lblod/reglement-publish-service:3.0.0
+    image: lblod/reglement-publish-service:3.0.1
     links:
       - database:database
     volumes:

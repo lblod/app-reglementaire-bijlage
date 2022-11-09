@@ -10,6 +10,15 @@
 
 
 
+
+## 3.0.3 (2022-11-09)
+
+#### :house: Internal
+* [#33](https://github.com/lblod/app-reglementaire-bijlage/pull/33) update publisher to 3.0.2 ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 1
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 3.0.2 (2022-11-04)
 
 #### :house: Internal

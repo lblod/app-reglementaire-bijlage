@@ -13,6 +13,15 @@
 
 
 
+
+## 4.0.0 (2023-01-25)
+
+#### :house: Internal
+* [#37](https://github.com/lblod/app-reglementaire-bijlage/pull/37) Update frontend to 4.0.1 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 3.0.6 (2023-01-12)
 
 #### :house: Internal

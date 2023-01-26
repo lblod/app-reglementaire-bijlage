@@ -14,6 +14,11 @@
 
 
 
+## 5.0.0 (2023-01-26)
+
+chore(frontend): bump to 5.0.0
+
+
 ## 4.0.0 (2023-01-25)
 
 #### :house: Internal

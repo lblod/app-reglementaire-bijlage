@@ -97,12 +97,14 @@ services:
     image: redpencil/varnish-post:1.0.0
     environment:
       BACKEND_HOST: database
+    restart: always
   publisher:
     image: lblod/reglement-publish-service:3.0.2
     links:
       - database:database
     volumes:
       - ./data/files/:/share/
+    restart: always
   file:
     image: semtech/mu-file-service:3.3.0
     restart: always

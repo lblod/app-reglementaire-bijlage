@@ -16,6 +16,15 @@
 
 
 
+
+## 6.0.1 (2023-03-13)
+
+#### :house: Internal
+* [#42](https://github.com/lblod/app-reglementaire-bijlage/pull/42) Remove authorization callback dispatch rule ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 6.0.0 (2023-03-13)
 
 #### :house: Internal

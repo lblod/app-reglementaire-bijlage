@@ -15,6 +15,16 @@
 
 
 
+
+## 6.0.0 (2023-03-13)
+
+#### :house: Internal
+* [#41](https://github.com/lblod/app-reglementaire-bijlage/pull/41) Update frontend to 6.0.0 ([@elpoelma](https://github.com/elpoelma))
+* [#40](https://github.com/lblod/app-reglementaire-bijlage/pull/40) ensure sparql-cache and reglement-publisher restart automatically when needed ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 5.1.0 (2023-02-14)
 
 #### :house: Internal

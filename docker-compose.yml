@@ -112,3 +112,7 @@ services:
       - database:database
     volumes:
       - ./data/files/:/share/
+  codex-proxy:
+    image: lblod/codex-reverse-proxy-service
+    logging: *default-logging
+    restart: always

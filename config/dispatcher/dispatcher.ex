@@ -149,6 +149,10 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://frontend/index.html"
   end
 
+  match "/codex/sparql/*path" do
+    forward conn, path, "http://codex-proxy/sparql/"
+  end
+
   # match "/*_", %{ last_call: true } do
   #   send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   # end

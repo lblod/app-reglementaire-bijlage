@@ -17,6 +17,17 @@
 
 
 
+
+## 6.1.0 (2023-04-10)
+
+#### :rocket: Enhancement
+* [#44](https://github.com/lblod/app-reglementaire-bijlage/pull/44) bump frontend to v6.1.0 ([@abeforgit](https://github.com/abeforgit))
+
+#### Committers: 2
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- [@usrtim](https://github.com/usrtim)
+
+
 ## 6.0.1 (2023-03-13)
 
 #### :house: Internal

@@ -71,6 +71,8 @@ services:
       - "logging=true"
   resource:
     image: semtech/mu-cl-resources:feature-nicer-error-on-unfound-resource-specification
+    environment:
+      CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     links:
       - database:database
     volumes:

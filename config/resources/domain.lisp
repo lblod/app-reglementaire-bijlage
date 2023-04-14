@@ -4,6 +4,10 @@
   "when non-nil, all paginated listings will contain the number
    of responses in the result object's meta.")
 
+(defparameter *supply-cache-headers-p* t)
+(defparameter *cache-model-properties* t)
+(defparameter *cache-count-queries* t)
+
 ;; reading in the domain.json
 (read-domain-file "domain.json")
 (read-domain-file "auth.json")

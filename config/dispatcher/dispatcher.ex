@@ -79,6 +79,10 @@ defmodule Dispatcher do
     forward conn, [], "http://remotelogin/remote-login"
   end
 
+  ############
+  # resources
+  ############
+
   match "/code-lists/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://resource/code-lists/"
   end
@@ -103,9 +107,12 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/published-regulatory-attachments/"
   end
 
-
   match "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
+  end
+
+  match "/codex/sparql/*path" do
+    forward conn, path, "http://codex-proxy/sparql/"
   end
 
   #########
@@ -149,9 +156,7 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://frontend/index.html"
   end
 
-  match "/codex/sparql/*path" do
-    forward conn, path, "http://codex-proxy/sparql/"
-  end
+  
 
   # match "/*_", %{ last_call: true } do
   #   send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )

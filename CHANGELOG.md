@@ -18,6 +18,19 @@
 
 
 
+
+## 6.1.1 (2023-05-02)
+
+#### :bug: Bug Fix
+* [#47](https://github.com/lblod/app-reglementaire-bijlage/pull/47) move codex route up in the dispatcher ([@lagartoverde](https://github.com/lagartoverde))
+
+#### :house: Internal
+* [#45](https://github.com/lblod/app-reglementaire-bijlage/pull/45) Update mu-cl-resources to 1.22.0 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 2
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 6.1.0 (2023-04-10)
 
 #### :rocket: Enhancement

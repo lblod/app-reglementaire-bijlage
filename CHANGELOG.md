@@ -19,6 +19,15 @@
 
 
 
+
+## 6.2.0 (2023-05-09)
+
+#### :house: Internal
+* [#48](https://github.com/lblod/app-reglementaire-bijlage/pull/48) bump frontend to 6.2.0 ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 1
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 6.1.1 (2023-05-02)
 
 #### :bug: Bug Fix

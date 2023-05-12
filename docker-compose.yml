@@ -6,7 +6,7 @@ x-logging: &default-logging
     max-file: "3"
 services:
   frontend:
-    image: lblod/frontend-reglementaire-bijlage:6.1.0
+    image: lblod/frontend-reglementaire-bijlage:6.2.0
     restart: always
     environment:
       EMBER_OAUTH_API_REDIRECT_URL: "https://reglementairebijlagen.lblod.info/authorization/callback"
@@ -37,7 +37,7 @@ services:
     restart: always
     logging: *default-logging
   database:
-    image: semtech/mu-authorization:0.6.0-beta.7
+    image: semtech/mu-authorization:0.6.0-beta.8
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
     volumes:
@@ -70,7 +70,7 @@ services:
     labels:
       - "logging=true"
   resource:
-    image: semtech/mu-cl-resources:feature-nicer-error-on-unfound-resource-specification
+    image: semtech/mu-cl-resources:1.22.1
     environment:
       CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     links:

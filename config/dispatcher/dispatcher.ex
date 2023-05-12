@@ -33,23 +33,23 @@ defmodule Dispatcher do
   ###############################################################
 
   match "/regulatory-statements/*path" do
-    forward conn, path, "http://resource/regulatory-statements/"
+    forward conn, path, "http://cache/regulatory-statements/"
   end
 
   match "/editor-documents/*path" do
-    forward conn, path, "http://resource/editor-documents/"
+    forward conn, path, "http://cache/editor-documents/"
   end
 
   match "/editor-document-folders/*path" do
-    forward conn, path, "http://resource/editor-document-folders/"
+    forward conn, path, "http://cache/editor-document-folders/"
   end
 
   match "/document-containers/*path" do
-    forward conn, path, "http://resource/document-containers/"
+    forward conn, path, "http://cache/document-containers/"
   end
 
   match "/administrative-units/*path" do
-    forward conn, path, "http://resource/administrative-units/"
+    forward conn, path, "http://cache/administrative-units/"
   end
 
   #########
@@ -64,15 +64,15 @@ defmodule Dispatcher do
   end
 
   match "/users/*path" do
-    forward conn, path, "http://resource/users/"
+    forward conn, path, "http://cache/users/"
   end
 
   match "/accounts/*path" do
-    forward conn, path, "http://resource/accounts/"
+    forward conn, path, "http://cache/accounts/"
   end
 
   match "/groups/*path" do
-    forward conn, path, "http://resource/groups/"
+    forward conn, path, "http://cache/groups/"
   end
 
   post "/remote-login/*path" do
@@ -84,27 +84,27 @@ defmodule Dispatcher do
   ############
 
   match "/code-lists/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/code-lists/"
+    Proxy.forward conn, path, "http://cache/code-lists/"
   end
 
   match "/concept-schemes/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/concept-schemes/"
+    Proxy.forward conn, path, "http://cache/concept-schemes/"
   end
 
   match "/skos-concepts/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/skos-concepts/"
+    Proxy.forward conn, path, "http://cache/skos-concepts/"
   end
 
   match "/concepts/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/concepts/"
+    Proxy.forward conn, path, "http://cache/concepts/"
   end
 
   match "/published-regulatory-attachment-containers/*path" do
-    Proxy.forward conn, path, "http://resource/published-regulatory-attachment-containers/"
+    Proxy.forward conn, path, "http://cache/published-regulatory-attachment-containers/"
   end
 
   match "/published-regulatory-attachments/*path" do
-    Proxy.forward conn, path, "http://resource/published-regulatory-attachments/"
+    Proxy.forward conn, path, "http://cache/published-regulatory-attachments/"
   end
 
   match "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
@@ -123,10 +123,10 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
   end
   get "/files/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/files/"
+    Proxy.forward conn, path, "http://cache/files/"
   end
   patch "/files/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/files/"
+    Proxy.forward conn, path, "http://cache/files/"
   end
   post "/files/*path", %{ accept: %{upload: true}, layer: :api} do
     Proxy.forward conn, path, "http://file/files/"

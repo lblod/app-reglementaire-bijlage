@@ -20,6 +20,19 @@
 
 
 
+
+## 6.3.0 (2023-05-18)
+
+#### :rocket: Enhancement
+* [#46](https://github.com/lblod/app-reglementaire-bijlage/pull/46) Actually use the cache service ([@elpoelma](https://github.com/elpoelma))
+
+#### :house: Internal
+* [#49](https://github.com/lblod/app-reglementaire-bijlage/pull/49) Bump frontend to 6.3.0 ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 2
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 6.2.0 (2023-05-09)
 
 #### :house: Internal

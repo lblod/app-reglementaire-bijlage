@@ -20,6 +20,15 @@
 
 
 
+
+## 6.3.0 (2023-05-18)
+
+#### :rocket: Enhancement
+* [#46](https://github.com/lblod/app-reglementaire-bijlage/pull/46) Actually use the cache service ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 6.2.0 (2023-05-09)
 
 #### :house: Internal

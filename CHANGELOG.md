@@ -21,6 +21,15 @@
 
 
 
+
+## 6.3.1 (2023-05-19)
+
+#### :house: Internal
+* [#50](https://github.com/lblod/app-reglementaire-bijlage/pull/50) Bump frontend to 6.3.1 ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 1
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 6.3.0 (2023-05-18)
 
 #### :rocket: Enhancement

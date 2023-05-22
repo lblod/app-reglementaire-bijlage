@@ -22,6 +22,15 @@
 
 
 
+
+## 6.3.2 (2023-05-22)
+
+#### :bug: Bug Fix
+* [#51](https://github.com/lblod/app-reglementaire-bijlage/pull/51) update mu-cl-resources to 1.22.2 ([@lagartoverde](https://github.com/lagartoverde))
+
+#### Committers: 1
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
 ## 6.3.1 (2023-05-19)
 
 #### :house: Internal

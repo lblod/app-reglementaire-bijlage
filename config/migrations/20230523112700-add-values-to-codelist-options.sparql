@@ -1,0 +1,14 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+INSERT {
+  GRAPH ?g {
+        ?concept ext:value ?label.
+  }
+}
+WHERE {
+  GRAPH ?graph {
+    ?concept a skos:Concept;
+      skos:prefLabel ?label.
+  } 
+  BIND(?graph as ?g)
+}

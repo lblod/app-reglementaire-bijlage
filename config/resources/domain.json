@@ -102,6 +102,10 @@
           "type": "string",
           "predicate": "skos:notation"
         },
+        "value": {
+          "type": "string",
+          "predicate": "ext:value"
+        },
         "search-label": {
           "type": "string",
           "predicate": "ext:searchLabel"

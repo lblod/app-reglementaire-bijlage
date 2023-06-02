@@ -223,6 +223,34 @@
       },
       "features": ["include-uri"],
       "new-resource-base": "http://lblod.data.gift/concept-schemes/"
+    },
+    "snippet-lists": {
+      "name": "snippet-list",
+      "class": "ext:SnippetList",
+      "attributes": {
+        "created-on": {
+          "type": "datetime",
+          "predicate": "pav:createdOn"
+        },
+        "label": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        }
+      },
+      "relationships": {
+        "publisher": {
+          "predicate": "dct:publisher",
+          "target": "administrative-unit",
+          "cardinality": "one"
+        },
+        "snippets": {
+          "predicate": "ext:hasSnippet",
+          "target": "document-container",
+          "cardinality": "many"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://lblod.data.gift/snippet-lists/"
     }
   }
 }

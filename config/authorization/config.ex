@@ -32,6 +32,7 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
                         "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                        "http://mu.semte.ch/vocabularies/ext/SnippetList",
                       ]
                     } }
                 ]
@@ -57,6 +58,7 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/mobiliteit/Codelist",
                         "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                        "http://mu.semte.ch/vocabularies/ext/SnippetList",
                       ]
                     } }
                 ]

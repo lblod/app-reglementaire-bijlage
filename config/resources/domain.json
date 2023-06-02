@@ -94,7 +94,7 @@
       "name": "skos-concept",
       "class": "skos:Concept",
       "attributes": {
-        "label": {
+        "value": {
           "type": "string",
           "predicate": "skos:prefLabel"
         },
@@ -102,9 +102,9 @@
           "type": "string",
           "predicate": "skos:notation"
         },
-        "value": {
+        "label": {
           "type": "string",
-          "predicate": "ext:value"
+          "predicate": "ext:summary"
         },
         "search-label": {
           "type": "string",

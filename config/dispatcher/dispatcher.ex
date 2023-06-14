@@ -111,6 +111,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
   end
 
+  match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/snippet-lists/"
+  end
+
   match "/codex/sparql/*path" do
     forward conn, path, "http://codex-proxy/sparql/"
   end

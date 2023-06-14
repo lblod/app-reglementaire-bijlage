@@ -112,7 +112,7 @@ defmodule Dispatcher do
   end
 
   match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://resource/snippet-lists/"
+    Proxy.forward conn, path, "http://cache/snippet-lists/"
   end
 
   match "/codex/sparql/*path" do

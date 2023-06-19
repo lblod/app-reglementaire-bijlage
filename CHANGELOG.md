@@ -23,6 +23,21 @@
 
 
 
+
+## 6.4.0 (2023-06-19)
+
+#### :rocket: Enhancement
+* [#53](https://github.com/lblod/app-reglementaire-bijlage/pull/53) Add snippets list resources ([@lagartoverde](https://github.com/lagartoverde))
+* [#52](https://github.com/lblod/app-reglementaire-bijlage/pull/52) Add values to codelist options ([@lagartoverde](https://github.com/lagartoverde))
+
+#### :house: Internal
+* [#54](https://github.com/lblod/app-reglementaire-bijlage/pull/54) chore(frontend): bump frontend to [v6.5.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v6.5.0) ([@abeforgit](https://github.com/abeforgit))
+
+#### Committers: 2
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Oscar Rodriguez Villalobos ([@lagartoverde](https://github.com/lagartoverde))
+
+
 ## 6.3.2 (2023-05-22)
 
 #### :bug: Bug Fix

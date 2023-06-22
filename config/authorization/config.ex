@@ -33,6 +33,8 @@ defmodule Acl.UserGroups.Config do
                         "http://mu.semte.ch/vocabularies/ext/PublishedRegulatoryAttachmentContainer",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                         "http://mu.semte.ch/vocabularies/ext/SnippetList",
+                        "http://mu.semte.ch/vocabularies/ext/EditorDocument",
+                        "http://mu.semte.ch/vocabularies/ext/DocumentContainer",
                       ]
                     } }
                 ]
@@ -83,9 +85,7 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/Person",
                         "http://mu.semte.ch/vocabularies/ext/EditorDocumentFolder",
                         "http://mu.semte.ch/vocabularies/ext/EditorDocumentStatus",
-                        "http://mu.semte.ch/vocabularies/ext/EditorDocument",
                         "http://mu.semte.ch/vocabularies/ext/Reglement",
-                        "http://mu.semte.ch/vocabularies/ext/DocumentContainer",
                         "http://mu.semte.ch/vocabularies/ext/Concept",
                         "http://mu.semte.ch/vocabularies/ext/Mapping",
                       ] } } ] },

@@ -85,6 +85,14 @@ services:
       - resource:backend
     restart: always
     logging: *default-logging
+  deltanotifier:
+    image: semtech/mu-delta-notifier
+    restart: always
+    logging: *default-logging
+    volumes:
+        - ./config/delta:/config
+    labels:
+      - "logging=true"
   migrations:
     image: semtech/mu-migrations-service:0.7.0
     links:

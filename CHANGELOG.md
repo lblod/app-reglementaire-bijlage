@@ -25,6 +25,18 @@
 
 
 
+
+## 6.6.0 (2023-07-06)
+
+#### :bug: Bug Fix
+* [#57](https://github.com/lblod/app-reglementaire-bijlage/pull/57) GN-4415: ensure caching is correctly set-up and add deltanotifier to stack ([@elpoelma](https://github.com/elpoelma))
+
+#### :house: Internal
+* [#58](https://github.com/lblod/app-reglementaire-bijlage/pull/58) Update frontend to 6.7.0 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 6.5.1 (2023-06-27)
 bump frontend to v6.6.1
 

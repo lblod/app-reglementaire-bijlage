@@ -111,6 +111,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
   end
 
+  match "/snippet-list-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/snippet-list-publication-tasks/"
+  end
+
   match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://cache/snippet-lists/"
   end
@@ -160,7 +164,7 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://frontend/index.html"
   end
 
-  
+
 
   # match "/*_", %{ last_call: true } do
   #   send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )

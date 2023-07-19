@@ -283,6 +283,11 @@
       "name": "published-snippet",
       "class": "ext:PublishedSnippet",
       "relationships": {
+        "previous-version": {
+          "predicate": "pav:previousVersion",
+          "target": "published-snippet",
+          "cardinality": "one"
+        },
         "derived-from": {
           "predicate": "prov:derivedFrom",
           "target": "editor-document",

@@ -107,6 +107,12 @@
               "target": "published-regulatory-attachment-container",
               "cardinality": "one",
               "inverse": true
+            },
+            "published-snippet-version": {
+              "predicate": "prov:derivedFrom",
+              "target": "published-snippet-container",
+              "cardinality": "one",
+              "inverse": true
             }
         },
         "new-resource-base": "http://data.lblod.info/document-containers/"

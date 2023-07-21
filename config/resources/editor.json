@@ -64,6 +64,12 @@
             "target": "published-regulatory-attachment",
             "cardinality": "one",
             "inverse": true
+          },
+          "published-snippet-version": {
+            "predicate": "prov:derivedFrom",
+            "target": "published-snippet",
+            "cardinality": "one",
+            "inverse": true
           }
         },
         "new-resource-base": "http://data.lblod.info/editor-documents/"

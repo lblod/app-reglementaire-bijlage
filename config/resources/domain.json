@@ -306,6 +306,10 @@
         "created-on": {
           "type": "datetime",
           "predicate": "pav:createdOn"
+        },
+        "valid-through": {
+          "type": "datetime",
+          "predicate": "schema:validThrough"
         }
       },
       "new-resource-base": "http://lblod.data.gift/published-snippets/"

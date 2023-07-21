@@ -34,6 +34,7 @@ defmodule Acl.UserGroups.Config do
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                         "http://mu.semte.ch/vocabularies/ext/SnippetList",
                         "http://mu.semte.ch/vocabularies/ext/PublishedSnippetContainer",
+                        "http://mu.semte.ch/vocabularies/ext/PublishedSnippet",
                       ]
                     } }
                 ]
@@ -61,6 +62,7 @@ defmodule Acl.UserGroups.Config do
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                         "http://mu.semte.ch/vocabularies/ext/SnippetList",
                         "http://mu.semte.ch/vocabularies/ext/PublishedSnippetContainer",
+                        "http://mu.semte.ch/vocabularies/ext/PublishedSnippet",
                       ]
                     } }
                 ]

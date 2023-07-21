@@ -107,6 +107,14 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/published-regulatory-attachments/"
   end
 
+  match "/published-snippet-containers/*path" do
+    Proxy.forward conn, path, "http://cache/published-snippet-containers/"
+  end
+
+  match "/published-snippets/*path" do
+    Proxy.forward conn, path, "http://cache/published-snippets/"
+  end
+
   match "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
   end

@@ -1,13 +1,14 @@
 {
   "version": "0.1",
   "prefixes": {
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "besluit": "http://data.vlaanderen.be/ns/besluit#",
-      "dct": "http://purl.org/dc/terms/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "org": "http://www.w3.org/ns/org#",
-      "mandaat": "http://data.vlaanderen.be/ns/mandaat#",
-      "generiek": "http://data.vlaanderen.be/ns/generiek#"
+    "ext": "http://mu.semte.ch/vocabularies/ext/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "besluit": "http://data.vlaanderen.be/ns/besluit#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "org": "http://www.w3.org/ns/org#",
+    "mandaat": "http://data.vlaanderen.be/ns/mandaat#",
+    "generiek": "http://data.vlaanderen.be/ns/generiek#"
   },
   "resources": {
     "administrative-units": {
@@ -31,7 +32,7 @@
     },
     "administrative-unit-classification-codes": {
       "name": "administrative-unit-classification-code",
-      "class": "code:BestuurseenheidClassificatieCode",
+      "class": "ext:BestuurseenheidClassificatieCode",
       "attributes": {
         "label": {
           "type": "string",

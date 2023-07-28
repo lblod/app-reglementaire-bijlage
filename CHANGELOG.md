@@ -26,6 +26,21 @@
 
 
 
+
+## 6.7.0 (2023-07-28)
+
+#### :rocket: Enhancement
+* [#59](https://github.com/lblod/app-reglementaire-bijlage/pull/59) GN-4323: Public snippet ([@dkozickis](https://github.com/dkozickis))
+
+#### :house: Internal
+* [#62](https://github.com/lblod/app-reglementaire-bijlage/pull/62) Update frontend to 6.9.0 ([@elpoelma](https://github.com/elpoelma))
+* [#61](https://github.com/lblod/app-reglementaire-bijlage/pull/61) Update reglement-publish-service to 3.1.0 ([@elpoelma](https://github.com/elpoelma))
+* [#60](https://github.com/lblod/app-reglementaire-bijlage/pull/60) Update frontend to 6.8.0 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 2
+- Deniss Kozickis ([@dkozickis](https://github.com/dkozickis))
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 6.6.0 (2023-07-06)
 
 #### :bug: Bug Fix

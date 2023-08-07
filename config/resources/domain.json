@@ -281,6 +281,11 @@
           "predicate": "prov:derivedFrom",
           "target": "document-container",
           "cardinality": "one"
+        },
+        "snippet-list": {
+          "predicate": "ext:fromSnippetList",
+          "target": "snippet-list",
+          "cardinality": "one"
         }
       },
       "new-resource-base": "http://lblod.data.gift/published-snippet-containers/"

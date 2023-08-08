@@ -27,6 +27,15 @@
 
 
 
+
+## 6.8.0 (2023-08-08)
+
+#### :house: Internal
+* [#64](https://github.com/lblod/app-reglementaire-bijlage/pull/64) Update frontend to 6.10.0 ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 6.7.0 (2023-07-28)
 
 #### :rocket: Enhancement

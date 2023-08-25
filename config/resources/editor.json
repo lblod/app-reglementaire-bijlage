@@ -48,16 +48,16 @@
             }
         },
         "relationships": {
-            "previous-version": {
-                "predicate": "pav:previousVersion",
-                "target": "editor-document",
-                "cardinality": "one"
-            },
-            "next-version": {
-              "predicate": "pav:previousVersion",
-              "target": "editor-document",
-              "cardinality": "one",
-              "inverse": true
+          "previous-version": {
+            "predicate": "pav:previousVersion",
+            "target": "editor-document",
+            "cardinality": "one"
+          },
+          "next-version": {
+            "predicate": "pav:previousVersion",
+            "target": "editor-document",
+            "cardinality": "one",
+            "inverse": true
           },
           "published-version": {
             "predicate": "prov:derivedFrom",
@@ -79,9 +79,9 @@
         "class": "ext:DocumentContainer",
         "relationships": {
             "current-version": {
-                "predicate": "pav:hasCurrentVersion",
-                "target": "editor-document",
-                "cardinality": "one"
+              "predicate": "pav:hasCurrentVersion",
+              "target": "editor-document",
+              "cardinality": "one"
             },
             "status": {
               "predicate": "ext:editorDocumentStatus",
@@ -119,6 +119,11 @@
               "target": "published-snippet-container",
               "cardinality": "one",
               "inverse": true
+            },
+            "snippet-lists": {
+              "predicate": "ext:hasSnippetLists",
+              "target": "snippet-list",
+              "cardinality": "many"
             }
         },
         "new-resource-base": "http://data.lblod.info/document-containers/"

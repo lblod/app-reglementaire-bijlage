@@ -1,0 +1,10 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+INSERT { GRAPH <http://mu.semte.ch/graphs/public> { ?publishedSnippetContainer ext:fromSnippetList ?snippetList. } }
+WHERE {
+  ?publishedSnippetContainer a ext:PublishedSnippetContainer;
+    prov:derivedFrom ?derivedFromSnippetDocumentContainer.
+  ?snippetList a ext:SnippetList;
+    ext:hasSnippet ?snippetDocumentContainer.
+  FILTER(?snippetDocumentContainer IN(?derivedFromSnippetDocumentContainer))
+}

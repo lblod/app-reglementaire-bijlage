@@ -30,6 +30,10 @@
 
 
 
+## 6.9.1 (2023-08-28)
+bump reglement-publish service to 4.0.0
+
+
 ## 6.9.0 (2023-08-28)
 
 #### :rocket: Enhancement

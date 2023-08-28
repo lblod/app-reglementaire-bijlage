@@ -29,6 +29,18 @@
 
 
 
+
+## 6.9.0 (2023-08-28)
+
+#### :rocket: Enhancement
+* [#66](https://github.com/lblod/app-reglementaire-bijlage/pull/66) chore: bump frontend to v7.0.0 ([@abeforgit](https://github.com/abeforgit))
+* [#63](https://github.com/lblod/app-reglementaire-bijlage/pull/63) GN-4322: Connect Snippet List with Template ([@dkozickis](https://github.com/dkozickis))
+
+#### Committers: 2
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Deniss Kozickis ([@dkozickis](https://github.com/dkozickis))
+
+
 ## 6.8.1 (2023-08-08)
 
 #### :house: Internal

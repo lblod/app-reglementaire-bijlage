@@ -30,6 +30,16 @@
 
 
 
+
+## 6.10.0 (2023-08-29)
+
+#### :rocket: Enhancement
+* [#67](https://github.com/lblod/app-reglementaire-bijlage/pull/67) chore(deps): bump frontend to [v7.1.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v7.1.0) ([@abeforgit](https://github.com/abeforgit))
+
+#### Committers: 1
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+
+
 ## 6.9.1 (2023-08-28)
 bump reglement-publish service to 4.0.0
 

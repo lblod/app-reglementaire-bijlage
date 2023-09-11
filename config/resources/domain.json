@@ -209,11 +209,6 @@
         }
       },
       "relationships": {
-        "type": {
-          "predicate": "dct:type",
-          "target": "skos-concept",
-          "cardinality": "one"
-        },
         "publisher": {
           "predicate": "dct:publisher",
           "target": "administrative-unit",

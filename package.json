@@ -1,0 +1,14 @@
+{
+  "name": "app-reglementaire-bijlage",
+  "private": true,
+  "version": "6.10.0",
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
+    "changesets-release-it-plugin": "^0.1.1",
+    "release-it": "^16.1.5"
+  }
+}

@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.11.1
+
+### Patch Changes
+
+- [#70](https://github.com/lblod/app-reglementaire-bijlage/pull/70) [`aa0629d`](https://github.com/lblod/app-reglementaire-bijlage/commit/aa0629d750588afe50202ee3a883331cf76fccd6) Thanks [@madnificent](https://github.com/madnificent)! - bump mu-identifier to 1.10.1
+
+- [#73](https://github.com/lblod/app-reglementaire-bijlage/pull/73) [`24afb1c`](https://github.com/lblod/app-reglementaire-bijlage/commit/24afb1c8ea451411fa3740ced595c3be785f4d62) Thanks [@elpoelma](https://github.com/elpoelma)! - Use correct URL in footer
+
 ## 6.11.0
 
 ### Minor Changes

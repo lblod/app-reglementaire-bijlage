@@ -26,6 +26,16 @@
 
 
 
+
+## 6.6.1 (2023-09-26)
+
+#### :house: Internal
+* [#72](https://github.com/lblod/app-reglementaire-bijlage/pull/72) Update frontend 6.7.1 (hotfix) ([@elpoelma](https://github.com/elpoelma))
+* [#71](https://github.com/lblod/app-reglementaire-bijlage/pull/71) Bump mu-identifier to 1.10.1 (hotfix) ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 6.6.0 (2023-07-06)
 
 #### :bug: Bug Fix

@@ -86,7 +86,7 @@ services:
     restart: always
     logging: *default-logging
   deltanotifier:
-    image: semtech/mu-delta-notifier
+    image: semtech/mu-delta-notifier:0.2.0
     restart: always
     logging: *default-logging
     volumes:

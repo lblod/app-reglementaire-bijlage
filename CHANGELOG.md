@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.13.1
+
+### Patch Changes
+
+- [#74](https://github.com/lblod/app-reglementaire-bijlage/pull/74) [`641546f`](https://github.com/lblod/app-reglementaire-bijlage/commit/641546fe58f8c8544ebfcdc4f80ed58209b879de) Thanks [@piemonkey](https://github.com/piemonkey)! - Use explicit mu-delta-notifier version
+
 ## 6.13.0
 
 ### Minor Changes

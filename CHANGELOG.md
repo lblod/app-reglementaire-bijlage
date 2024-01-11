@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.13.0
+
+### Minor Changes
+
+- [`9b8766d`](https://github.com/lblod/app-reglementaire-bijlage/commit/9b8766dd2928858dd6236bb84fdf04d699a3f909) Thanks [@piemonkey](https://github.com/piemonkey)! - Update editor version to 8.3.0
+
 ## 6.12.0
 
 ### Minor Changes

@@ -1,6 +1,8 @@
 version: '3.4'
 
 services:
+  frontend:
+    restart: "no"
   identifier:
     ports:
       - "80:80"
@@ -15,17 +17,26 @@ services:
       ENABLE_CORS: "true"
     ports:
       - "8890:8890"
+  login:
+    restart: "no"
   resource:
     restart: "no"
   cache:
+    restart: "no"
+  deltanotifier:
     restart: "no"
   migrations:
     restart: "no"
   mocklogin:
     image: lblod/mock-login-service:latest
+  sparql-cache:
+    restart: "no"
   publisher:
+    restart: "no"
     ports:
       - "8080:80"
+  file:
+    restart: "no"
   yasgui:
     image: erikap/yasgui
     ports:
@@ -41,3 +52,5 @@ services:
       SITE_ADDRESS: "reglementairebijlagen.lblod.info"
     volumes:
       - ./config/dev/tlsproxy/Caddyfile:/etc/caddy/Caddyfile
+  codex-proxy:
+    restart: "no"

@@ -58,22 +58,22 @@
       "relationships": {
         "administrative-unit": {
           "predicate": "besluit:bestuurt",
-          "target": "administrative-units",
+          "target": "administrative-unit",
           "cardinality": "one"
         },
         "classification": {
           "predicate": "org:classification",
-          "target": "governing-body-classification-codes",
+          "target": "administrative-unit-classification-code",
           "cardinality": "one"
         },
         "is-time-specialization-of": {
           "predicate": "generiek:isTijdspecialisatieVan",
-          "target": "governing-bodies",
+          "target": "governing-body",
           "cardinality": "one"
         },
         "has-time-specializations": {
           "predicate": "generiek:isTijdspecialisatieVan",
-          "target": "governing-bodies",
+          "target": "governing-body",
           "cardinality": "many",
           "inverse": true
         }

@@ -166,29 +166,6 @@
       },
       "new-resource-base": "http://data.lblod.info/concepts/"
     },
-    "mappings": {
-      "name": "mapping",
-      "class": "ext:Mapping",
-      "attributes": {
-        "variable": {
-          "type": "string",
-          "predicate": "ext:variable"
-        },
-        "type": {
-          "type": "string",
-          "predicate": "ext:variableType"
-        }
-      },
-      "relationships": {
-        "code-list": {
-          "predicate": "ext:codeList",
-          "target": "code-list",
-          "cardinality": "one"
-        }
-      },
-      "features": ["include-uri"],
-      "new-resource-base": "http://data.lblod.info/mappings/"
-    },
     "code-lists": {
       "name": "code-list",
       "class": "lblodmow:Codelist",
@@ -204,12 +181,6 @@
           "predicate": "dct:publisher",
           "target": "administrative-unit",
           "cardinality": "one"
-        },
-        "mappings": {
-          "predicate": "ext:codeList",
-          "target": "mapping",
-          "cardinality": "many",
-          "inverse": true
         }
       },
       "features": ["include-uri"],

@@ -75,11 +75,6 @@
               "target": "editor-document",
               "cardinality": "one"
             },
-            "status": {
-              "predicate": "ext:editorDocumentStatus",
-              "target": "skos-concept",
-              "cardinality": "one"
-            },
             "folder": {
               "predicate": "ext:editorDocumentFolder",
               "target": "editor-document-folder",

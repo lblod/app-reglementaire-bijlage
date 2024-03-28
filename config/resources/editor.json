@@ -90,11 +90,6 @@
               "target": "editor-document",
               "cardinality": "many"
             },
-            "attachments": {
-              "predicate": "ext:hasAttachments",
-              "target": "attachment",
-              "cardinality": "many"
-            },
             "published-version": {
               "predicate": "prov:derivedFrom",
               "target": "published-regulatory-attachment-container",
@@ -136,35 +131,6 @@
           }
         },
         "new-resource-base": "http://data.lblod.info/editor-document-folders/"
-      },
-      "attachments": {
-        "name": "attachment",
-        "class": "ext:Attachment",
-        "attributes": {
-          "decision": {
-            "type": "uri",
-            "predicate": "dct:isPartOf"
-          }
-        },
-        "relationships": {
-          "document-container": {
-            "predicate": "ext:hasAttachments",
-            "target": "document-container",
-            "cardinality": "one",
-            "inverse": true
-          },
-          "file": {
-            "predicate": "ext:hasFile",
-            "target": "file",
-            "cardinality": "one"
-          },
-          "type": {
-            "predicate": "ext:attachmentType",
-            "target": "skos-concept",
-            "cardinality": "one"
-          }
-        },
-        "new-resource-base": "http://lblod.data.gift/attachment/"
       }
   }
 }

@@ -1,0 +1,8 @@
+steps:
+  validate-resource-models:
+    image: madnificent/cl-resources-plantuml-generator
+    commands:
+      - /start-generator.sh
+when:
+  event:
+    - pull_request

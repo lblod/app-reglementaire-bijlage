@@ -37,14 +37,6 @@
             "updated-on": {
               "type": "datetime",
               "predicate": "pav:lastUpdateOn"
-            },
-            "starred": {
-              "type": "boolean",
-              "predicate": "tmp:starred"
-            },
-            "origin": {
-              "type": "string",
-              "predicate": "pav:providedBy"
             }
         },
         "relationships": {

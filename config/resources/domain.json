@@ -179,19 +179,9 @@
         }
       },
       "relationships": {
-        "instruction": {
-          "predicate": "ext:instructionVariable",
-          "target": "template",
-          "cardinality": "one"
-        },
         "code-list": {
           "predicate": "ext:codeList",
           "target": "code-list",
-          "cardinality": "one"
-        },
-        "expects": {
-          "predicate": "ext:expects",
-          "target": "shape",
           "cardinality": "one"
         }
       },

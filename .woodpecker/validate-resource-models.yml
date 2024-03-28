@@ -2,7 +2,11 @@ steps:
   validate-resource-models:
     image: madnificent/cl-resources-plantuml-generator
     commands:
-      - /start-generator.sh
+      - mkdir /config/output
+      - /load-config.sh
+      - sbcl --load /usr/src/startup.lisp
+      - cd /
+      - java -jar plantuml.jar -tsvg /config/output/jsonapi-domain.plantuml
 when:
   event:
     - pull_request

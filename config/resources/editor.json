@@ -110,17 +110,6 @@
         },
         "new-resource-base": "http://data.lblod.info/document-containers/"
       },
-      "editor-document-statuses": {
-        "name": "editor-document-status",
-        "class": "ext:EditorDocumentStatus",
-        "attributes": {
-          "name": {
-            "type": "string",
-            "predicate": "ext:EditorDocumentStatusName"
-          }
-        },
-        "new-resource-base": "http://data.lblod.info/editor-document-statuses/"
-      },
       "editor-document-folders": {
         "name": "editor-document-folder",
         "class": "ext:EditorDocumentFolder",

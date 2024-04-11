@@ -37,14 +37,6 @@
             "updated-on": {
               "type": "datetime",
               "predicate": "pav:lastUpdateOn"
-            },
-            "starred": {
-              "type": "boolean",
-              "predicate": "tmp:starred"
-            },
-            "origin": {
-              "type": "string",
-              "predicate": "pav:providedBy"
             }
         },
         "relationships": {
@@ -83,11 +75,6 @@
               "target": "editor-document",
               "cardinality": "one"
             },
-            "status": {
-              "predicate": "ext:editorDocumentStatus",
-              "target": "skos-concept",
-              "cardinality": "one"
-            },
             "folder": {
               "predicate": "ext:editorDocumentFolder",
               "target": "editor-document-folder",
@@ -101,11 +88,6 @@
             "revisions": {
               "predicate": "pav:hasVersion",
               "target": "editor-document",
-              "cardinality": "many"
-            },
-            "attachments": {
-              "predicate": "ext:hasAttachments",
-              "target": "attachment",
               "cardinality": "many"
             },
             "published-version": {
@@ -128,17 +110,6 @@
         },
         "new-resource-base": "http://data.lblod.info/document-containers/"
       },
-      "editor-document-statuses": {
-        "name": "editor-document-status",
-        "class": "ext:EditorDocumentStatus",
-        "attributes": {
-          "name": {
-            "type": "string",
-            "predicate": "ext:EditorDocumentStatusName"
-          }
-        },
-        "new-resource-base": "http://data.lblod.info/editor-document-statuses/"
-      },
       "editor-document-folders": {
         "name": "editor-document-folder",
         "class": "ext:EditorDocumentFolder",
@@ -149,35 +120,6 @@
           }
         },
         "new-resource-base": "http://data.lblod.info/editor-document-folders/"
-      },
-      "attachments": {
-        "name": "attachment",
-        "class": "ext:Attachment",
-        "attributes": {
-          "decision": {
-            "type": "uri",
-            "predicate": "dct:isPartOf"
-          }
-        },
-        "relationships": {
-          "document-container": {
-            "predicate": "ext:hasAttachments",
-            "target": "document-container",
-            "cardinality": "one",
-            "inverse": true
-          },
-          "file": {
-            "predicate": "ext:hasFile",
-            "target": "file",
-            "cardinality": "one"
-          },
-          "type": {
-            "predicate": "ext:attachmentType",
-            "target": "skos-concept",
-            "cardinality": "one"
-          }
-        },
-        "new-resource-base": "http://lblod.data.gift/attachment/"
       }
   }
 }

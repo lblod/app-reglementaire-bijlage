@@ -36,12 +36,20 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/concepts/"
   end
 
-  match "/published-regulatory-attachment-containers/*path" do
-    Proxy.forward conn, path, "http://cache/published-regulatory-attachment-containers/"
+  match "/templates/*path" do
+    Proxy.forward conn, path, "http://cache/templates/"
   end
 
-  match "/published-regulatory-attachments/*path" do
-    Proxy.forward conn, path, "http://cache/published-regulatory-attachments/"
+  match "/template-versions/*path" do
+    Proxy.forward conn, path, "http://cache/template-versions/"
+  end
+
+  match "/regulatory-attachment-templates/*path" do
+    Proxy.forward conn, path, "http://cache/regulatory-attachment-templates/"
+  end
+
+  match "/decision-templates/*path" do
+    Proxy.forward conn, path, "http://cache/decision-templates/"
   end
 
   match "/published-snippet-containers/*path" do

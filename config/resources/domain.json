@@ -7,7 +7,9 @@
     "dbpedia": "http://dbpedia.org/ontology/",
     "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
     "gn": "http://data.lblod.info/vocabularies/gelinktnotuleren/",
-    "skos": "http://www.w3.org/2004/02/skos/core#"
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "pav": "http://purl.org/pav/"
   },
   "resources": {
     "files": {

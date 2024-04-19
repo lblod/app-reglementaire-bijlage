@@ -1,5 +1,31 @@
 # app-reglementaire-bijlage
 
+## 6.13.5
+
+### Patch Changes
+
+- [#76](https://github.com/lblod/app-reglementaire-bijlage/pull/76) [`fd837a6`](https://github.com/lblod/app-reglementaire-bijlage/commit/fd837a69f1cbbb3523f434bc2edc32d77d830baf) Thanks [@elpoelma](https://github.com/elpoelma)! - Drop unused `attachment` model
+
+- [#78](https://github.com/lblod/app-reglementaire-bijlage/pull/78) [`c262e79`](https://github.com/lblod/app-reglementaire-bijlage/commit/c262e793b11a5232b7910cf97ce76b35a885e5f6) Thanks [@elpoelma](https://github.com/elpoelma)! - Update `lblod/reglement-publish-service` to 4.1.0
+
+- [#75](https://github.com/lblod/app-reglementaire-bijlage/pull/75) [`a27fb51`](https://github.com/lblod/app-reglementaire-bijlage/commit/a27fb510d60e08710c8057f071aadbf670a04ca2) Thanks [@elpoelma](https://github.com/elpoelma)! - Remove unresolvable relationships
+
+- [#76](https://github.com/lblod/app-reglementaire-bijlage/pull/76) [`2f3765d`](https://github.com/lblod/app-reglementaire-bijlage/commit/2f3765d5a7b22a42865fd5ec5dfd7193bc122dbb) Thanks [@elpoelma](https://github.com/elpoelma)! - Drop unused `mapping` model
+
+- [#78](https://github.com/lblod/app-reglementaire-bijlage/pull/78) [`d837b26`](https://github.com/lblod/app-reglementaire-bijlage/commit/d837b2669f94809e75024355e4bf8638b5abf8e9) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version 8.3.1
+
+- [#76](https://github.com/lblod/app-reglementaire-bijlage/pull/76) [`e73c647`](https://github.com/lblod/app-reglementaire-bijlage/commit/e73c647e0f73087e689303a42301eec4dbe44ed7) Thanks [@elpoelma](https://github.com/elpoelma)! - Drop unnecessary `starred` and `origin` properties of `editor-document` model
+
+- [#78](https://github.com/lblod/app-reglementaire-bijlage/pull/78) [`77f84e4`](https://github.com/lblod/app-reglementaire-bijlage/commit/77f84e4de153ef430f5be5ba7ed7582e85ebb397) Thanks [@elpoelma](https://github.com/elpoelma)! - Introduce `/tasks/:id` endpoint used for fetching task information
+
+- [`dec7780`](https://github.com/lblod/app-reglementaire-bijlage/commit/dec7780a22e03b24fd9bf330f78fa00eb7fef9cf) Thanks [@abeforgit](https://github.com/abeforgit)! - bump mu-cl-resources to 1.23.0 to avoid fatal bug
+
+- [#76](https://github.com/lblod/app-reglementaire-bijlage/pull/76) [`76dec71`](https://github.com/lblod/app-reglementaire-bijlage/commit/76dec716d8983d5a6ebf5f12c0cc20599744cd45) Thanks [@elpoelma](https://github.com/elpoelma)! - Drop unnecessary/unused `status` property from `document-container` model
+
+- [`43d774d`](https://github.com/lblod/app-reglementaire-bijlage/commit/43d774de244618fe533d7513a475d32987891529) Thanks [@abeforgit](https://github.com/abeforgit)! - bump virtuoso to 1.2.0-rc.1
+
+- [#76](https://github.com/lblod/app-reglementaire-bijlage/pull/76) [`6ea8f03`](https://github.com/lblod/app-reglementaire-bijlage/commit/6ea8f03bb5bebb313a57552189312849230255a4) Thanks [@elpoelma](https://github.com/elpoelma)! - Drop unused `editor-document-statuses` model
+
 ## 6.13.4
 
 ### Patch Changes

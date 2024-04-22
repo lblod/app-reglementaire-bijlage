@@ -60,8 +60,8 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/published-snippets/"
   end
 
-  post "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
+  post "/publish-template/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/publish-template/"
   end
 
   post "/snippet-list-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do

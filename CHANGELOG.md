@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.13.6
+
+### Patch Changes
+
+- [`8893ab8`](https://github.com/lblod/app-reglementaire-bijlage/commit/8893ab8fcde5c213f94a69d52a40a21c38d8de9a) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version 8.4.0
+
 ## 6.13.5
 
 ### Patch Changes

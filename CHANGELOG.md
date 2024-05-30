@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.15.0
+
+### Minor Changes
+
+- [`1373e16`](https://github.com/lblod/app-reglementaire-bijlage/commit/1373e1642778587ffccaa459a09bea54deeafa96) Thanks [@piemonkey](https://github.com/piemonkey)! - Update frontend to 8.6.0
+
 ## 6.14.0
 
 ### Minor Changes

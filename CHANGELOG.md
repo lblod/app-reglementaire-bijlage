@@ -1,5 +1,31 @@
 # app-reglementaire-bijlage
 
+## 6.16.0
+
+### Minor Changes
+
+- [#77](https://github.com/lblod/app-reglementaire-bijlage/pull/77) [`b71102a`](https://github.com/lblod/app-reglementaire-bijlage/commit/b71102a719eacb780f5048cb7029675d0ade3f03) Thanks [@elpoelma](https://github.com/elpoelma)! - Implement updated data-model in mu-cl-resources config.
+
+  Addition of the following resource models:
+
+  - `template`
+  - `template-version`
+  - `decision-template`
+  - `regulatory-attachment-template`
+
+  Removal of the following resource models:
+
+  - `published-regulatory-attachment-container`
+  - `published-regulatory-attachment`
+
+- [#77](https://github.com/lblod/app-reglementaire-bijlage/pull/77) [`72e103f`](https://github.com/lblod/app-reglementaire-bijlage/commit/72e103f1d9cbfa42cb436483d09f4055deef3baf) Thanks [@elpoelma](https://github.com/elpoelma)! - Add migrations responsible for moving regulatory-attachment templates to new data-model
+
+- [#77](https://github.com/lblod/app-reglementaire-bijlage/pull/77) [`40e6318`](https://github.com/lblod/app-reglementaire-bijlage/commit/40e631835fc2ef37e7f2c583fa43c561bcabc314) Thanks [@elpoelma](https://github.com/elpoelma)! - Update mu-auth config to contain the following resource_types:
+  - "http://data.lblod.info/vocabularies/gelinktnotuleren/Template"
+  - "http://data.lblod.info/vocabularies/gelinktnotuleren/ReglementaireBijlageTemplate"
+  - "http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate"
+  - "http://data.lblod.info/vocabularies/gelinktnotuleren/TemplateVersie"
+
 ## 6.15.0
 
 ### Minor Changes

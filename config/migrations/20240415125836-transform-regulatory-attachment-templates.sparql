@@ -1,0 +1,14 @@
+
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX schema: <http://schema.org/>
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?template a gn:Template.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?template a gn:ReglementaireBijlageTemplate.
+  }
+}

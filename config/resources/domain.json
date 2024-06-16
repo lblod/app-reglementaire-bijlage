@@ -7,7 +7,9 @@
     "dbpedia": "http://dbpedia.org/ontology/",
     "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
     "gn": "http://data.lblod.info/vocabularies/gelinktnotuleren/",
-    "skos": "http://www.w3.org/2004/02/skos/core#"
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "pav": "http://purl.org/pav/"
   },
   "resources": {
     "files": {
@@ -46,38 +48,38 @@
       "features": ["include-uri"],
       "new-resource-base": "http://data.example.com/files/"
     },
-    "published-regulatory-attachment-containers": {
-      "name": "published-regulatory-attachment-container",
-      "class": "gn:ReglementaireBijlageTemplate",
+    "templates": {
+      "name": "template",
+      "class": "gn:Template",
       "relationships": {
         "current-version": {
           "predicate": "pav:hasCurrentVersion",
-          "target": "published-regulatory-attachment",
+          "target": "template-version",
           "cardinality": "one"
         },
         "versions": {
           "predicate": "pav:hasVersion",
-          "target": "published-regulatory-attachment",
+          "target": "template-version",
           "cardinality": "many"
         },
         "derived-from": {
           "predicate": "prov:derivedFrom",
           "target": "document-container",
           "cardinality": "one"
+        },
+        "publisher": {
+          "predicate": "dct:publisher",
+          "target": "administrative-unit",
+          "cardinality": "one"
         }
       },
-      "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment-container/"
+      "new-resource-base": "http://data.lblod.info/id/templates/"
     },
-    "published-regulatory-attachments": {
-      "name": "published-regulatory-attachment",
-      "class": "gn:ReglementaireBijlageTemplateVersie",
+    "template-versions": {
+      "name": "template-version",
+      "class": "gn:TemplateVersie",
       "super": ["file"],
       "relationships": {
-        "previous-version": {
-          "predicate": "pav:previousVersion",
-          "target": "published-regulatory-attachment",
-          "cardinality": "one"
-        },
         "derived-from": {
           "predicate": "prov:derivedFrom",
           "target": "editor-document",
@@ -88,9 +90,25 @@
         "valid-through": {
           "type": "string",
           "predicate": "schema:validThrough"
+        },
+        "title": {
+          "type": "string",
+          "predicate": "dct:title"
         }
       },
-      "new-resource-base": "http://data.lblod.info/id/published-regulatory-attachment/"
+      "new-resource-base": "http://data.lblod.info/id/template-version/"
+    },
+    "regulatory-attachment-templates": {
+      "name": "regulatory-attachment-template",
+      "class": "gn:ReglementaireBijlageTemplate",
+      "super": ["template"],
+      "new-resource-base": "http://data.lblod.info/id/reglementaire-bijlage-template/"
+    },
+    "decision-templates": {
+      "name": "decision-template",
+      "class": "gn:BesluitTemplate",
+      "super": ["template"],
+      "new-resource-base": "http://data.lblod.info/id/besluit-template/"
     },
     "skos-concepts": {
       "name": "skos-concept",

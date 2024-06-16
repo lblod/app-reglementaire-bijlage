@@ -51,12 +51,6 @@
             "cardinality": "one",
             "inverse": true
           },
-          "published-version": {
-            "predicate": "prov:derivedFrom",
-            "target": "published-regulatory-attachment",
-            "cardinality": "one",
-            "inverse": true
-          },
           "published-snippet-version": {
             "predicate": "prov:derivedFrom",
             "target": "published-snippet",
@@ -89,12 +83,6 @@
               "predicate": "pav:hasVersion",
               "target": "editor-document",
               "cardinality": "many"
-            },
-            "published-version": {
-              "predicate": "prov:derivedFrom",
-              "target": "published-regulatory-attachment-container",
-              "cardinality": "one",
-              "inverse": true
             },
             "published-snippet-version": {
               "predicate": "prov:derivedFrom",

@@ -16,25 +16,73 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
-  ###############
-  # SPARQL
-  ###############
+  #######################################################################
+  # domain.json                                                         #
+  #######################################################################
 
- match "/sparql", %{ layer: :api, accept: %{ sparql: true } } do
-    forward conn, [], "http://sparql-cache/sparql"
+  match "/code-lists/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/code-lists/"
   end
 
- match "/raw-sparql", %{ layer: :api, accept: %{ sparql: true } } do
-   forward conn, [], "http://database:8890/sparql"
- end
-
-   ###############################################################
-  # domain.json
-  ###############################################################
-
-  match "/regulatory-statements/*path" do
-    forward conn, path, "http://cache/regulatory-statements/"
+  match "/concept-schemes/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/concept-schemes/"
   end
+
+  match "/skos-concepts/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/skos-concepts/"
+  end
+
+  match "/concepts/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/concepts/"
+  end
+
+  match "/templates/*path" do
+    Proxy.forward conn, path, "http://cache/templates/"
+  end
+
+  match "/template-versions/*path" do
+    Proxy.forward conn, path, "http://cache/template-versions/"
+  end
+
+  match "/regulatory-attachment-templates/*path" do
+    Proxy.forward conn, path, "http://cache/regulatory-attachment-templates/"
+  end
+
+  match "/decision-templates/*path" do
+    Proxy.forward conn, path, "http://cache/decision-templates/"
+  end
+
+  match "/published-snippet-containers/*path" do
+    Proxy.forward conn, path, "http://cache/published-snippet-containers/"
+  end
+
+  match "/published-snippets/*path" do
+    Proxy.forward conn, path, "http://cache/published-snippets/"
+  end
+
+  post "/publish-template/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/publish-template/"
+  end
+
+  post "/snippet-list-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/snippet-list-publication-tasks/"
+  end
+
+  get "/tasks/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://publisher/tasks/"
+  end
+
+  match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/snippet-lists/"
+  end
+
+  match "/codex/sparql/*path" do
+    forward conn, path, "http://codex-proxy/sparql/"
+  end
+
+  #######################################################################
+  # editor.json                                                         #
+  #######################################################################
 
   match "/editor-documents/*path" do
     forward conn, path, "http://cache/editor-documents/"
@@ -52,9 +100,42 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/administrative-units/"
   end
 
-  #########
-  # login
-  ########
+  #######################################################################
+  # FILES                                                               #
+  #######################################################################
+
+  get "/files/:id/download", %{ layer: :api} do
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  get "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/files/"
+  end
+  patch "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/files/"
+  end
+  post "/files/*path", %{ accept: %{upload: true}, layer: :api} do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+  delete "/files/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+
+  #######################################################################
+  # SPARQL                                                              #
+  #######################################################################
+
+  match "/sparql", %{ layer: :api, accept: %{ sparql: true } } do
+    forward conn, [], "http://sparql-cache/sparql"
+  end
+
+  match "/raw-sparql", %{ layer: :api, accept: %{ sparql: true } } do
+    forward conn, [], "http://database:8890/sparql"
+  end
+
+  #######################################################################
+  # AUTH                                                                #
+  #######################################################################
+
   match "/mock/sessions/*path" do
     forward conn, path, "http://mocklogin/sessions/"
   end
@@ -79,86 +160,10 @@ defmodule Dispatcher do
     forward conn, [], "http://remotelogin/remote-login"
   end
 
-  ############
-  # resources
-  ############
 
-  match "/code-lists/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/code-lists/"
-  end
-
-  match "/concept-schemes/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/concept-schemes/"
-  end
-
-  match "/skos-concepts/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/skos-concepts/"
-  end
-
-  match "/concepts/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/concepts/"
-  end
-
-  match "/published-regulatory-attachment-containers/*path" do
-    Proxy.forward conn, path, "http://cache/published-regulatory-attachment-containers/"
-  end
-
-  match "/published-regulatory-attachments/*path" do
-    Proxy.forward conn, path, "http://cache/published-regulatory-attachments/"
-  end
-
-  match "/published-snippet-containers/*path" do
-    Proxy.forward conn, path, "http://cache/published-snippet-containers/"
-  end
-
-  match "/published-snippets/*path" do
-    Proxy.forward conn, path, "http://cache/published-snippets/"
-  end
-
-  post "/regulatory-attachment-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/regulatory-attachment-publication-tasks/"
-  end
-
-  post "/snippet-list-publication-tasks/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/snippet-list-publication-tasks/"
-  end
-
-  get "/tasks/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://publisher/tasks/"
-  end
-
-  match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/snippet-lists/"
-  end
-
-  match "/codex/sparql/*path" do
-    forward conn, path, "http://codex-proxy/sparql/"
-  end
-
-  #########
-  # files
-  ########
-
-  get "/files/:id/download", %{ layer: :api} do
-    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
-  end
-  get "/files/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/files/"
-  end
-  patch "/files/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/files/"
-  end
-  post "/files/*path", %{ accept: %{upload: true}, layer: :api} do
-    Proxy.forward conn, path, "http://file/files/"
-  end
-  delete "/files/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://file/files/"
-  end
-
-
-  ###############################################################
-  # frontend layer
-  ###############################################################
+  #######################################################################
+  # FRONTEND                                                            #
+  #######################################################################
 
   match "/assets/*path", %{ layer: :api } do
     Proxy.forward conn, path, "http://frontend/assets/"

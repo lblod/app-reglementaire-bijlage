@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.16.2
+
+### Patch Changes
+
+- [`4e2624d`](https://github.com/lblod/app-reglementaire-bijlage/commit/4e2624db0314537eec0a2a271b6949cfa76ab334) Thanks [@elpoelma](https://github.com/elpoelma)! - Update `reglement-publish-service` to version 5.0.1
+
 ## 6.16.1
 
 ### Patch Changes

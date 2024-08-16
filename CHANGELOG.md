@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.18.0
+
+### Minor Changes
+
+- [`03f54d5`](https://github.com/lblod/app-reglementaire-bijlage/commit/03f54d5a4e9d0fccc9b068f63ded8e9c49998cf1) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.2.1](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.2.1)
+
+- [#80](https://github.com/lblod/app-reglementaire-bijlage/pull/80) [`96cc300`](https://github.com/lblod/app-reglementaire-bijlage/commit/96cc3002fe56b06f2844b1977555554b993a7f53) Thanks [@abeforgit](https://github.com/abeforgit)! - Add vendor-proxy service
+
 ## 6.17.0
 
 ### Minor Changes

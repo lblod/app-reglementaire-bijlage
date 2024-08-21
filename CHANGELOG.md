@@ -1,5 +1,15 @@
 # app-reglementaire-bijlage
 
+## 6.19.0
+
+### Minor Changes
+
+- [`494452a`](https://github.com/lblod/app-reglementaire-bijlage/commit/494452ab3dcdd2e21778588902b57da22d02f4a0) Thanks [@lagartoverde](https://github.com/lagartoverde)! - bump frontend to [v9.3.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.3.0)
+
+### Patch Changes
+
+- [`34c117e`](https://github.com/lblod/app-reglementaire-bijlage/commit/34c117e6c0b6a1a8ef5f7074e206ddff1071c0fd) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Bump changesets-release-it-plugin to 0.1.2
+
 ## 6.18.0
 
 ### Minor Changes

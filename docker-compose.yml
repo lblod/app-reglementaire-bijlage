@@ -6,7 +6,7 @@ x-logging: &default-logging
     max-file: "3"
 services:
   frontend:
-    image: lblod/frontend-reglementaire-bijlage:9.2.1
+    image: lblod/frontend-reglementaire-bijlage:9.3.0
     restart: always
     environment:
       EMBER_OAUTH_API_REDIRECT_URL: "https://reglementairebijlagen.lblod.info/authorization/callback"
@@ -131,7 +131,7 @@ services:
     image: lblod/vendor-proxy-service:0.1.0
     environment:
       QUERY_BASE_URL: 'https://mandatenbeheer.lblod.info'
-      VENDOR_KEY: 'secret'
+      VENDOR_KEY: '1e328f96-ebd5-42d8-9c40-f451417858ff'
       VENDOR_URI: 'http://data.lblod.info/vendors/75ad4503-1699-4e43-8cab-a494142ae571'
       AUTH_GROUP: 'org'
 

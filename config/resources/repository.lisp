@@ -40,3 +40,4 @@
 (add-prefix "nie" "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#")
 (add-prefix "dbpedia" "http://dbpedia.org/ontology/")
 (add-prefix "gn" "http://data.lblod.info/vocabularies/gelinktnotuleren/")
+(add-prefix "say" "https://say.data.gift/ns/")

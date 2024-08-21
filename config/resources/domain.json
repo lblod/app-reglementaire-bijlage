@@ -215,6 +215,10 @@
         "label": {
           "type": "string",
           "predicate": "skos:prefLabel"
+        },
+        "imported-resources": {
+          "type": "string-set",
+          "predicate": "say:snippetImportedResource"
         }
       },
       "relationships": {

@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.20.0
+
+### Minor Changes
+
+- [#81](https://github.com/lblod/app-reglementaire-bijlage/pull/81) [`4f89f6f`](https://github.com/lblod/app-reglementaire-bijlage/commit/4f89f6fce509bf73560a10b85de6d3ed1c0aa80b) Thanks [@piemonkey](https://github.com/piemonkey)! - Add imported resources to snippet list model
+
+- [`2effc5c`](https://github.com/lblod/app-reglementaire-bijlage/commit/2effc5c35de28137216ed8f9d00b99efff54ea03) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.4.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.4.0)
+
 ## 6.19.0
 
 ### Minor Changes

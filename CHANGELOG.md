@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.21.0
+
+### Minor Changes
+
+- [#82](https://github.com/lblod/app-reglementaire-bijlage/pull/82) [`05070dc`](https://github.com/lblod/app-reglementaire-bijlage/commit/05070dc9e10db493a9e31591c74981fab91d5157) Thanks [@piemonkey](https://github.com/piemonkey)! - Remove vendor-proxy service as templates should be municipality agnostic, so it is not needed.
+
+- [`0abe517`](https://github.com/lblod/app-reglementaire-bijlage/commit/0abe5172c8c3125faf66a1a9b21400e8c12d4b40) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.5.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.5.0)
+
 ## 6.20.0
 
 ### Minor Changes

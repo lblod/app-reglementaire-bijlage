@@ -206,7 +206,7 @@
     },
     "snippet-lists": {
       "name": "snippet-list",
-      "class": "ext:SnippetList",
+      "class": "gn:SnippetList",
       "attributes": {
         "created-on": {
           "type": "datetime",
@@ -228,8 +228,8 @@
           "cardinality": "one"
         },
         "snippets": {
-          "predicate": "ext:hasSnippet",
-          "target": "document-container",
+          "predicate": "gn:hasSnippet",
+          "target": "snippet",
           "cardinality": "many"
         },
         "templates": {
@@ -242,46 +242,58 @@
       "features": ["include-uri"],
       "new-resource-base": "http://lblod.data.gift/snippet-lists/"
     },
-    "published-snippet-containers": {
-      "name": "published-snippet-container",
-      "class": "ext:PublishedSnippetContainer",
+    "snippets": {
+      "name": "snippet",
+      "class": "gn:Snippet",
+      "attributes": {
+        "position": {
+          "type": "number",
+          "predicate": "schema:position"
+        },
+        "created-on": {
+          "type": "datetime",
+          "predicate": "pav:createdOn"
+        },
+        "updated-on": {
+          "type": "datetime",
+          "predicate": "pav:lastUpdateOn"
+        }
+      },
       "relationships": {
         "current-version": {
           "predicate": "pav:hasCurrentVersion",
-          "target": "published-snippet",
+          "target": "snippet-version",
           "cardinality": "one"
         },
-        "versions": {
+        "revisions": {
           "predicate": "pav:hasVersion",
-          "target": "published-snippet",
+          "target": "snippet-version",
           "cardinality": "many"
         },
-        "derived-from": {
-          "predicate": "prov:derivedFrom",
-          "target": "document-container",
-          "cardinality": "one"
-        },
         "snippet-list": {
-          "predicate": "ext:fromSnippetList",
+          "predicate": "gn:hasSnippet",
           "target": "snippet-list",
-          "cardinality": "one"
+          "cardinality": "one",
+          "inverse": true
         }
       },
-      "new-resource-base": "http://lblod.data.gift/published-snippet-containers/"
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/id/snippets/"
     },
-    "published-snippets": {
-      "name": "published-snippet",
-      "class": "ext:PublishedSnippet",
+    "snippet-versions": {
+      "name": "snippet-version",
+      "class": "gn:SnippetVersion",
       "relationships": {
         "previous-version": {
           "predicate": "pav:previousVersion",
-          "target": "published-snippet",
+          "target": "snippet-version",
           "cardinality": "one"
         },
-        "derived-from": {
-          "predicate": "prov:derivedFrom",
-          "target": "editor-document",
-          "cardinality": "one"
+        "snippet": {
+          "predicate": "pav:hasVersion",
+          "target": "snippet",
+          "cardinality": "one",
+          "inverse": true
         }
       },
       "attributes": {
@@ -302,7 +314,8 @@
           "predicate": "schema:validThrough"
         }
       },
-      "new-resource-base": "http://lblod.data.gift/published-snippets/"
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/id/snippet-versions/"
     }
   }
 }

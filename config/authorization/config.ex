@@ -36,10 +36,10 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/Template",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/ReglementaireBijlageTemplate",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate",
-
-                        "http://mu.semte.ch/vocabularies/ext/SnippetList",
-                        "http://mu.semte.ch/vocabularies/ext/PublishedSnippetContainer",
-                        "http://mu.semte.ch/vocabularies/ext/PublishedSnippet",
+                        
+                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetList",
+                        "http://data.lblod.info/vocabularies/gelinktnotuleren/Snippet",
+                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetVersion",
                       ]
                     } }
                 ]
@@ -68,9 +68,9 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/Template",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/ReglementaireBijlageTemplate",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate",
-                        "http://mu.semte.ch/vocabularies/ext/SnippetList",
-                        "http://mu.semte.ch/vocabularies/ext/PublishedSnippetContainer",
-                        "http://mu.semte.ch/vocabularies/ext/PublishedSnippet",
+                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetList",
+                        "http://data.lblod.info/vocabularies/gelinktnotuleren/Snippet",
+                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetVersion",
                       ]
                     } }
                 ]

@@ -52,12 +52,16 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/decision-templates/"
   end
 
-  match "/published-snippet-containers/*path" do
-    Proxy.forward conn, path, "http://cache/published-snippet-containers/"
+  match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/snippet-lists/"
   end
 
-  match "/published-snippets/*path" do
-    Proxy.forward conn, path, "http://cache/published-snippets/"
+  match "/snippets/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/snippets/"
+  end
+
+  match "/snippet-versions/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/snippet-versions/"
   end
 
   post "/publish-template/*path", %{ accept: %{json: true}, layer: :api} do
@@ -70,10 +74,6 @@ defmodule Dispatcher do
 
   get "/tasks/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://publisher/tasks/"
-  end
-
-  match "/snippet-lists/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/snippet-lists/"
   end
 
   match "/codex/sparql/*path" do

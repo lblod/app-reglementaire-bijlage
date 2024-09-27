@@ -50,12 +50,6 @@
             "target": "editor-document",
             "cardinality": "one",
             "inverse": true
-          },
-          "published-snippet-version": {
-            "predicate": "prov:derivedFrom",
-            "target": "published-snippet",
-            "cardinality": "one",
-            "inverse": true
           }
         },
         "new-resource-base": "http://data.lblod.info/editor-documents/"
@@ -83,12 +77,6 @@
               "predicate": "pav:hasVersion",
               "target": "editor-document",
               "cardinality": "many"
-            },
-            "published-snippet-version": {
-              "predicate": "prov:derivedFrom",
-              "target": "published-snippet-container",
-              "cardinality": "one",
-              "inverse": true
             },
             "snippet-lists": {
               "predicate": "ext:hasSnippetLists",

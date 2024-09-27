@@ -1,0 +1,83 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippetList a ext:SnippetList.
+    ?snippetList ext:hasSnippet ?documentContainer.
+  }
+}
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippetList a gn:SnippetList.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippetList a ext:SnippetList.
+    OPTIONAL {
+      ?snippetList ext:hasSnippet ?documentContainer.
+    }
+  }
+};
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippet a ext:PublishedSnippetContainer.
+    ?snippet prov:derivedFrom ?derivedFrom.
+    ?snippet ext:fromSnippetList ?snippetList.
+  }
+  GRAPH ?organizationGraph {
+    ?derivedFrom ?p ?o.
+    ?derivedFrom pav:hasCurrentVersion ?derivedFromCurrentVersion.
+  }
+}
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippet a gn:Snippet.
+    ?snippet pav:createdOn ?createdOn.
+    ?snippet pav:lastUpdateOn ?updatedOn.
+    ?snippetList gn:hasSnippet ?snippet.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippet a ext:PublishedSnippetContainer.
+    ?snippet prov:derivedFrom ?derivedFrom.
+    OPTIONAL {
+      ?snippet ext:fromSnippetList ?snippetList.
+    }
+  }
+  GRAPH ?organizationGraph {
+    ?derivedFrom ?p ?o.
+    ?derivedFrom pav:hasCurrentVersion ?derivedFromCurrentVersion.
+    ?derivedFromCurrentVersion pav:createdOn ?createdOn.
+    ?derivedFromCurrentVersion pav:lastUpdateOn ?updatedOn.
+  }    
+};
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippetVersion a ext:PublishedSnippet.
+    ?snippetVersion prov:derivedFrom ?derivedFrom.
+  }
+  GRAPH ?organizationGraph {
+    ?derivedFrom ?p ?o.
+  }
+}
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippetVersion a gn:SnippetVersion.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?snippetVersion a ext:PublishedSnippet.
+    ?snippetVersion prov:derivedFrom ?derivedFrom.
+  }
+  GRAPH ?organizationGraph {
+    ?derivedFrom ?p ?o.
+  }
+}

@@ -37,9 +37,9 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/ReglementaireBijlageTemplate",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate",
                         
-                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetList",
-                        "http://data.lblod.info/vocabularies/gelinktnotuleren/Snippet",
-                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetVersion",
+                        "https://say.data.gift/ns/SnippetList",
+                        "https://say.data.gift/ns/Snippet",
+                        "https://say.data.gift/ns/SnippetVersion",
                       ]
                     } }
                 ]
@@ -68,9 +68,10 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/Template",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/ReglementaireBijlageTemplate",
                         "http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate",
-                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetList",
-                        "http://data.lblod.info/vocabularies/gelinktnotuleren/Snippet",
-                        "http://data.lblod.info/vocabularies/gelinktnotuleren/SnippetVersion",
+
+                        "https://say.data.gift/ns/SnippetList",
+                        "https://say.data.gift/ns/Snippet",
+                        "https://say.data.gift/ns/SnippetVersion",
                       ]
                     } }
                 ]

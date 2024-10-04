@@ -9,7 +9,8 @@
     "gn": "http://data.lblod.info/vocabularies/gelinktnotuleren/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "prov": "http://www.w3.org/ns/prov#",
-    "pav": "http://purl.org/pav/"
+    "pav": "http://purl.org/pav/",
+    "say": "https://say.data.gift/ns/"
   },
   "resources": {
     "files": {
@@ -206,7 +207,7 @@
     },
     "snippet-lists": {
       "name": "snippet-list",
-      "class": "gn:SnippetList",
+      "class": "say:SnippetList",
       "attributes": {
         "created-on": {
           "type": "datetime",
@@ -228,7 +229,7 @@
           "cardinality": "one"
         },
         "snippets": {
-          "predicate": "gn:hasSnippet",
+          "predicate": "say:hasSnippet",
           "target": "snippet",
           "cardinality": "many"
         },
@@ -244,7 +245,7 @@
     },
     "snippets": {
       "name": "snippet",
-      "class": "gn:Snippet",
+      "class": "say:Snippet",
       "attributes": {
         "position": {
           "type": "number",
@@ -271,7 +272,7 @@
           "cardinality": "many"
         },
         "snippet-list": {
-          "predicate": "gn:hasSnippet",
+          "predicate": "say:hasSnippet",
           "target": "snippet-list",
           "cardinality": "one",
           "inverse": true
@@ -282,7 +283,7 @@
     },
     "snippet-versions": {
       "name": "snippet-version",
-      "class": "gn:SnippetVersion",
+      "class": "say:SnippetVersion",
       "relationships": {
         "previous-version": {
           "predicate": "pav:previousVersion",

@@ -1,7 +1,7 @@
 PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
-PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
 PREFIX pav: <http://purl.org/pav/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX say: <https://say.data.gift/ns/>
 
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
@@ -11,7 +11,7 @@ DELETE {
 }
 INSERT {
   GRAPH <http://mu.semte.ch/graphs/public> {
-    ?snippetList a gn:SnippetList.
+    ?snippetList a say:SnippetList.
   }
 }
 WHERE {
@@ -36,10 +36,10 @@ DELETE {
 }
 INSERT {
   GRAPH <http://mu.semte.ch/graphs/public> {
-    ?snippet a gn:Snippet.
+    ?snippet a say:Snippet.
     ?snippet pav:createdOn ?createdOn.
     ?snippet pav:lastUpdateOn ?updatedOn.
-    ?snippetList gn:hasSnippet ?snippet.
+    ?snippetList say:hasSnippet ?snippet.
   }
 }
 WHERE {
@@ -69,7 +69,7 @@ DELETE {
 }
 INSERT {
   GRAPH <http://mu.semte.ch/graphs/public> {
-    ?snippetVersion a gn:SnippetVersion.
+    ?snippetVersion a say:SnippetVersion.
   }
 }
 WHERE {

@@ -1,5 +1,12 @@
 # app-reglementaire-bijlage
 
+## 6.22.0
+
+### Minor Changes
+
+- [#84](https://github.com/lblod/app-reglementaire-bijlage/pull/84) [`bfb051c`](https://github.com/lblod/app-reglementaire-bijlage/commit/bfb051c6a79b28ad6bc09b4b9cee71efa819b717) Thanks [@elpoelma](https://github.com/elpoelma)! - Rework snippet data models and add support for ordered snippets in a snippet-list
+  Update frontend to version 9.6.1
+
 ## 6.21.1
 
 ### Patch Changes

@@ -1,0 +1,18 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+DELETE {
+  GRAPH ?g {
+    ?documentContainer ext:hasSnippetLists ?list.
+  }
+}
+INSERT {
+  GRAPH ?g  {
+    ?documentContainer ext:linkedSnippetList ?list.
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?documentContainer a ext:DocumentContainer.
+    ?documentContainer ext:hasSnippetLists ?list.
+  }
+}

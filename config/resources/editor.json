@@ -78,8 +78,8 @@
               "target": "editor-document",
               "cardinality": "many"
             },
-            "snippet-lists": {
-              "predicate": "ext:hasSnippetLists",
+            "linked-snippet-lists": {
+              "predicate": "ext:linkedSnippetList",
               "target": "snippet-list",
               "cardinality": "many"
             }

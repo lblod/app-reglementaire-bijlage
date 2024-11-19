@@ -232,12 +232,6 @@
           "predicate": "say:hasSnippet",
           "target": "snippet",
           "cardinality": "many"
-        },
-        "templates": {
-          "predicate": "ext:hasSnippetLists",
-          "target": "document-container",
-          "cardinality": "many",
-          "inverse": true
         }
       },
       "features": ["include-uri"],
@@ -276,6 +270,11 @@
           "target": "snippet-list",
           "cardinality": "one",
           "inverse": true
+        },
+        "linked-snippet-lists": {
+          "predicate": "ext:linkedSnippetList",
+          "target": "snippet-list",
+          "cardinality": "many"
         }
       },
       "features": ["include-uri"],

@@ -1,5 +1,17 @@
 # app-reglementaire-bijlage
 
+## 6.26.0
+
+### Minor Changes
+
+- [#85](https://github.com/lblod/app-reglementaire-bijlage/pull/85) [`4402ee0`](https://github.com/lblod/app-reglementaire-bijlage/commit/4402ee0e4318a24d12daccb707cf20578b5054ea) Thanks [@elpoelma](https://github.com/elpoelma)! - Extend/generalize connected snippet-list feature:
+
+  - Rename `snippet-lists` JSON:API relationship defined on `document-container` to `linked-snippet-lists`
+  - Add `linked-snippet-lists` JSON:API relationship to `snippet` data-model
+  - Remove unused `templates` JSON:API relationship of `snippet-list` data-model
+
+- [`3367a19`](https://github.com/lblod/app-reglementaire-bijlage/commit/3367a198c7c201b0b5f7f4139beaff4d3e70f7c6) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.12.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.12.0)
+
 ## 6.25.0
 
 ### Minor Changes

@@ -89,7 +89,7 @@
       },
       "attributes": {
         "valid-through": {
-          "type": "string",
+          "type": "datetime",
           "predicate": "schema:validThrough"
         },
         "title": {

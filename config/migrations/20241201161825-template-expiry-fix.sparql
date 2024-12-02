@@ -1,0 +1,22 @@
+PREFIX schema: <http://schema.org/>      
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+DELETE {
+  GRAPH ?g {
+    ?templateVersion schema:validThrough ?validThrough.
+  }
+}
+INSERT {
+  GRAPH ?g {
+    ?templateVersion schema:validThrough ?vtDate.
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?templateVersion a gn:TemplateVersie;
+        schema:validThrough ?validThrough.
+    FILTER (DATATYPE(?validThrough) = xsd:string).
+    BIND (STRDT(?validThrough, xsd:dateTime) as ?vtDate).
+  }
+}

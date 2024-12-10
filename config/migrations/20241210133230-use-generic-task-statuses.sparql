@@ -1,0 +1,25 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX task: <http://redpencil.data.gift/vocabularies/tasks/>
+
+DELETE {
+  GRAPH ?g {
+    ?task adms:status ?oldStatus.
+  }
+}
+INSERT {
+  GRAPH ?g {
+    ?task adms:status ?newStatus.
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?task a task:Task;
+          adms:status ?oldStatus.
+    VALUES (?oldStatus ?newStatus) {
+      (<http://lblod.data.gift/besluit-publicatie-melding-statuses/created> <http://redpencil.data.gift/id/concept/JobStatus/scheduled>)
+      (<http://lblod.data.gift/besluit-publicatie-melding-statuses/ongoing> <http://redpencil.data.gift/id/concept/JobStatus/busy>)
+      (<http://lblod.data.gift/besluit-publicatie-melding-statuses/success> <http://redpencil.data.gift/id/concept/JobStatus/success>)
+      (<http://lblod.data.gift/besluit-publicatie-melding-statuses/failure> <http://redpencil.data.gift/id/concept/JobStatus/failed>)
+    }
+  }
+}

@@ -1,0 +1,19 @@
+DELETE {
+  GRAPH ?g {
+
+  }
+}
+INSERT {
+  GRAPH ?g {
+
+  }
+}
+WHERE {
+  VALUES (?oldStatus ?newStatus) {
+    (<http://lblod.data.gift/besluit-publicatie-melding-statuses/created> <http://redpencil.data.gift/id/concept/JobStatus/scheduled>)
+    (<http://lblod.data.gift/besluit-publicatie-melding-statuses/ongoing> <http://redpencil.data.gift/id/concept/JobStatus/busy>)
+    (<http://lblod.data.gift/besluit-publicatie-melding-statuses/success> <http://redpencil.data.gift/id/concept/JobStatus/success>)
+    (<http://lblod.data.gift/besluit-publicatie-melding-statuses/failure> <http://redpencil.data.gift/id/concept/JobStatus/failed>)
+  }
+  
+}

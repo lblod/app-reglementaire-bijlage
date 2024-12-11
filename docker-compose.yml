@@ -6,7 +6,7 @@ x-logging: &default-logging
     max-file: "3"
 services:
   frontend:
-    image: lblod/frontend-reglementaire-bijlage:9.13.3
+    image: lblod/frontend-reglementaire-bijlage:9.14.0
     restart: always
     environment:
       EMBER_OAUTH_API_REDIRECT_URL: "https://reglementairebijlagen.lblod.info/authorization/callback"
@@ -109,7 +109,7 @@ services:
       BACKEND_HOST: database
     restart: always
   publisher:
-    image: lblod/reglement-publish-service:5.0.1
+    image: lblod/reglement-publish-service:5.1.0
     links:
       - database:database
     volumes:

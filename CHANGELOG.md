@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.28.0
+
+### Minor Changes
+
+- [`e16c242`](https://github.com/lblod/app-reglementaire-bijlage/commit/e16c242860e4d9ff7b3eaae58659931c8d5fa687) Thanks [@piemonkey](https://github.com/piemonkey)! - Update frontend to 9.14.0 to fix a crash on save and publisher to 5.1.0 to support unpublishing templates
+
+- [#86](https://github.com/lblod/app-reglementaire-bijlage/pull/86) [`8d42237`](https://github.com/lblod/app-reglementaire-bijlage/commit/8d422372411c27343e4ca46dea24723f7a9d1d53) Thanks [@piemonkey](https://github.com/piemonkey)! - Correct schema:validThrough relationship of Template Version to be an xsd:dateTime
+
 ## 6.27.3
 
 ### Patch Changes

@@ -1,0 +1,144 @@
+{
+  "version": "0.1",
+  "prefixes": {
+    "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+    "dct": "http://purl.org/dc/terms/",
+    "dbpedia": "http://dbpedia.org/ontology/",
+    "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
+    "cogs": "http://vocab.deri.ie/cogs#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "task": "http://redpencil.data.gift/vocabularies/tasks/",
+    "oslc": "http://open-services.net/ns/core#"
+  },
+  "resources": {
+    "files": {
+      "name": "file",
+      "class": "nfo:FileDataObject",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "predicate": "nfo:fileName"
+        },
+        "format": {
+          "type": "string",
+          "predicate": "dct:format"
+        },
+        "size": {
+          "type": "number",
+          "predicate": "nfo:fileSize"
+        },
+        "extension": {
+          "type": "string",
+          "predicate": "dbpedia:fileExtension"
+        },
+        "created": {
+          "type": "datetime",
+          "predicate": "nfo:fileCreated"
+        }
+      },
+      "relationships": {
+        "download": {
+          "predicate": "nie:dataSource",
+          "target": "file",
+          "cardinality": "one",
+          "inverse": true
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.example.com/files/"
+    },
+    "jobs": {
+      "name": "job",
+      "class": "cogs:Job",
+      "attributes": {
+        "created": {
+          "type": "datetime",
+          "predicate": "dct:created"
+        },
+        "modified": {
+          "type": "datetime",
+          "predicate": "dct:modified"
+        },
+        "creator": {
+          "type": "url",
+          "predicate": "dct:creator"
+        },
+        "status": {
+          "type": "url",
+          "predicate": "adms:status"
+        },
+        "operation": {
+          "type": "url",
+          "predicate": "task:operation"
+        }
+      },
+      "relationships": {
+        "job-error": {
+          "target": "job-error",
+          "cardinality": "one",
+          "predicate": "task:error"
+        },
+        "tasks": {
+          "target": "task",
+          "cardinality": "many",
+          "predicate": "dct:isPartOf",
+          "inverse": true
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://redpencil.data.gift/id/job/"
+    },
+    "job-errors": {
+      "name": "job-error",
+      "class": "oslc:Error",
+      "attributes": {
+        "message": {
+          "type": "string",
+          "predicate": "oslc:message"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://redpencil.data.gift/id/jobs/error/"
+    },
+    "tasks": {
+      "name": "task",
+      "class": "task:Task",
+      "attributes": {
+        "created": {
+          "type": "datetime",
+          "predicate": "dct:created"
+        },
+        "modified": {
+          "type": "datetime",
+          "predicate": "dct:modified"
+        },
+        "status": {
+          "type": "url",
+          "predicate": "adms:status"
+        },
+        "operation": {
+          "type": "url",
+          "predicate": "task:operation"
+        },
+        "index": {
+          "type": "string",
+          "predicate": "task:index"
+        }
+      },
+      "relationships": {
+        "job-error": {
+          "target": "job-error",
+          "cardinality": "one",
+          "predicate": "task:error"
+        },
+        "job": {
+          "target": "job",
+          "cardinality": "one",
+          "predicate": "dct:isPartOf"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://redpencil.data.gift/id/task/"
+    }
+  }
+}

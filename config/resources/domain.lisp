@@ -9,6 +9,7 @@
 (defparameter *cache-count-queries* t)
 
 ;; reading in the domain.json
+(read-domain-file "generic.json")
 (read-domain-file "domain.json")
 (read-domain-file "auth.json")
 (read-domain-file "editor.json")

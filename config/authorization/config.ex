@@ -104,6 +104,8 @@ defmodule Acl.UserGroups.Config do
                         "http://vocab.deri.ie/cogs#Job",
                         "http://open-services.net/ns/core#Error",
                         "http://redpencil.data.gift/vocabularies/tasks/Task",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive",
                       ] } } ] },
 
       # // CLEANUP

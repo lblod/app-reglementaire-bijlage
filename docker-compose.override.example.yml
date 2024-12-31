@@ -1,0 +1,23 @@
+# This file contains overrides that are useful for different development situations. These are
+# intended to be used at the same time as the docker-compose.dev.yml file.
+
+# services:
+  ### Local dev setup: tweaks to .dev.yml to allow for running side-by-side with app-gn
+  # identifier:
+  #   ports: !override
+  #     - "180:80"
+  # virtuoso:
+  #   ports: !override
+  #     - "9890:8890"
+  # yasgui:
+  #   image: erikap/yasgui
+  #   ports: !override
+  #     - "9891:80"
+  #   environment:
+  #     ENABLE_ENDPOINT_SELECTOR: "true"
+  #     DEFAULT_SPARQL_ENDPOINT: "http://localhost:9890/sparql"
+  # tlsproxy:
+  #   image: caddy:2
+  #   command: "/bin/false"
+  #   ports: !reset null
+  ### END local dev setup

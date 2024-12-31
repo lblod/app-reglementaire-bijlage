@@ -144,7 +144,7 @@ defmodule Dispatcher do
   # Template Export Service                                             #
   #######################################################################
   post "/export-templates" do
-    Proxy.forward conn, [], "http://template-export-service/export"
+    Proxy.forward conn, [], "http://template-export/export"
   end
 
   #######################################################################

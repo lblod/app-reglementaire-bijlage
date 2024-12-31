@@ -21,3 +21,17 @@
   #   command: "/bin/false"
   #   ports: !reset null
   ### END local dev setup
+
+  # Actually running template-export service before it's published to docker hub
+  # template-export:
+  #   image: !reset null
+  #   build: "https://github.com/lblod/template-export-service.git#feat/initial-version"
+  #   volumes:
+  #     - /path/to/template-export-service:/app
+  #   # environment:
+  #   #   NODE_ENV: development
+  #   #   LOGGING_LEVEL: "debug"
+  #   #   LOG_SPARQL_ALL: false
+  #   #   DEBUG_AUTH_HEADERS: false
+  #   # ports:
+  #   #   - "9229:9229"

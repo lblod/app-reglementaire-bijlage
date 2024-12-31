@@ -52,3 +52,5 @@ services:
       - ./config/dev/tlsproxy/Caddyfile:/etc/caddy/Caddyfile
   codex-proxy:
     restart: "no"
+  template-export:
+    restart: "no"

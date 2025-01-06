@@ -80,6 +80,11 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/results/"
   end
 
+
+  get "/data-containers/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/data-containers/"
+  end
+  
   get "/archives/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://cache/archives/"
   end

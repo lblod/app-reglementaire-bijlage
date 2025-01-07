@@ -1,5 +1,25 @@
 # app-reglementaire-bijlage
 
+## 6.30.0
+
+### Minor Changes
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`ab0dd05`](https://github.com/lblod/app-reglementaire-bijlage/commit/ab0dd05bc1874dff00d8c17d9479616fac3f30a0) Thanks [@elpoelma](https://github.com/elpoelma)! - Add `task`, `job` and `job-error` models to resources config
+
+### Patch Changes
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`9d0e106`](https://github.com/lblod/app-reglementaire-bijlage/commit/9d0e1066844d592b9fa1180b62b80ffc87f48cc3) Thanks [@elpoelma](https://github.com/elpoelma)! - Update `lblod/reglement-publish-service` to version [5.2.0](https://github.com/lblod/reglement-publish-service/releases/tag/v5.2.0)
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`925431b`](https://github.com/lblod/app-reglementaire-bijlage/commit/925431be9c76e8834f273fa8fb6f68393dbb8fcd) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.15.2](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.15.2)
+
+- [#89](https://github.com/lblod/app-reglementaire-bijlage/pull/89) [`9680391`](https://github.com/lblod/app-reglementaire-bijlage/commit/9680391b24ac465a256dd059c4cb59825d351b15) Thanks [@elpoelma](https://github.com/elpoelma)! - mu-auth - add the following types to the `org-wf` graph-spec:
+
+  - `http://vocab.deri.ie/cogs#Job`
+  - `http://open-services.net/ns/core#Error`
+  - `http://redpencil.data.gift/vocabularies/tasks/Task`
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`bf0eb21`](https://github.com/lblod/app-reglementaire-bijlage/commit/bf0eb2130fc39528cc59eb943d1c95c1e79ac46b) Thanks [@elpoelma](https://github.com/elpoelma)! - Add migration which introduces more generic task status-URIs
+
 ## 6.29.0
 
 ### Minor Changes

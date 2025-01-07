@@ -109,7 +109,7 @@ services:
       BACKEND_HOST: database
     restart: always
   publisher:
-    image: lblod/reglement-publish-service:5.1.0
+    image: lblod/reglement-publish-service:5.2.0
     links:
       - database:database
     volumes:

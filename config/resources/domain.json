@@ -13,42 +13,6 @@
     "say": "https://say.data.gift/ns/"
   },
   "resources": {
-    "files": {
-      "name": "file",
-      "class": "nfo:FileDataObject",
-      "attributes": {
-        "name": {
-          "type": "string",
-          "predicate": "nfo:fileName"
-        },
-        "format": {
-          "type": "string",
-          "predicate": "dct:format"
-        },
-        "size": {
-          "type": "number",
-          "predicate": "nfo:fileSize"
-        },
-        "extension": {
-          "type": "string",
-          "predicate": "dbpedia:fileExtension"
-        },
-        "created": {
-          "type": "datetime",
-          "predicate": "nfo:fileCreated"
-        }
-      },
-      "relationships": {
-        "download": {
-          "predicate": "nie:dataSource",
-          "target": "file",
-          "cardinality": "one",
-          "inverse": true
-        }
-      },
-      "features": ["include-uri"],
-      "new-resource-base": "http://data.example.com/files/"
-    },
     "templates": {
       "name": "template",
       "class": "gn:Template",

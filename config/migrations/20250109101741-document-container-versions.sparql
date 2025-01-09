@@ -1,0 +1,16 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX pav: <http://purl.org/pav/>
+
+INSERT {
+  GRAPH ?g {
+  	?documentContainer pav:hasVersion ?currentVersion.
+    ?documentContainer pav:hasVersion ?previousVersion.
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?documentContainer a ext:DocumentContainer.
+    ?documentContainer pav:hasCurrentVersion ?currentVersion.
+    ?currentVersion pav:previousVersion+ ?previousVersion.
+  }
+}

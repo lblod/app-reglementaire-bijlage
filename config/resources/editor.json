@@ -50,6 +50,12 @@
             "target": "editor-document",
             "cardinality": "one",
             "inverse": true
+          },
+          "document-container": {
+            "predicate": "pav:hasVersion",
+            "target": "document-container",
+            "cardinality": "one",
+            "inverse": true
           }
         },
         "new-resource-base": "http://data.lblod.info/editor-documents/"

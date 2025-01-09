@@ -160,6 +160,10 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://template-export/export"
   end
 
+  post "/import-templates" do
+    Proxy.forward conn, [], "http://template-export/import"
+  end
+
   #######################################################################
   # SPARQL                                                              #
   #######################################################################

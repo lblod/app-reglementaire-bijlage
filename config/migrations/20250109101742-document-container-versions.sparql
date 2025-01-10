@@ -1,0 +1,16 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX pav: <http://purl.org/pav/>
+
+INSERT {
+  GRAPH ?g {
+  	?documentContainer pav:hasVersion ?version.
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?documentContainer a ext:DocumentContainer.
+    # This is a workaround due to the transitive '*'-operator not working as expected 
+    # when specifying a graph and the amount of predicate matches being 0
+  	?documentContainer (pav:hasCurrentVersion/pav:previousVersion+)|pav:hasCurrentVersion ?version.
+  }
+}

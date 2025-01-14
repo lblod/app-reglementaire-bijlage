@@ -40,17 +40,6 @@
             }
         },
         "relationships": {
-          "previous-version": {
-            "predicate": "pav:previousVersion",
-            "target": "editor-document",
-            "cardinality": "one"
-          },
-          "next-version": {
-            "predicate": "pav:previousVersion",
-            "target": "editor-document",
-            "cardinality": "one",
-            "inverse": true
-          },
           "document-container": {
             "predicate": "pav:hasVersion",
             "target": "document-container",
@@ -58,6 +47,7 @@
             "inverse": true
           }
         },
+        "features": ["include-uri"],
         "new-resource-base": "http://data.lblod.info/editor-documents/"
       },
       "document-containers": {
@@ -90,6 +80,7 @@
               "cardinality": "many"
             }
         },
+        "features": ["include-uri"],
         "new-resource-base": "http://data.lblod.info/document-containers/"
       },
       "editor-document-folders": {
@@ -101,6 +92,7 @@
             "predicate": "ext:EditorDocumentFolderName"
           }
         },
+        "features": ["include-uri"],
         "new-resource-base": "http://data.lblod.info/editor-document-folders/"
       }
   }

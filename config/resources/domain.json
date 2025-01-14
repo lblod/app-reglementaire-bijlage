@@ -248,11 +248,6 @@
       "name": "snippet-version",
       "class": "say:SnippetVersion",
       "relationships": {
-        "previous-version": {
-          "predicate": "pav:previousVersion",
-          "target": "snippet-version",
-          "cardinality": "one"
-        },
         "snippet": {
           "predicate": "pav:hasVersion",
           "target": "snippet",

@@ -1,0 +1,7 @@
+PREFIX pav: <http://purl.org/pav/>
+
+DELETE WHERE {
+  GRAPH ?g {
+    ?version1 pav:previousVersion ?version2 .
+  }
+}

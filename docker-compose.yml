@@ -1,9 +1,9 @@
-version: '3.4'
 x-logging: &default-logging
   driver: "json-file"
   options:
     max-size: "10m"
     max-file: "3"
+
 services:
   frontend:
     image: lblod/frontend-reglementaire-bijlage:9.15.3
@@ -126,4 +126,9 @@ services:
     image: lblod/codex-reverse-proxy-service
     logging: *default-logging
     restart: always
-
+  template-export:
+    image: lblod/template-export-service:0.0.1
+    logging: *default-logging
+    restart: always
+    volumes:
+      - ./data/files/:/share/

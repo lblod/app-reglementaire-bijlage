@@ -40,17 +40,6 @@
             }
         },
         "relationships": {
-          "previous-version": {
-            "predicate": "pav:previousVersion",
-            "target": "editor-document",
-            "cardinality": "one"
-          },
-          "next-version": {
-            "predicate": "pav:previousVersion",
-            "target": "editor-document",
-            "cardinality": "one",
-            "inverse": true
-          },
           "document-container": {
             "predicate": "pav:hasVersion",
             "target": "document-container",

@@ -1,0 +1,17 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX say: <https://say.data.gift/ns/>
+
+INSERT {
+  GRAPH ?g {
+  	?snippet pav:hasVersion ?version.
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?snippet a say:Snippet.
+    # This is a workaround due to the transitive '*'-operator not working as expected 
+    # when specifying a graph and the amount of predicate matches being 0
+  	?snippet (pav:hasCurrentVersion/pav:previousVersion+)|pav:hasCurrentVersion ?version.
+  }
+}

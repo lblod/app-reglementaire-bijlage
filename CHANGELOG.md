@@ -1,5 +1,19 @@
 # app-reglementaire-bijlage
 
+## 6.30.1
+
+### Patch Changes
+
+- [#90](https://github.com/lblod/app-reglementaire-bijlage/pull/90) [`6585f46`](https://github.com/lblod/app-reglementaire-bijlage/commit/6585f46ba7c80b671fd9b5b64e5c97ad7fb4b677) Thanks [@elpoelma](https://github.com/elpoelma)! - Addition of migration which ensures the versions of a `snippet` resource are stored through a `pav:hasVersion` relationship
+
+- [#90](https://github.com/lblod/app-reglementaire-bijlage/pull/90) [`523862c`](https://github.com/lblod/app-reglementaire-bijlage/commit/523862c11a28a8e5c0cd8e6d81843dc7c254c986) Thanks [@elpoelma](https://github.com/elpoelma)! - Addition of migration which ensures the versions of a `document-container` resource are stored through a `pav:hasVersion` relationship
+
+- [#91](https://github.com/lblod/app-reglementaire-bijlage/pull/91) [`8039fbe`](https://github.com/lblod/app-reglementaire-bijlage/commit/8039fbe3dec904bbc910c3ddeeac6f77c2928796) Thanks [@elpoelma](https://github.com/elpoelma)! - Add migration which removes `pav:previousVersion` relationships from triplestore
+
+- [#91](https://github.com/lblod/app-reglementaire-bijlage/pull/91) [`2f9c206`](https://github.com/lblod/app-reglementaire-bijlage/commit/2f9c206d6e4bb0262602e66fae89fcbd0b553245) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version 9.15.4
+
+- [#91](https://github.com/lblod/app-reglementaire-bijlage/pull/91) [`8039fbe`](https://github.com/lblod/app-reglementaire-bijlage/commit/8039fbe3dec904bbc910c3ddeeac6f77c2928796) Thanks [@elpoelma](https://github.com/elpoelma)! - Remove `previous-version` and `next-version` relationships from editor-document and snippet-version models
+
 ## 6.30.0
 
 ### Minor Changes

@@ -16,7 +16,7 @@
       "class": "besluit:Bestuurseenheid",
       "relationships": {
         "classification": {
-          "predicate": "org:classification",
+          "predicate": "besluit:classificatie",
           "target": "administrative-unit-classification-code",
           "cardinality": "one"
         },
@@ -37,6 +37,10 @@
         "label": {
           "type": "string",
           "predicate": "skos:prefLabel"
+        },
+        "scope-note": {
+          "type": "string",
+          "predicate": "skos:scopeNote"
         }
       },
       "features": ["include-uri"],

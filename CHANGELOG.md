@@ -1,5 +1,19 @@
 # app-reglementaire-bijlage
 
+## 6.31.0
+
+### Minor Changes
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`cb3be11`](https://github.com/lblod/app-reglementaire-bijlage/commit/cb3be11b4a08edffec4c686cd05a0e1b08423a77) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version 9.16.0
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`dd1a268`](https://github.com/lblod/app-reglementaire-bijlage/commit/dd1a26828999f1c6c9e74fe6e79a0515aaf94e42) Thanks [@elpoelma](https://github.com/elpoelma)! - Add `lblod/template-export-service` to stack
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`8ea9039`](https://github.com/lblod/app-reglementaire-bijlage/commit/8ea903985c76aed2d1ecc03989a737b450bd3004) Thanks [@elpoelma](https://github.com/elpoelma)! - Add support for results to tasks
+
+### Patch Changes
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`c81d067`](https://github.com/lblod/app-reglementaire-bijlage/commit/c81d067537f356ec7f7050a0772f0d1ec6dff931) Thanks [@elpoelma](https://github.com/elpoelma)! - Enable `include-uri` feature for the `editor-document-folder`, `document-container` and `editor-document` models
+
 ## 6.30.1
 
 ### Patch Changes

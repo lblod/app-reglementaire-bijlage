@@ -76,6 +76,19 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/job-errors/"
   end
 
+  get "/results/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/results/"
+  end
+
+
+  get "/data-containers/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/data-containers/"
+  end
+  
+  get "/archives/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/archives/"
+  end
+
   post "/publish-template/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://publisher/publish-template/"
   end
@@ -138,6 +151,17 @@ defmodule Dispatcher do
   end
   delete "/files/*path", %{ accept: %{json: true}, layer: :api} do
     Proxy.forward conn, path, "http://file/files/"
+  end
+
+  #######################################################################
+  # Template Export Service                                             #
+  #######################################################################
+  post "/export-templates" do
+    Proxy.forward conn, [], "http://template-export/export"
+  end
+
+  post "/import-templates" do
+    Proxy.forward conn, [], "http://template-export/import"
   end
 
   #######################################################################

@@ -135,10 +135,45 @@
           "target": "job",
           "cardinality": "one",
           "predicate": "dct:isPartOf"
+        },
+        "result": {
+          "target": "data-container",
+          "cardinality": "one",
+          "predicate": "task:resultsContainer"
         }
       },
       "features": ["include-uri"],
       "new-resource-base": "http://redpencil.data.gift/id/task/"
+    },
+    "data-containers": {
+      "name": "data-container",
+      "class": "nfo:DataContainer",
+      "attributes": {},
+      "relationships": {
+        "task": {
+          "target": "task",
+          "cardinality": "one",
+          "predicate": "task:resultsContainer",
+          "inverse": true
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://redpencil.data.gift/id/data-container/"
+    },
+    "archives": {
+      "name": "archive",
+      "class": "nfo:Archive",
+      "super": ["data-container"],
+      "attributes": {},
+      "relationships": {
+        "file": {
+          "target": "file",
+          "cardinality": "one",
+          "predicate": "task:hasFile"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://redpencil.data.gift/id/archive/"
     }
   }
 }

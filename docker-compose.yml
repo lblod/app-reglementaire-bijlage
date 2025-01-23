@@ -127,7 +127,7 @@ services:
     logging: *default-logging
     restart: always
   template-export:
-    image: lblod/template-export-service:0.0.1
+    image: lblod/template-export-service:1.0.0
     logging: *default-logging
     restart: always
     volumes:

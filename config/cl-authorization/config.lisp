@@ -36,22 +36,8 @@
     :gn "http://data.lblod.info/vocabularies/gelinktnotuleren/"
     :nfo "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
     :say "https://say.data.gift/ns/"
-
-  :lblodmow "http://data.lblod.info/vocabularies/mobiliteit/"
-  :dct "http://purl.org/dc/terms/"
-  
-  :org "http://www.w3.org/ns/org#"
-  
-  :vs "http://www.w3.org/2003/06/sw-vocab-status/ns#"
-  :ext "http://mu.semte.ch/vocabularies/ext/"
-  :cidoc "http://www.cidoc-crm.org/cidoc-crm/"
-  :qudt "http://qudt.org/schema/qudt/"
-  
-  
-  :rdfs "http://www.w3.org/2000/01/rdf-schema#"
-  :sh "http://www.w3.org/ns/shacl#"
-  :tribont "https://w3id.org/tribont/core#"
-  :musession "http://mu.semte.ch/vocabularies/session/"
+    :ext "http://mu.semte.ch/vocabularies/ext/"
+    :task "http://redpencil.data.gift/vocabularies/tasks/"
 )
 
 (define-graph public ("http://mu.semte.ch/graphs/public")
@@ -71,7 +57,7 @@
     ("say:SnippetVersion" -> _)
 )
 
-(define graph organizations ()
+(define-graph organizations ("http://mu.semte.ch/graphs/organizations/")
     ("foaf:OnlineAccount" -> _)
     ("foaf:Person" -> _)
     ("ext:EditorDocumentFolder" -> _)
@@ -81,4 +67,42 @@
     ("ext:DocumentContainer" -> _)
     ("ext:Concept" -> _)
     ("ext:Mapping" -> _)
+    ("task:Task" -> _)
 )
+
+(defparameter *access-query*
+  "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+    PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+    SELECT DISTINCT ?session_group WHERE {
+    <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group;
+                    ext:sessionRole ?role.
+    FILTER(?role in (\"ABBLBLODGebruiker-Superadmin\",\"ABBLBLODGebruiker-Beheerder\",\"ABBLBLODGebruiker-Gebruiker\"))
+    }"
+    "Access query for a logged in user"
+)
+
+(supply-allowed-group "organization-user"
+  :parameters ("session_group")
+  :query *access-query*
+)
+
+(grant (read write)
+       :to-graph  organizations
+       :for-allowed-group "organization-user")
+
+
+(supply-allowed-group "public")
+
+(grant (read)
+       :to-graph public
+       :for-allowed-group "public")
+
+
+(supply-allowed-group "logged-in-user"
+  :parameters ()
+  :query *access-query*
+)
+
+(grant (write)
+       :to-graph  public
+       :for-allowed-group "logged-in-user")

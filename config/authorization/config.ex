@@ -101,6 +101,11 @@ defmodule Acl.UserGroups.Config do
                         "http://mu.semte.ch/vocabularies/ext/DocumentContainer",
                         "http://mu.semte.ch/vocabularies/ext/Concept",
                         "http://mu.semte.ch/vocabularies/ext/Mapping",
+                        "http://vocab.deri.ie/cogs#Job",
+                        "http://open-services.net/ns/core#Error",
+                        "http://redpencil.data.gift/vocabularies/tasks/Task",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive",
                       ] } } ] },
 
       # // CLEANUP

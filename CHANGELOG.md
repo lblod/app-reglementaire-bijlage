@@ -1,5 +1,59 @@
 # app-reglementaire-bijlage
 
+## 6.31.1
+
+### Patch Changes
+
+- [`023d7c2`](https://github.com/lblod/app-reglementaire-bijlage/commit/023d7c2eadd34f096eaed1f72ad5cc401f88aef3) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.16.1](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.16.1)
+
+## 6.31.0
+
+### Minor Changes
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`cb3be11`](https://github.com/lblod/app-reglementaire-bijlage/commit/cb3be11b4a08edffec4c686cd05a0e1b08423a77) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version 9.16.0
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`dd1a268`](https://github.com/lblod/app-reglementaire-bijlage/commit/dd1a26828999f1c6c9e74fe6e79a0515aaf94e42) Thanks [@elpoelma](https://github.com/elpoelma)! - Add `lblod/template-export-service` to stack
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`8ea9039`](https://github.com/lblod/app-reglementaire-bijlage/commit/8ea903985c76aed2d1ecc03989a737b450bd3004) Thanks [@elpoelma](https://github.com/elpoelma)! - Add support for results to tasks
+
+### Patch Changes
+
+- [#87](https://github.com/lblod/app-reglementaire-bijlage/pull/87) [`c81d067`](https://github.com/lblod/app-reglementaire-bijlage/commit/c81d067537f356ec7f7050a0772f0d1ec6dff931) Thanks [@elpoelma](https://github.com/elpoelma)! - Enable `include-uri` feature for the `editor-document-folder`, `document-container` and `editor-document` models
+
+## 6.30.1
+
+### Patch Changes
+
+- [#90](https://github.com/lblod/app-reglementaire-bijlage/pull/90) [`6585f46`](https://github.com/lblod/app-reglementaire-bijlage/commit/6585f46ba7c80b671fd9b5b64e5c97ad7fb4b677) Thanks [@elpoelma](https://github.com/elpoelma)! - Addition of migration which ensures the versions of a `snippet` resource are stored through a `pav:hasVersion` relationship
+
+- [#90](https://github.com/lblod/app-reglementaire-bijlage/pull/90) [`523862c`](https://github.com/lblod/app-reglementaire-bijlage/commit/523862c11a28a8e5c0cd8e6d81843dc7c254c986) Thanks [@elpoelma](https://github.com/elpoelma)! - Addition of migration which ensures the versions of a `document-container` resource are stored through a `pav:hasVersion` relationship
+
+- [#91](https://github.com/lblod/app-reglementaire-bijlage/pull/91) [`8039fbe`](https://github.com/lblod/app-reglementaire-bijlage/commit/8039fbe3dec904bbc910c3ddeeac6f77c2928796) Thanks [@elpoelma](https://github.com/elpoelma)! - Add migration which removes `pav:previousVersion` relationships from triplestore
+
+- [#91](https://github.com/lblod/app-reglementaire-bijlage/pull/91) [`2f9c206`](https://github.com/lblod/app-reglementaire-bijlage/commit/2f9c206d6e4bb0262602e66fae89fcbd0b553245) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version 9.15.4
+
+- [#91](https://github.com/lblod/app-reglementaire-bijlage/pull/91) [`8039fbe`](https://github.com/lblod/app-reglementaire-bijlage/commit/8039fbe3dec904bbc910c3ddeeac6f77c2928796) Thanks [@elpoelma](https://github.com/elpoelma)! - Remove `previous-version` and `next-version` relationships from editor-document and snippet-version models
+
+## 6.30.0
+
+### Minor Changes
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`ab0dd05`](https://github.com/lblod/app-reglementaire-bijlage/commit/ab0dd05bc1874dff00d8c17d9479616fac3f30a0) Thanks [@elpoelma](https://github.com/elpoelma)! - Add `task`, `job` and `job-error` models to resources config
+
+### Patch Changes
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`9d0e106`](https://github.com/lblod/app-reglementaire-bijlage/commit/9d0e1066844d592b9fa1180b62b80ffc87f48cc3) Thanks [@elpoelma](https://github.com/elpoelma)! - Update `lblod/reglement-publish-service` to version [5.2.0](https://github.com/lblod/reglement-publish-service/releases/tag/v5.2.0)
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`925431b`](https://github.com/lblod/app-reglementaire-bijlage/commit/925431be9c76e8834f273fa8fb6f68393dbb8fcd) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.15.2](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.15.2)
+
+- [#89](https://github.com/lblod/app-reglementaire-bijlage/pull/89) [`9680391`](https://github.com/lblod/app-reglementaire-bijlage/commit/9680391b24ac465a256dd059c4cb59825d351b15) Thanks [@elpoelma](https://github.com/elpoelma)! - mu-auth - add the following types to the `org-wf` graph-spec:
+
+  - `http://vocab.deri.ie/cogs#Job`
+  - `http://open-services.net/ns/core#Error`
+  - `http://redpencil.data.gift/vocabularies/tasks/Task`
+
+- [#88](https://github.com/lblod/app-reglementaire-bijlage/pull/88) [`bf0eb21`](https://github.com/lblod/app-reglementaire-bijlage/commit/bf0eb2130fc39528cc59eb943d1c95c1e79ac46b) Thanks [@elpoelma](https://github.com/elpoelma)! - Add migration which introduces more generic task status-URIs
+
 ## 6.29.0
 
 ### Minor Changes

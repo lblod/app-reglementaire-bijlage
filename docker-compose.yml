@@ -1,12 +1,12 @@
-version: '3.4'
 x-logging: &default-logging
   driver: "json-file"
   options:
     max-size: "10m"
     max-file: "3"
+
 services:
   frontend:
-    image: lblod/frontend-reglementaire-bijlage:9.15.1
+    image: lblod/frontend-reglementaire-bijlage:9.16.1
     restart: always
     environment:
       EMBER_OAUTH_API_REDIRECT_URL: "https://reglementairebijlagen.lblod.info/authorization/callback"
@@ -110,7 +110,7 @@ services:
       BACKEND_HOST: database
     restart: always
   publisher:
-    image: lblod/reglement-publish-service:5.1.0
+    image: lblod/reglement-publish-service:5.2.0
     links:
       - database:database
     volumes:
@@ -127,4 +127,9 @@ services:
     image: lblod/codex-reverse-proxy-service
     logging: *default-logging
     restart: always
-
+  template-export:
+    image: lblod/template-export-service:1.0.0
+    logging: *default-logging
+    restart: always
+    volumes:
+      - ./data/files/:/share/

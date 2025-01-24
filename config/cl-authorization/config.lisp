@@ -38,6 +38,8 @@
     :say "https://say.data.gift/ns/"
     :ext "http://mu.semte.ch/vocabularies/ext/"
     :task "http://redpencil.data.gift/vocabularies/tasks/"
+    :oslc "http://open-services.net/ns/core#"
+    :cogs "http://vocab.deri.ie/cogs#"
 )
 
 (define-graph public ("http://mu.semte.ch/graphs/public")
@@ -68,6 +70,10 @@
     ("ext:Concept" -> _)
     ("ext:Mapping" -> _)
     ("task:Task" -> _)
+    ("oslc:Error" -> _)
+    ("cogs:Job" -> _)
+    ("nfo:DataContainer" -> _)
+    ("nfo:Archive" -> _)
 )
 
 (defparameter *access-query*
@@ -81,14 +87,14 @@
     "Access query for a logged in user"
 )
 
-(supply-allowed-group "organization-user"
+(supply-allowed-group "org-wf"
   :parameters ("session_group")
   :query *access-query*
 )
 
 (grant (read write)
        :to-graph  organizations
-       :for-allowed-group "organization-user")
+       :for-allowed-group "org-wf")
 
 
 (supply-allowed-group "public")

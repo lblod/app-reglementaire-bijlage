@@ -28,7 +28,7 @@
           "cardinality": "many"
         },
         "derived-from": {
-          "predicate": "prov:derivedFrom",
+          "predicate": "prov:wasDerivedFrom",
           "target": "document-container",
           "cardinality": "one"
         },
@@ -46,7 +46,7 @@
       "super": ["file"],
       "relationships": {
         "derived-from": {
-          "predicate": "prov:derivedFrom",
+          "predicate": "prov:wasDerivedFrom",
           "target": "editor-document",
           "cardinality": "one"
         }

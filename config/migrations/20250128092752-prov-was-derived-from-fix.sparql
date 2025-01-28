@@ -1,0 +1,18 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+DELETE {
+  GRAPH ?g {
+  	?sub prov:derivedFrom ?obj .
+  }
+}
+INSERT {
+  GRAPH ?g {
+  	?sub prov:wasDerivedFrom ?obj .
+  }
+}
+WHERE {
+  GRAPH ?g {
+  	?sub prov:derivedFrom ?obj .
+  }
+}

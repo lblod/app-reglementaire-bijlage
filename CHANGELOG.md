@@ -1,5 +1,15 @@
 # app-reglementaire-bijlage
 
+## 6.31.2
+
+### Patch Changes
+
+- [#93](https://github.com/lblod/app-reglementaire-bijlage/pull/93) [`aacd446`](https://github.com/lblod/app-reglementaire-bijlage/commit/aacd4464b02ee154ea7f0d47d8cee7ee4e3260dc) Thanks [@elpoelma](https://github.com/elpoelma)! - Fix: replace erroneous `prov:derivedFrom` predicated by `prov:wasDerivedFrom`
+
+- [#93](https://github.com/lblod/app-reglementaire-bijlage/pull/93) [`1ffdbbb`](https://github.com/lblod/app-reglementaire-bijlage/commit/1ffdbbb0843fae094adb618767a56ecd9f29cc76) Thanks [@elpoelma](https://github.com/elpoelma)! - Update `publisher` service to version [5.2.1](https://github.com/lblod/reglement-publish-service/releases/tag/v5.2.1)
+
+- [`65a8134`](https://github.com/lblod/app-reglementaire-bijlage/commit/65a81343cd9a27e8076170488d22268118139f01) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.16.2](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.16.2)
+
 ## 6.31.1
 
 ### Patch Changes

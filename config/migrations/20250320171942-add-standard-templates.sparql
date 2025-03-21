@@ -1,0 +1,151 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?templateUri
+       <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate> ;
+       <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://data.lblod.info/vocabularies/gelinktnotuleren/Template> ;
+       <http://purl.org/pav/hasCurrentVersion>    ?tVersionUri ;
+       <http://purl.org/pav/hasVersion>    ?tVersionUri ;
+       <http://mu.semte.ch/vocabularies/core/uuid>    ?templateUuid ;
+       <http://www.w3.org/ns/prov#wasDerivedFrom>    ?docContainerUri .
+    ?tVersionUri
+       <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> ;
+       <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://data.lblod.info/vocabularies/gelinktnotuleren/TemplateVersie> ;
+       <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName>    ?filename ;
+       <http://purl.org/dc/terms/format>    """application/html""" ;
+       <http://purl.org/dc/terms/title>    ?title ;
+       <http://dbpedia.org/ontology/extension>    """html""" ;
+       <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated>    """2025-03-20T14:05:37.623Z"""^^xsd:dateTime ;
+       <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize>    ?filesize ;
+       <http://mu.semte.ch/vocabularies/core/uuid>    ?tVersionUuid ;
+       <http://www.w3.org/ns/prov#wasDerivedFrom>    ?edDocUri ;
+       <http://mu.semte.ch/vocabularies/ext/context> ?context ;
+       <http://mu.semte.ch/vocabularies/ext/disabledInContext> ?disabledInContext .
+    ?fileShareUri
+       <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> ;
+       <http://mu.semte.ch/vocabularies/core/uuid>    ?fileShareUuid ;
+       <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#dataSource>    ?tVersionUri ;
+       <http://purl.org/dc/terms/format>    """application/html""" ;
+       <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName>  ?filename ;
+       <http://dbpedia.org/ontology/extension>    """html""" ;
+       <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated>   """2025-03-20T14:05:37.630Z"""^^xsd:dateTime ;
+       <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize>    ?filesize .
+  }
+} WHERE {
+  VALUES (
+    ?title
+    ?templateUri
+    ?templateUuid
+    ?tVersionUri
+    ?tVersionUuid
+    ?filename
+    ?filesize
+    ?fileShareUuid
+    ?contextVal
+    ?disabledInContext
+    ?docContainerUri
+    ?edDocUri
+  ) {
+    (
+      """Vrije tekst"""
+      <http://data.lblod.info/templates/728cc126-2bb2-11e9-a884-97ead76424d3>
+      """6639d450-0594-11f0-835d-c39998a0026f"""
+      <http://data.lblod.info/template-versies/66305e72-0594-11f0-835d-4167dfca58d0>
+      """66305e72-0594-11f0-835d-4167dfca58d0"""
+      """66305e70-0594-11f0-835d-4167dfca58d0.html"""
+      """135"""^^xsd:integer
+      """66317c84-0594-11f0-835d-4167dfca58d0"""
+      <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>
+      "NO VALUE"
+      # These URIs don't actually point to anything, this is because they would need to be in a
+      # different graph. This however means that for now nobody can edit these templates.
+      <http://data.lblod.info/document-containers/728cc127-2bb2-11e9-a884-97ead76424d3>
+      <http://data.lblod.info/editor-documents/728cc128-2bb2-11e9-a884-97ead76424d3>
+    )
+    (
+      """Generiek besluit (klassieke stijl)"""
+      <http://data.lblod.info/templates/39c31a7e-2ba9-11e9-88cf-83ebfda837dc>
+      """39c31a7e-2ba9-11e9-88cf-83ebfda837dc"""
+      <http://data.lblod.info/template-versies/66305f83-0594-11f0-835d-4167dfca58d0>
+      """66305f83-0594-11f0-835d-4167dfca58d0"""
+      """7a078aa0-066a-11f0-a394-ef8a71fdca0b.html"""
+      """2041"""^^xsd:integer
+      """7a078aaa-066a-11f0-a394-ef8a71fdca0b"""
+      <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>
+      <http://data.vlaanderen.be/ns/besluit#Besluit>
+      # These URIs don't actually point to anything, this is because they would need to be in a
+      # different graph. This however means that for now nobody can edit these templates.
+      <http://data.lblod.info/document-containers/39c31a7f-2ba9-11e9-88cf-83ebfda837dc>
+      <http://data.lblod.info/editor-documents/39c31a80-2ba9-11e9-88cf-83ebfda837dc>
+    )
+    (
+      """Aanvullend Reglement besluit"""
+      <http://data.lblod.info/templates/2deed136-94c2-47ec-a542-8746cd020579>
+      """2deed136-94c2-47ec-a542-8746cd020579"""
+      <http://data.lblod.info/template-versies/66305f94-0594-11f0-835d-4167dfca58d0>
+      """66305f94-0594-11f0-835d-4167dfca58d0"""
+      """b1241820-066d-11f0-bcfc-17b647119536.html"""
+      """4424"""^^xsd:integer
+      """b1241823-066d-11f0-bcfc-17b647119536"""
+      <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>
+      <http://data.vlaanderen.be/ns/besluit#Besluit>
+      # These URIs don't actually point to anything, this is because they would need to be in a
+      # different graph. This however means that for now nobody can edit these templates.
+      <http://data.lblod.info/document-containers/39c31a81-2ba9-11e9-88cf-83ebfda837dc>
+      <http://data.lblod.info/editor-documents/39c31a82-2ba9-11e9-88cf-83ebfda837dc>
+    )
+    (
+      """Minimaal besluit"""
+      <http://data.lblod.info/templates/b04fc03e-e8ff-496a-9343-1f07b4f55551>
+      """b04fc03e-e8ff-496a-9343-1f07b4f55551"""
+      <http://data.lblod.info/template-versies/66305fa5-0594-11f0-835d-4167dfca58d0>
+      """66305fa5-0594-11f0-835d-4167dfca58d0"""
+      """12eed070-0670-11f0-bb6e-1b9ed1d35f61.html"""
+      """836"""^^xsd:integer
+      """12eed073-0670-11f0-bb6e-1b9ed1d35f61"""
+      <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>
+      <http://data.vlaanderen.be/ns/besluit#Besluit>
+      # These URIs don't actually point to anything, this is because they would need to be in a
+      # different graph. This however means that for now nobody can edit these templates.
+      <http://data.lblod.info/document-containers/39c31a83-2ba9-11e9-88cf-83ebfda837dc>
+      <http://data.lblod.info/editor-documents/39c31a84-2ba9-11e9-88cf-83ebfda837dc>
+    )
+    (
+      """Generiek besluit (nieuwe stijl)"""
+      <http://data.lblod.info/templates/6933312e-2bac-11e9-af69-3baeff70b1a8>
+      """6933312e-2bac-11e9-af69-3baeff70b1a8"""
+      <http://data.lblod.info/template-versies/66305fb6-0594-11f0-835d-4167dfca58d0>
+      """66305fb6-0594-11f0-835d-4167dfca58d0"""
+      """b59ca090-0670-11f0-a1a9-b5a2b86fcdce.html"""
+      """2202"""^^xsd:integer
+      """b59ca093-0670-11f0-a1a9-b5a2b86fcdce"""
+      <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>
+      <http://data.vlaanderen.be/ns/besluit#Besluit>
+      # These URIs don't actually point to anything, this is because they would need to be in a
+      # different graph. This however means that for now nobody can edit these templates.
+      <http://data.lblod.info/document-containers/39c31a85-2ba9-11e9-88cf-83ebfda837dc>
+      <http://data.lblod.info/editor-documents/39c31a86-2ba9-11e9-88cf-83ebfda837dc>
+    )
+    # This was disabled in standard template service but is kept here in case we will need it in the
+    # future. If it's not needed, remove the coresponding file from git.
+    # (
+    #   """Citeeropschrift"""
+    #   <http://data.lblod.info/templates/d905ddf8-bd78-42e2-a722-95eb2568e76a>
+    #   """d905ddf8-bd78-42e2-a722-95eb2568e76a"""
+    #   <http://data.lblod.info/template-versies/66305fc7-0594-11f0-835d-4167dfca58d0>
+    #   """66305fc7-0594-11f0-835d-4167dfca58d0"""
+    #   """877e0720-0671-11f0-8934-dd8430244af7.html"""
+    #   """122"""^^xsd:integer
+    #   """877e0723-0671-11f0-8934-dd8430244af7"""
+    #   <http://data.vlaanderen.be/ns/besluit#Besluit>
+    #   <http://data.vlaanderen.be/ns/besluit#Artikel>
+    #   # These URIs don't actually point to anything, this is because they would need to be in a
+    #   # different graph. This however means that for now nobody can edit these templates.
+    #   <http://data.lblod.info/document-containers/39c31a87-2ba9-11e9-88cf-83ebfda837dc>
+    #   <http://data.lblod.info/editor-documents/39c31a88-2ba9-11e9-88cf-83ebfda837dc>
+    # )
+  }
+  BIND (IRI(CONCAT("share://", ?filename)) AS ?fileShareUri)
+  BIND(IF(?contextVal = "NO VALUE", ?notBound, ?contextVal) AS ?context)
+}

@@ -1,7 +1,7 @@
 {
   "name": "app-reglementaire-bijlage",
   "private": true,
-  "version": "6.33.2",
+  "version": "6.33.3",
   "scripts": {
     "release": "release-it"
   },

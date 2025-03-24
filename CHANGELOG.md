@@ -1,5 +1,15 @@
 # app-reglementaire-bijlage
 
+## 6.34.0
+
+### Minor Changes
+
+- [#94](https://github.com/lblod/app-reglementaire-bijlage/pull/94) [`19d0231`](https://github.com/lblod/app-reglementaire-bijlage/commit/19d02314764092f79b9b7e496b03a80f24b5d826) Thanks [@piemonkey](https://github.com/piemonkey)! - Add the 'standard templates' as (non-editable) templates accessible in the same way as normal templates
+
+### Patch Changes
+
+- [`9aa228a`](https://github.com/lblod/app-reglementaire-bijlage/commit/9aa228a0b661d1323e7617098f86cf6405a9c653) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.19.2](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.19.2)
+
 ## 6.33.3
 
 ### Patch Changes

@@ -4,7 +4,14 @@
 !/data/db/toLoad
 !/data/db/toLoad/*
 
-/data/files
+/data/files/*
+# Files holding 'standard templates'
+!/data/files/66305e70-0594-11f0-835d-4167dfca58d0.html
+!/data/files/7a078aa0-066a-11f0-a394-ef8a71fdca0b.html
+!/data/files/b1241820-066d-11f0-bcfc-17b647119536.html
+!/data/files/12eed070-0670-11f0-bb6e-1b9ed1d35f61.html
+!/data/files/b59ca090-0670-11f0-a1a9-b5a2b86fcdce.html
+!/data/files/877e0720-0671-11f0-8934-dd8430244af7.html
 
 node_modules
 docker-compose.override.yml

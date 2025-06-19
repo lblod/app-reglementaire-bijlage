@@ -31,8 +31,6 @@ services:
     restart: "no"
   publisher:
     restart: "no"
-    ports:
-      - "8080:80"
   file:
     restart: "no"
   yasgui:

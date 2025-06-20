@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.40.0
+
+### Minor Changes
+
+- [`bb17297`](https://github.com/lblod/app-reglementaire-bijlage/commit/bb172971fb1b39b2425fb4d618cf2dadd2ef769c) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.26.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.26.0)
+
+- [#95](https://github.com/lblod/app-reglementaire-bijlage/pull/95) [`99b7637`](https://github.com/lblod/app-reglementaire-bijlage/commit/99b76373008872559e1c526466a2c1022d559723) Thanks [@piemonkey](https://github.com/piemonkey)! - Remove property attribute from decisions in standard templates to prevent it being interpreted as a backlink in RDFa aware documents
+
 ## 6.39.0
 
 ### Minor Changes

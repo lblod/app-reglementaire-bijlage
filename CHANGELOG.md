@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.41.3
+
+### Patch Changes
+
+- [`cada19f`](https://github.com/lblod/app-reglementaire-bijlage/commit/cada19f234a902ae2a8cceb41ce8718613284047) Thanks [@abeforgit](https://github.com/abeforgit)! - Remove "nieuwe gemeentewet" from AR template
+
 ## 6.41.2
 
 ### Patch Changes

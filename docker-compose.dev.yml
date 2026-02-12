@@ -2,8 +2,6 @@ services:
   frontend:
     restart: "no"
   identifier:
-    ports:
-      - "80:80"
     restart: "no"
   dispatcher:
     restart: "no"
@@ -13,8 +11,6 @@ services:
     restart: "no"
     environment:
       ENABLE_CORS: "true"
-    ports:
-      - "8890:8890"
   login:
     restart: "no"
   resource:
@@ -33,17 +29,8 @@ services:
     restart: "no"
   file:
     restart: "no"
-  yasgui:
-    image: erikap/yasgui
-    ports:
-      - "8891:80"
-    environment:
-      ENABLE_ENDPOINT_SELECTOR: "true"
-      DEFAULT_SPARQL_ENDPOINT: "http://localhost:8890/sparql"
   tlsproxy:
     image: caddy:2
-    ports:
-      - "443:443"
     environment:
       SITE_ADDRESS: "reglementairebijlagen.lblod.info"
     volumes:

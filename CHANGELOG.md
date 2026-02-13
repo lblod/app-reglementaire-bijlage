@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.41.5
+
+### Patch Changes
+
+- [`0f9e872`](https://github.com/lblod/app-reglementaire-bijlage/commit/0f9e872c1ebe8e4a27569d5f755f57692a655db5) Thanks [@abeforgit](https://github.com/abeforgit)! - Bump template export to [1.0.1](https://github.com/lblod/template-export-service/releases/tag/v1.0.1)
+
 ## 6.41.4
 
 ### Patch Changes

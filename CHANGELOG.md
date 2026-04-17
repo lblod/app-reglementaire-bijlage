@@ -1,5 +1,10 @@
 # app-reglementaire-bijlage
 
+## 6.42.1
+
+## Patch Changes
+- [`77cfc6701a73f657ffe3a74a46f57d9af4fa50e5`](https://github.com/lblod/app-reglementaire-bijlage/commit/77cfc6701a73f657ffe3a74a46f57d9af4fa50e5)] - don't allow read for cleanup
+
 ## 6.42.0
 
 ### Minor Changes

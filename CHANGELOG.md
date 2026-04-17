@@ -1,8 +1,15 @@
 # app-reglementaire-bijlage
 
+## 6.43.0
+
+### Minor Changes
+
+- [`3e7f62a`](https://github.com/lblod/app-reglementaire-bijlage/commit/3e7f62ad96f4e4e828438501645cd6e5a0ad979a) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Bump frontend to [v9.31.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.31.0)
+
 ## 6.42.1
 
 ## Patch Changes
+
 - [`77cfc6701a73f657ffe3a74a46f57d9af4fa50e5`](https://github.com/lblod/app-reglementaire-bijlage/commit/77cfc6701a73f657ffe3a74a46f57d9af4fa50e5)] - don't allow read for cleanup
 
 ## 6.42.0

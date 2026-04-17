@@ -112,7 +112,7 @@ defmodule Acl.UserGroups.Config do
       #
       %GraphCleanup{
         originating_graph: "http://mu.semte.ch/application",
-        useage: [:read, :write],
+        useage: [:write],
         name: "clean"
       }
     ]

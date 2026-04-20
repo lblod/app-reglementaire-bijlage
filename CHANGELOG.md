@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.43.1
+
+### Patch Changes
+
+- [`587c77f`](https://github.com/lblod/app-reglementaire-bijlage/commit/587c77fe16bc2df504233b27c7e69808f51af239) Thanks [@abeforgit](https://github.com/abeforgit)! - Add clean group to default allowed groups header
+
 ## 6.43.0
 
 ### Minor Changes

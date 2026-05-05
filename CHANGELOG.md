@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.44.1
+
+### Patch Changes
+
+- [`fd04933`](https://github.com/lblod/app-reglementaire-bijlage/commit/fd049336b65f73a3e63d49b1d3805b94de75e9fa) Thanks [@abeforgit](https://github.com/abeforgit)! - bump virtuoso to 1.2.2
+
 ## 6.44.0
 
 ### Minor Changes

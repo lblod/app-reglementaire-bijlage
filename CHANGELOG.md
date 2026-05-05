@@ -12,6 +12,12 @@
 
 - [`4205c7d`](https://github.com/lblod/app-reglementaire-bijlage/commit/4205c7d6baf6dc58a031a079d8a2f8f2d2c6106a) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.32.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.32.0)
 
+## 6.43.2
+
+### Patch Changes
+
+- [`f17b75d`](https://github.com/lblod/app-reglementaire-bijlage/commit/f17b75d7dec1abe569b656026d6cf316c58345cc) Thanks [@abeforgit](https://github.com/abeforgit)! - bump virtuoso to 1.2.2
+
 ## 6.43.1
 
 ### Patch Changes

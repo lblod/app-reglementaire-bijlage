@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.46.0
+
+### Minor Changes
+
+- [`eaad296ef371202dd3059a1632c37ea195a87e65`](https://github.com/lblod/app-reglementaire-bijlage/commit/eaad296ef371202dd3059a1632c37ea195a87e65) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.34.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.0)
+
 ## 6.45.0
 
 ### Minor Changes

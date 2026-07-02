@@ -42,10 +42,14 @@
     :cogs "http://vocab.deri.ie/cogs#"
 )
 
-(define-graph public ("http://mu.semte.ch/graphs/public")
+(define-graph public-non-writable ("http://mu.semte.ch/graphs/public")
     ("foaf:OnlineAccount" -> _)
     ("foaf:Person" -> _)
     ("besluit:Bestuurseenheid" -> _)
+)
+
+(define-graph public ("http://mu.semte.ch/graphs/public")
+    
     ("skos:Concept" -> _)
     ("skos:ConceptScheme" -> _)
     ("mobiliteit:Codelist" -> _)
@@ -101,6 +105,10 @@
 
 (grant (read)
        :to-graph public
+       :for-allowed-group "public")
+
+(grant (read)
+       :to-graph public-non-writable
        :for-allowed-group "public")
 
 

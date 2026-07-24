@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.47.0
+
+### Minor Changes
+
+- [#92](https://github.com/lblod/app-reglementaire-bijlage/pull/92) [`56a202f`](https://github.com/lblod/app-reglementaire-bijlage/commit/56a202f5171e852d2d55f7baf7028a373ba06cc9) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Migrate from mu-auth to sparql-parser
+
 ## 6.46.0
 
 ### Minor Changes

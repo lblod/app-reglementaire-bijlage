@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.47.1
+
+### Patch Changes
+
+- [`54bdedd`](https://github.com/lblod/app-reglementaire-bijlage/commit/54bdedd2606163ff8c4512a14d5a4d50fd1a247b) Thanks [@lagartoverde](https://github.com/lagartoverde)! - bump frontend to [9.34.1](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.1)
+
 ## 6.47.0
 
 ### Minor Changes

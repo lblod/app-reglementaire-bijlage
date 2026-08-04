@@ -1,0 +1,65 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?templateUri
+            <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://data.lblod.info/vocabularies/gelinktnotuleren/BesluitTemplate> ;
+            <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://data.lblod.info/vocabularies/gelinktnotuleren/Template> ;
+            <http://purl.org/pav/hasCurrentVersion>    ?tVersionUri ;
+            <http://purl.org/pav/hasVersion>    ?tVersionUri ;
+            <http://mu.semte.ch/vocabularies/core/uuid>    ?templateUuid ;
+            <http://www.w3.org/ns/prov#wasDerivedFrom>    ?docContainerUri .
+        ?tVersionUri
+            <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> ;
+            <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://data.lblod.info/vocabularies/gelinktnotuleren/TemplateVersie> ;
+            <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName>    ?filename ;
+            <http://purl.org/dc/terms/format>    """application/html""" ;
+            <http://purl.org/dc/terms/title>    ?title ;
+            <http://dbpedia.org/ontology/extension>    """html""" ;
+            <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated>    """2025-03-20T14:05:37.623Z"""^^xsd:dateTime ;
+            <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize>    ?filesize ;
+            <http://mu.semte.ch/vocabularies/core/uuid>    ?tVersionUuid ;
+            <http://www.w3.org/ns/prov#wasDerivedFrom>    ?edDocUri ;
+            <http://mu.semte.ch/vocabularies/ext/context> ?context ;
+            <http://mu.semte.ch/vocabularies/ext/disabledInContext> ?disabledInContext .
+        ?fileShareUri
+            <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> ;
+            <http://mu.semte.ch/vocabularies/core/uuid>    ?fileShareUuid ;
+            <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#dataSource>    ?tVersionUri ;
+            <http://purl.org/dc/terms/format>    """application/html""" ;
+            <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName>  ?filename ;
+            <http://dbpedia.org/ontology/extension>    """html""" ;
+            <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated>   """2025-03-20T14:05:37.630Z"""^^xsd:dateTime ;
+            <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize>    ?filesize .
+    }
+} WHERE {
+    VALUES (
+    ?title
+    ?templateUri
+    ?templateUuid
+    ?tVersionUri
+    ?tVersionUuid
+    ?filename
+    ?filesize
+    ?fileShareUuid
+    ?contextVal
+    ?disabledInContext
+    ?docContainerUri
+    ?edDocUri
+  ) {
+    (
+      """Vrije tekst"""
+      <http://data.lblod.info/templates/728cc126-2bb2-11e9-a884-97ead76424d3>
+      """6639d450-0594-11f0-835d-c39998a0026f"""
+      <http://data.lblod.info/template-versies/66305e72-0594-11f0-835d-4167dfca58d0>
+      """66305e72-0594-11f0-835d-4167dfca58d0"""
+      """66305e70-0594-11f0-835d-4167dfca58d0.html"""
+      """135"""^^xsd:integer
+      """66317c84-0594-11f0-835d-4167dfca58d0"""
+      <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>
+      "NO VALUE"
+      # These URIs don't actually point to anything, this is because they would need to be in a
+      # different graph. This however means that for now nobody can edit these templates.
+      <http://data.lblod.info/document-containers/728cc127-2bb2-11e9-a884-97ead76424d3>
+      <http://data.lblod.info/editor-documents/728cc128-2bb2-11e9-a884-97ead76424d3>
+    )
+  }
+}

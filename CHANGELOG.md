@@ -1,5 +1,15 @@
 # app-reglementaire-bijlage
 
+## 6.48.0
+
+### Minor Changes
+
+- [#98](https://github.com/lblod/app-reglementaire-bijlage/pull/98) [`ef87373`](https://github.com/lblod/app-reglementaire-bijlage/commit/ef8737353efcb57064c553bf2e3592303dfec281) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Remove vrije tekst template
+
+### Patch Changes
+
+- [`651602b`](https://github.com/lblod/app-reglementaire-bijlage/commit/651602b3168f969f080eb124e6162a9f8f59922e) Thanks [@piemonkey](https://github.com/piemonkey)! - Update frontend to [v9.34.2](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.2)
+
 ## 6.47.1
 
 ### Patch Changes

@@ -129,6 +129,7 @@ LIMIT 1
 | ?child   | ?name | ?age |
 | -------- | ------- | ----- |
 | `<http://johns-family.org/people/8c794aeafa2b>` | "Alice"  | 20    |
+
 Note that also a predicate can be a variable, this is a powerful feature of SPARQL and allows us to explore a database even if we don't know anything about its structure. If we want to know all predicates we have available about resources in the database we could run.
 ```sparql
 SELECT DISTINCT ?predicate WHERE {

@@ -1,5 +1,6 @@
 # Virtuoso files /data/db
 /data/db/*
+
 !/data/db/virtuoso.ini
 !/data/db/toLoad
 !/data/db/toLoad/*
@@ -12,6 +13,8 @@
 !/data/files/12eed070-0670-11f0-bb6e-1b9ed1d35f61.html
 !/data/files/b59ca090-0670-11f0-a1a9-b5a2b86fcdce.html
 !/data/files/877e0720-0671-11f0-8934-dd8430244af7.html
+
+/data/mu-auth/*
 
 node_modules
 docker-compose.override.yml

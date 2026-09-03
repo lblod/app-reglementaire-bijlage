@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: lblod/frontend-reglementaire-bijlage:9.28.0
+    image: lblod/frontend-reglementaire-bijlage:9.34.2
     restart: always
     environment:
       EMBER_OAUTH_API_REDIRECT_URL: "https://reglementairebijlagen.lblod.info/authorization/callback"
@@ -19,7 +19,8 @@ services:
   identifier:
     image: semtech/mu-identifier:1.10.1
     environment:
-      DEFAULT_MU_AUTH_ALLOWED_GROUPS_HEADER: "[{\"variables\":[],\"name\":\"public\"}]"
+      # It is INCREDIBLY important that the "clean" group is part of this config, DO NOT ADJUST unless you know EXACTLY what you're doing
+      DEFAULT_MU_AUTH_ALLOWED_GROUPS_HEADER: "[{\"variables\":[],\"name\":\"clean\"}, {\"variables\":[],\"name\":\"public\"}]"
       SESSION_COOKIE_SECURE: "on"
       DEFAULT_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER: "*"
     links:
@@ -37,15 +38,16 @@ services:
     restart: always
     logging: *default-logging
   database:
-    image: semtech/mu-authorization:0.6.0-beta.8
-    environment:
-      MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
+    image: semtech/sparql-parser:0.0.15
     volumes:
-      - ./config/authorization:/config
+      - ./config/cl-authorization:/config
+      - ./data/mu-auth:/data
+    labels:
+      - "logging=true"
     restart: always
     logging: *default-logging
   virtuoso:
-    image: redpencil/virtuoso:1.2.0-rc.1
+    image: redpencil/virtuoso:1.2.2
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"

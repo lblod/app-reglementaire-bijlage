@@ -1,5 +1,87 @@
 # app-reglementaire-bijlage
 
+## 6.48.0
+
+### Minor Changes
+
+- [#98](https://github.com/lblod/app-reglementaire-bijlage/pull/98) [`ef87373`](https://github.com/lblod/app-reglementaire-bijlage/commit/ef8737353efcb57064c553bf2e3592303dfec281) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Remove vrije tekst template
+
+### Patch Changes
+
+- [`651602b`](https://github.com/lblod/app-reglementaire-bijlage/commit/651602b3168f969f080eb124e6162a9f8f59922e) Thanks [@piemonkey](https://github.com/piemonkey)! - Update frontend to [v9.34.2](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.2)
+
+## 6.47.1
+
+### Patch Changes
+
+- [`54bdedd`](https://github.com/lblod/app-reglementaire-bijlage/commit/54bdedd2606163ff8c4512a14d5a4d50fd1a247b) Thanks [@lagartoverde](https://github.com/lagartoverde)! - bump frontend to [9.34.1](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.1)
+
+## 6.47.0
+
+### Minor Changes
+
+- [#92](https://github.com/lblod/app-reglementaire-bijlage/pull/92) [`56a202f`](https://github.com/lblod/app-reglementaire-bijlage/commit/56a202f5171e852d2d55f7baf7028a373ba06cc9) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Migrate from mu-auth to sparql-parser
+
+## 6.46.0
+
+### Minor Changes
+
+- [`eaad296ef371202dd3059a1632c37ea195a87e65`](https://github.com/lblod/app-reglementaire-bijlage/commit/eaad296ef371202dd3059a1632c37ea195a87e65) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.34.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.0)
+
+## 6.45.0
+
+### Minor Changes
+
+- [`c62d5c439513a01982396df2fd9c6ea8e5c95ebc`](https://github.com/lblod/app-reglementaire-bijlage/commit/c62d5c439513a01982396df2fd9c6ea8e5c95ebc) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.33.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.33.0)
+
+## 6.44.1
+
+### Patch Changes
+
+- [`fd04933`](https://github.com/lblod/app-reglementaire-bijlage/commit/fd049336b65f73a3e63d49b1d3805b94de75e9fa) Thanks [@abeforgit](https://github.com/abeforgit)! - bump virtuoso to 1.2.2
+
+## 6.44.0
+
+### Minor Changes
+
+- [`4205c7d`](https://github.com/lblod/app-reglementaire-bijlage/commit/4205c7d6baf6dc58a031a079d8a2f8f2d2c6106a) Thanks [@abeforgit](https://github.com/abeforgit)! - bump frontend to [v9.32.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.32.0)
+
+## 6.43.2
+
+### Patch Changes
+
+- [`f17b75d`](https://github.com/lblod/app-reglementaire-bijlage/commit/f17b75d7dec1abe569b656026d6cf316c58345cc) Thanks [@abeforgit](https://github.com/abeforgit)! - bump virtuoso to 1.2.2
+
+## 6.43.1
+
+### Patch Changes
+
+- [`587c77f`](https://github.com/lblod/app-reglementaire-bijlage/commit/587c77fe16bc2df504233b27c7e69808f51af239) Thanks [@abeforgit](https://github.com/abeforgit)! - Add clean group to default allowed groups header
+
+## 6.43.0
+
+### Minor Changes
+
+- [`3e7f62a`](https://github.com/lblod/app-reglementaire-bijlage/commit/3e7f62ad96f4e4e828438501645cd6e5a0ad979a) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Bump frontend to [v9.31.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.31.0)
+
+## 6.42.1
+
+## Patch Changes
+
+- [`77cfc6701a73f657ffe3a74a46f57d9af4fa50e5`](https://github.com/lblod/app-reglementaire-bijlage/commit/77cfc6701a73f657ffe3a74a46f57d9af4fa50e5)] - don't allow read for cleanup
+
+## 6.42.0
+
+### Minor Changes
+
+- [`05a8c99`](https://github.com/lblod/app-reglementaire-bijlage/commit/05a8c9901bf9c3c9f24c461c975bb4077330ec42) Thanks [@abeforgit](https://github.com/abeforgit)! - Bump frontend to [v9.30.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.30.0)
+
+## 6.41.5
+
+### Patch Changes
+
+- [`0f9e872`](https://github.com/lblod/app-reglementaire-bijlage/commit/0f9e872c1ebe8e4a27569d5f755f57692a655db5) Thanks [@abeforgit](https://github.com/abeforgit)! - Bump template export to [1.0.1](https://github.com/lblod/template-export-service/releases/tag/v1.0.1)
+
 ## 6.41.4
 
 ### Patch Changes

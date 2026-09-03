@@ -151,11 +151,57 @@ Now will look at some common queries related to the Regulatory Statements (RB). 
 
 ![figure 2](figure2.svg)
 
-Let's start by fetching 50 random templates:
+### Fetching templates by type (Decision or Regulatory Attachment)
+In order to differentiate between the two template types, we make use of folders (`ext:EditorDocumentFolder`). Each type has its own folder, summarized below:
+| Document Type   | Folder ID (`mu:uuid`) |
+| -------- | ------- |
+| Decision | 8460981D-CB21-4710-B7B5-9DD2DFD11888 |
+| Regulatory Attachment | 7A4CA4A9-D7A4-4A99-B2FB-39B6D535FC1D |
+
+So in order to fetch all decision templates we execute the following query:
 ```sparql
 PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
 
-SELECT ?template WHERE {
+SELECT DISTINCT ?template WHERE {
+  VALUES ?folderId {
+    """8460981D-CB21-4710-B7B5-9DD2DFD11888""" # Decision
+  }
+
   ?template a gn:Template .
-} LIMIT 50
+  ?template prov:wasDerivedFrom ?container .
+  ?container ext:editorDocumentFolder ?folder .
+  ?folder mu:uuid ?folderId .
+} 
+```
+Note the SPARQL `VALUES` directive determines the template type here (more about the `VALUES` directive [here](https://www.w3.org/TR/sparql11-query/#inline-data)).
+
+This results in a list of template URI's, which is not useful on its own but we can build upon this query to get more detailed information. For example, if we want to get the `dct:title` and `ext:editorDocumentContent` of the latest version of each decision template we run:
+```sparql
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX task: <http://redpencil.data.gift/vocabularies/tasks/>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?title ?htmlContent WHERE {
+  VALUES ?folderId {
+    """8460981D-CB21-4710-B7B5-9DD2DFD11888""" # Decision
+  }
+
+  ?template a gn:Template .
+  ?template prov:wasDerivedFrom ?container .
+  ?container ext:editorDocumentFolder ?folder .
+  ?folder mu:uuid ?folderId .
+
+  ?template pav:hasCurrentVersion ?version .
+  ?version prov:wasDerivedFrom ?editorDoc .
+  ?editorDoc dct:title ?title .
+  ?editorDoc ext:editorDocumentContent ?htmlContent .
+}
 ```

@@ -1,0 +1,97 @@
+@startuml
+set namespaceSeparator none
+class "skos:Concept"
+"skos:Concept" : skos:prefLabel
+"skos:Concept" : skos:notation
+"skos:Concept" : ext:summary
+"skos:Concept" : ext:searchLabel
+"skos:Concept" : pav:createdOn
+"skos:Concept" : schema:position
+"skos:Concept" --> "1" "skos:ConceptScheme" : skos:inScheme > 
+class "besluit:Bestuurseenheid"
+"besluit:Bestuurseenheid" --> "1" "ext:BestuurseenheidClassificatieCode" : org:classification > 
+"besluit:Bestuurseenheid" --> "*" "besluit:Bestuursorgaan" : besluit:bestuurt > 
+class "foaf:Person"
+"foaf:Person" : foaf:firstName
+"foaf:Person" : foaf:familyName
+"foaf:Person" --> "*" "foaf:OnlineAccount" : foaf:account > 
+"foaf:Person" --> "*" "besluit:Bestuurseenheid" : foaf:member > 
+class "gn:ReglementaireBijlageTemplate"
+"gn:Template" <|-- "gn:ReglementaireBijlageTemplate"
+class "say:SnippetVersion"
+"say:SnippetVersion" : dct:title
+"say:SnippetVersion" : ext:editorDocumentContent
+"say:SnippetVersion" : pav:createdOn
+"say:SnippetVersion" : schema:validThrough
+"say:SnippetVersion" --> "1" "say:Snippet" : pav:hasVersion > 
+class "gn:TemplateVersie"
+"gn:TemplateVersie" : schema:validThrough
+"gn:TemplateVersie" : dct:title
+"gn:TemplateVersie" --> "1" "ext:EditorDocument" : prov:wasDerivedFrom > 
+"nfo:FileDataObject" <|-- "gn:TemplateVersie"
+class "ext:EditorDocument"
+"ext:EditorDocument" : dct:title
+"ext:EditorDocument" : ext:editorDocumentContent
+"ext:EditorDocument" : ext:editorDocumentTemplateVersion
+"ext:EditorDocument" : ext:editorDocumentContext
+"ext:EditorDocument" : pav:createdOn
+"ext:EditorDocument" : pav:lastUpdateOn
+"ext:EditorDocument" --> "1" "ext:DocumentContainer" : pav:hasVersion > 
+class "besluit:Bestuursorgaan"
+"besluit:Bestuursorgaan" : mandaat:bindingstart
+"besluit:Bestuursorgaan" : mandaat:bindingEinde
+"besluit:Bestuursorgaan" --> "1" "besluit:Bestuurseenheid" : administrative-unit > 
+"besluit:Bestuursorgaan" --> "1" "ext:BestuurseenheidClassificatieCode" : org:classification > 
+"besluit:Bestuursorgaan" --> "1" "besluit:Bestuursorgaan" : generiek:isTijdspecialisatieVan > 
+"besluit:Bestuursorgaan" --> "*" "besluit:Bestuursorgaan" : generiek:isTijdspecialisatieVan > 
+class "nfo:FileDataObject"
+"nfo:FileDataObject" : nfo:fileName
+"nfo:FileDataObject" : dct:format
+"nfo:FileDataObject" : nfo:fileSize
+"nfo:FileDataObject" : dbpedia:fileExtension
+"nfo:FileDataObject" : nfo:fileCreated
+"nfo:FileDataObject" --> "1" "nfo:FileDataObject" : nie:dataSource > 
+class "foaf:OnlineAccount"
+"foaf:OnlineAccount" : foaf:accountServiceHomepage
+"foaf:OnlineAccount" : dct:identifier
+"foaf:OnlineAccount" --> "1" "foaf:Person" : foaf:account > 
+class "say:Snippet"
+"say:Snippet" : schema:position
+"say:Snippet" : pav:createdOn
+"say:Snippet" : pav:lastUpdateOn
+"say:Snippet" --> "1" "say:SnippetVersion" : pav:hasCurrentVersion > 
+"say:Snippet" --> "1" "say:SnippetList" : say:hasSnippet > 
+"say:Snippet" --> "*" "say:SnippetVersion" : pav:hasVersion > 
+"say:Snippet" --> "*" "say:SnippetList" : ext:linkedSnippetList > 
+class "nfo:Archive"
+"nfo:Archive" --> "1" "nfo:FileDataObject" : task:hasFile > 
+"nfo:DataContainer" <|-- "nfo:Archive"
+class "gn:Template"
+"gn:Template" --> "1" "gn:TemplateVersie" : pav:hasCurrentVersion > 
+"gn:Template" --> "1" "ext:DocumentContainer" : prov:wasDerivedFrom > 
+"gn:Template" --> "*" "gn:TemplateVersie" : pav:hasVersion > 
+class "ext:DocumentContainer"
+"ext:DocumentContainer" --> "1" "ext:EditorDocument" : pav:hasCurrentVersion > 
+"ext:DocumentContainer" --> "1" "ext:EditorDocumentFolder" : ext:editorDocumentFolder > 
+"ext:DocumentContainer" --> "*" "ext:EditorDocument" : pav:hasVersion > 
+"ext:DocumentContainer" --> "*" "say:SnippetList" : ext:linkedSnippetList > 
+class "lblodmow:Codelist"
+"lblodmow:Codelist" : pav:createdOn
+"lblodmow:Codelist" --> "1" "besluit:Bestuurseenheid" : dct:publisher > 
+"skos:ConceptScheme" <|-- "lblodmow:Codelist"
+class "say:SnippetList"
+"say:SnippetList" : pav:createdOn
+"say:SnippetList" : skos:prefLabel
+"say:SnippetList" : say:snippetImportedResource
+"say:SnippetList" --> "1" "besluit:Bestuurseenheid" : dct:publisher > 
+"say:SnippetList" --> "*" "say:Snippet" : say:hasSnippet > 
+class "nfo:DataContainer"
+class "skos:ConceptScheme"
+"skos:ConceptScheme" : skos:prefLabel
+"skos:ConceptScheme" --> "*" "skos:Concept" : skos:inScheme > 
+"skos:ConceptScheme" --> "*" "skos:Concept" : skos:topConceptOf > 
+class "ext:EditorDocumentFolder"
+"ext:EditorDocumentFolder" : ext:EditorDocumentFolderName
+class "ext:BestuurseenheidClassificatieCode"
+"ext:BestuurseenheidClassificatieCode" : skos:prefLabel
+@enduml

@@ -36,6 +36,11 @@
           "predicate": "dct:publisher",
           "target": "administrative-unit",
           "cardinality": "one"
+        },
+        "tags": {
+          "predicate": "ext:hasTag",
+          "target": "template-tag",
+          "cardinality": "many"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/templates/"
@@ -137,6 +142,20 @@
         }
       },
       "new-resource-base": "http://data.lblod.info/concept-schemes/"
+    },
+    "template-tags": {
+      "name": "template-tag",
+      "class": "gn:TemplateTag",
+      "super": ["skos-concept"],
+      "relationships": {
+        "template": {
+          "inverse": true,
+          "predicate": "ext:hasTag",
+          "target": "template",
+          "cardinality": "many"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/template-tag/"
     },
     "concepts": {
       "name": "concept",

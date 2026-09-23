@@ -1,5 +1,17 @@
 # app-reglementaire-bijlage
 
+## 6.49.0
+
+### Minor Changes
+
+- [`66e7256778798f6a7950440c70443bf44eff4bd6`](https://github.com/lblod/app-reglementaire-bijlage/commit/66e7256778798f6a7950440c70443bf44eff4bd6) Thanks [@kobemertens](https://github.com/kobemertens)! - Switch package manager to pnpm
+
+### Patch Changes
+
+- [#99](https://github.com/lblod/app-reglementaire-bijlage/pull/99) [`efd41da02266cf136f2b70b5a79c5f6dd4965098`](https://github.com/lblod/app-reglementaire-bijlage/commit/efd41da02266cf136f2b70b5a79c5f6dd4965098) Thanks [@kobemertens](https://github.com/kobemertens)! - Add vendor documentation
+
+- [`124b39a3642d50db6cb7db014b6ac6aa1055096d`](https://github.com/lblod/app-reglementaire-bijlage/commit/124b39a3642d50db6cb7db014b6ac6aa1055096d) Thanks [@abeforgit](https://github.com/abeforgit)! - Bump frontend to [v9.34.3](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.34.3)
+
 ## 6.48.0
 
 ### Minor Changes

@@ -84,6 +84,11 @@
               "predicate": "ext:linkedSnippetList",
               "target": "snippet-list",
               "cardinality": "many"
+            },
+            "tags": {
+              "predicate": "ext:hasTag",
+              "target": "template-tag",
+              "cardinality": "many"
             }
         },
         "features": ["include-uri"],

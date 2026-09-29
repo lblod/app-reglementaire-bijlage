@@ -36,11 +36,6 @@
           "predicate": "dct:publisher",
           "target": "administrative-unit",
           "cardinality": "one"
-        },
-        "tags": {
-          "predicate": "ext:hasTag",
-          "target": "template-tag",
-          "cardinality": "many"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/templates/"
@@ -151,7 +146,7 @@
         "template": {
           "inverse": true,
           "predicate": "ext:hasTag",
-          "target": "template",
+          "target": "document-container",
           "cardinality": "many"
         }
       },

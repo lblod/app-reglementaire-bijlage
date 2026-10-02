@@ -78,7 +78,7 @@
     ("cogs:Job" -> _)
     ("nfo:DataContainer" -> _)
     ("nfo:Archive" -> _)
-    ("gn:TemplateTag")
+    ("gn:TemplateTag" -> _)
 )
 
 (defparameter *access-query*

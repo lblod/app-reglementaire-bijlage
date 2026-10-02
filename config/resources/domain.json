@@ -143,7 +143,7 @@
       "class": "gn:TemplateTag",
       "super": ["skos-concept"],
       "relationships": {
-        "template": {
+        "document-containers": {
           "inverse": true,
           "predicate": "ext:hasTag",
           "target": "document-container",

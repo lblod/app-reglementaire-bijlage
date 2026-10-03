@@ -150,6 +150,7 @@
           "cardinality": "many"
         }
       },
+      "features": ["include-uri"],
       "new-resource-base": "http://data.lblod.info/id/template-tag/"
     },
     "concepts": {

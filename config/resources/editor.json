@@ -54,6 +54,12 @@
         "name": "document-container",
         "class": "ext:DocumentContainer",
         "relationships": {
+            "template": {
+              "predicate": "prov:wasDerivedFrom",
+              "target": "template",
+              "cardinality": "one",
+              "inverse": true
+            },
             "current-version": {
               "predicate": "pav:hasCurrentVersion",
               "target": "editor-document",
@@ -77,6 +83,11 @@
             "linked-snippet-lists": {
               "predicate": "ext:linkedSnippetList",
               "target": "snippet-list",
+              "cardinality": "many"
+            },
+            "tags": {
+              "predicate": "ext:hasTag",
+              "target": "template-tag",
               "cardinality": "many"
             }
         },

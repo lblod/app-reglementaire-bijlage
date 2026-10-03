@@ -138,6 +138,21 @@
       },
       "new-resource-base": "http://data.lblod.info/concept-schemes/"
     },
+    "template-tags": {
+      "name": "template-tag",
+      "class": "gn:TemplateTag",
+      "super": ["skos-concept"],
+      "relationships": {
+        "document-containers": {
+          "inverse": true,
+          "predicate": "ext:hasTag",
+          "target": "document-container",
+          "cardinality": "many"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/id/template-tag/"
+    },
     "concepts": {
       "name": "concept",
       "class": "ext:Concept",

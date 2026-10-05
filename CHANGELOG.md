@@ -1,5 +1,15 @@
 # app-reglementaire-bijlage
 
+## 6.50.0
+
+### Minor Changes
+
+- [`0766463`](https://github.com/lblod/app-reglementaire-bijlage/commit/07664635329e6bb68466c1c25c333f61ecd7a6af) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Add template tags feature
+
+### Patch Changes
+
+- [`345b2df`](https://github.com/lblod/app-reglementaire-bijlage/commit/345b2df008bb32094d05731be8dd2bc64a954929) Thanks [@lagartoverde](https://github.com/lagartoverde)! - Bump frontend to [9.35.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.35.0)
+
 ## 6.49.0
 
 ### Minor Changes

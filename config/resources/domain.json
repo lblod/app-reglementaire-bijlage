@@ -138,9 +138,9 @@
       },
       "new-resource-base": "http://data.lblod.info/concept-schemes/"
     },
-    "template-tags": {
-      "name": "template-tag",
-      "class": "gn:TemplateTag",
+    "tags": {
+      "name": "tag",
+      "class": "gn:Tag",
       "super": ["skos-concept"],
       "relationships": {
         "document-containers": {
@@ -151,7 +151,7 @@
         }
       },
       "features": ["include-uri"],
-      "new-resource-base": "http://data.lblod.info/id/template-tag/"
+      "new-resource-base": "http://data.lblod.info/id/tag/"
     },
     "concepts": {
       "name": "concept",

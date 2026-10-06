@@ -1,0 +1,15 @@
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+
+DELETE {
+  GRAPH ?g {
+    ?s a gn:TemplateTag .
+  }
+} INSERT {
+  GRAPH ?g {
+    ?s a gn:Tag .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?s a gn:TemplateTag .
+  }
+}

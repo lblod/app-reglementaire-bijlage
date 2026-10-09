@@ -148,6 +148,12 @@
           "predicate": "ext:hasTag",
           "target": "document-container",
           "cardinality": "many"
+        },
+        "snippet-lists": {
+          "inverse": true,
+          "predicate": "ext:hasTag",
+          "target": "snippet-list",
+          "cardinality": "many"
         }
       },
       "features": ["include-uri"],
@@ -210,6 +216,11 @@
         "snippets": {
           "predicate": "say:hasSnippet",
           "target": "snippet",
+          "cardinality": "many"
+        },
+        "tags": {
+          "predicate": "ext:hasTag",
+          "target": "tag",
           "cardinality": "many"
         }
       },

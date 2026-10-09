@@ -64,8 +64,8 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/snippet-versions/"
   end
 
-  match "/template-tags/*path", %{ accept: %{json: true}, layer: :api} do
-    Proxy.forward conn, path, "http://cache/template-tags/"
+  match "/tags/*path", %{ accept: %{json: true}, layer: :api} do
+    Proxy.forward conn, path, "http://cache/tags/"
   end
 
   get "/tasks/*path", %{ accept: %{json: true}, layer: :api} do

@@ -87,7 +87,7 @@
             },
             "tags": {
               "predicate": "ext:hasTag",
-              "target": "tag",
+              "target": "template-tag",
               "cardinality": "many"
             }
         },

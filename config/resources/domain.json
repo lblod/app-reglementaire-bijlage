@@ -138,9 +138,9 @@
       },
       "new-resource-base": "http://data.lblod.info/concept-schemes/"
     },
-    "template-tags": {
-      "name": "template-tag",
-      "class": "gn:TemplateTag",
+    "tags": {
+      "name": "tag",
+      "class": "gn:Tag",
       "super": ["skos-concept"],
       "relationships": {
         "document-containers": {
@@ -148,10 +148,16 @@
           "predicate": "ext:hasTag",
           "target": "document-container",
           "cardinality": "many"
+        },
+        "snippet-lists": {
+          "inverse": true,
+          "predicate": "ext:hasTag",
+          "target": "snippet-list",
+          "cardinality": "many"
         }
       },
       "features": ["include-uri"],
-      "new-resource-base": "http://data.lblod.info/id/template-tag/"
+      "new-resource-base": "http://data.lblod.info/id/tag/"
     },
     "concepts": {
       "name": "concept",
@@ -210,6 +216,11 @@
         "snippets": {
           "predicate": "say:hasSnippet",
           "target": "snippet",
+          "cardinality": "many"
+        },
+        "tags": {
+          "predicate": "ext:hasTag",
+          "target": "tag",
           "cardinality": "many"
         }
       },

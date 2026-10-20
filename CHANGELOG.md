@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.52.0
+
+### Minor Changes
+
+- [`f159c59f87c8cfefba35f9d9ad1a384f8d164cd5`](https://github.com/lblod/app-reglementaire-bijlage/commit/f159c59f87c8cfefba35f9d9ad1a384f8d164cd5) Thanks [@abeforgit](https://github.com/abeforgit)! - Bump frontend to [v9.36.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.36.0)
+
+- [#101](https://github.com/lblod/app-reglementaire-bijlage/pull/101) [`87c049fe3385714e4c6421f2d27afb5c6ffce578`](https://github.com/lblod/app-reglementaire-bijlage/commit/87c049fe3385714e4c6421f2d27afb5c6ffce578) Thanks [@kobemertens](https://github.com/kobemertens)! - Rename gn:TemplateTag to gn:Tag and add tags to snippet lists
+
 ## 6.51.0
 
 ### Minor Changes

@@ -79,6 +79,8 @@ services:
     image: semtech/mu-cl-resources:1.27.2
     environment:
       CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
+      # increased from the default "1024", in MB. This allows larger documents to be saved more reliably.
+      LISP_DYNAMIC_SPACE_SIZE: "4096"
     links:
       - database:database
     volumes:

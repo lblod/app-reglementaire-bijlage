@@ -1,5 +1,13 @@
 # app-reglementaire-bijlage
 
+## 6.53.0
+
+### Minor Changes
+
+- [`827157238516e5edbb310790315ab2b962d49bb3`](https://github.com/lblod/app-reglementaire-bijlage/commit/827157238516e5edbb310790315ab2b962d49bb3) Thanks [@elpoelma](https://github.com/elpoelma)! - Update frontend to version [9.37.0](https://github.com/lblod/frontend-reglementaire-bijlage/releases/tag/v9.37.0)
+
+- [#105](https://github.com/lblod/app-reglementaire-bijlage/pull/105) [`2f795dda4c592dee417e38415e5ebec1c05cfdd3`](https://github.com/lblod/app-reglementaire-bijlage/commit/2f795dda4c592dee417e38415e5ebec1c05cfdd3) Thanks [@elpoelma](https://github.com/elpoelma)! - mu-cl-resources: increase heap memory limit from 1024MB to 4096MB to handle bigger documents in a better way
+
 ## 6.52.0
 
 ### Minor Changes

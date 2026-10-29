@@ -61,6 +61,7 @@
     ("say:SnippetList" -> _)
     ("say:Snippet" -> _)
     ("say:SnippetVersion" -> _)
+    ("gn:Tag" -> _)
 )
 
 (define-graph organizations ("http://mu.semte.ch/graphs/organizations/")
@@ -78,7 +79,6 @@
     ("cogs:Job" -> _)
     ("nfo:DataContainer" -> _)
     ("nfo:Archive" -> _)
-    ("gn:Tag" -> _)
 )
 
 (defparameter *access-query*

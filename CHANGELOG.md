@@ -1,5 +1,11 @@
 # app-reglementaire-bijlage
 
+## 6.54.2
+
+### Patch Changes
+
+- [#107](https://github.com/lblod/app-reglementaire-bijlage/pull/107) [`131d5eac9fcadd5e07ce4ef3d3bcb3f68e180932`](https://github.com/lblod/app-reglementaire-bijlage/commit/131d5eac9fcadd5e07ce4ef3d3bcb3f68e180932) Thanks [@abeforgit](https://github.com/abeforgit)! - Fix inconsistent template saving
+
 ## 6.54.1
 
 ### Patch Changes

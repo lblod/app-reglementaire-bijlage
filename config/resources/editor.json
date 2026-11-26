@@ -1,110 +1,135 @@
 {
   "version": "0.1",
   "prefixes": {
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "besluit": "http://data.vlaanderen.be/ns/besluit#",
-      "dct": "http://purl.org/dc/terms/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "ext": "http://mu.semte.ch/vocabularies/ext/",
-      "pav": "http://purl.org/pav/",
-      "tmp": "http://mu.semte.ch/vocabularies/tmp/"
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "besluit": "http://data.vlaanderen.be/ns/besluit#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ext": "http://mu.semte.ch/vocabularies/ext/",
+    "pav": "http://purl.org/pav/",
+    "tmp": "http://mu.semte.ch/vocabularies/tmp/"
   },
   "resources": {
-      "editor-documents": {
-        "name": "editor-document",
-        "class": "ext:EditorDocument",
-        "attributes": {
-            "title": {
-                "type": "string",
-                "predicate": "dct:title"
-            },
-            "content": {
-                "type": "string",
-                "predicate": "ext:editorDocumentContent"
-            },
-            "template-version": {
-              "type": "string",
-              "predicate": "ext:editorDocumentTemplateVersion"
-            },
-            "context": {
-                "type": "string",
-                "predicate": "ext:editorDocumentContext"
-            },
-            "created-on": {
-              "type": "datetime",
-              "predicate": "pav:createdOn"
-            },
-            "updated-on": {
-              "type": "datetime",
-              "predicate": "pav:lastUpdateOn"
-            }
+    "editor-documents": {
+      "name": "editor-document",
+      "class": "ext:EditorDocument",
+      "attributes": {
+        "title": {
+          "type": "string",
+          "predicate": "dct:title"
         },
-        "relationships": {
-          "document-container": {
-            "predicate": "pav:hasVersion",
-            "target": "document-container",
-            "cardinality": "one",
-            "inverse": true
-          }
+        "content": {
+          "type": "string",
+          "predicate": "ext:editorDocumentContent"
         },
-        "features": ["include-uri"],
-        "new-resource-base": "http://data.lblod.info/editor-documents/"
+        "template-version": {
+          "type": "string",
+          "predicate": "ext:editorDocumentTemplateVersion"
+        },
+        "context": {
+          "type": "string",
+          "predicate": "ext:editorDocumentContext"
+        },
+        "created-on": {
+          "type": "datetime",
+          "predicate": "pav:createdOn"
+        },
+        "updated-on": {
+          "type": "datetime",
+          "predicate": "pav:lastUpdateOn"
+        }
       },
-      "document-containers": {
-        "name": "document-container",
-        "class": "ext:DocumentContainer",
-        "relationships": {
-            "template": {
-              "predicate": "prov:wasDerivedFrom",
-              "target": "template",
-              "cardinality": "one",
-              "inverse": true
-            },
-            "current-version": {
-              "predicate": "pav:hasCurrentVersion",
-              "target": "editor-document",
-              "cardinality": "one"
-            },
-            "folder": {
-              "predicate": "ext:editorDocumentFolder",
-              "target": "editor-document-folder",
-              "cardinality": "one"
-            },
-            "publisher": {
-              "predicate": "dct:publisher",
-              "target": "administrative-unit",
-              "cardinality": "one"
-            },
-            "revisions": {
-              "predicate": "pav:hasVersion",
-              "target": "editor-document",
-              "cardinality": "many"
-            },
-            "linked-snippet-lists": {
-              "predicate": "ext:linkedSnippetList",
-              "target": "snippet-list",
-              "cardinality": "many"
-            },
-            "tags": {
-              "predicate": "ext:hasTag",
-              "target": "tag",
-              "cardinality": "many"
-            }
-        },
-        "features": ["include-uri"],
-        "new-resource-base": "http://data.lblod.info/document-containers/"
+      "relationships": {
+        "document-container": {
+          "predicate": "pav:hasVersion",
+          "target": "document-container",
+          "cardinality": "one",
+          "inverse": true
+        }
       },
-      "editor-document-folders": {
-        "name": "editor-document-folder",
-        "class": "ext:EditorDocumentFolder",
-        "attributes": {
-          "name": {
-            "type": "string",
-            "predicate": "ext:EditorDocumentFolderName"
-          }
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/editor-documents/"
+    },
+    "document-containers": {
+      "name": "document-container",
+      "class": "ext:DocumentContainer",
+      "relationships": {
+        "template": {
+          "predicate": "prov:wasDerivedFrom",
+          "target": "template",
+          "cardinality": "one",
+          "inverse": true
         },
-        "features": ["include-uri"],
-        "new-resource-base": "http://data.lblod.info/editor-document-folders/"
-      }
+        "current-version": {
+          "predicate": "pav:hasCurrentVersion",
+          "target": "editor-document",
+          "cardinality": "one"
+        },
+        "folder": {
+          "predicate": "ext:editorDocumentFolder",
+          "target": "editor-document-folder",
+          "cardinality": "one"
+        },
+        "publisher": {
+          "predicate": "dct:publisher",
+          "target": "administrative-unit",
+          "cardinality": "one"
+        },
+        "revisions": {
+          "predicate": "pav:hasVersion",
+          "target": "editor-document",
+          "cardinality": "many"
+        },
+        "linked-snippet-lists": {
+          "predicate": "ext:linkedSnippetList",
+          "target": "snippet-list",
+          "cardinality": "many"
+        },
+        "template-info": {
+          "predicate": "ext:templateInfo",
+          "target": "template-info",
+          "cardinality": "one"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/document-containers/"
+    },
+    "template-infos": {
+      "name": "template-info",
+      "class": "gn:TemplateInfo",
+      "relationships": {
+        "tags": {
+          "predicate": "ext:hasTag",
+          "target": "tag",
+          "cardinality": "many"
+        },
+        "document-containers": {
+          "predicate": "ext:templateInfo",
+          "target": "document-container",
+          "cardinality": "many",
+          "inverse": true
+        },
+        "templates": {
+          "predicate": "ext:templateInfo",
+          "target": "template",
+          "cardinality": "many",
+          "inverse": true
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/id/template-info/"
+    },
+    "editor-document-folders": {
+      "name": "editor-document-folder",
+      "class": "ext:EditorDocumentFolder",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "predicate": "ext:EditorDocumentFolderName"
+        }
+      },
+      "features": ["include-uri"],
+      "new-resource-base": "http://data.lblod.info/editor-document-folders/"
+    }
   }
 }

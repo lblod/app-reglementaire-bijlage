@@ -117,7 +117,7 @@
         }
       },
       "features": ["include-uri"],
-      "new-resource-base": "http://data.lblod.info/id/template-info/"
+      "new-resource-base": "http://data.lblod.info/id/template-infos/"
     },
     "editor-document-folders": {
       "name": "editor-document-folder",

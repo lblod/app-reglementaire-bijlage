@@ -17,5 +17,5 @@ WHERE {
     ?publishedTemplate prov:wasDerivedFrom ?documentContainer .
   }
   BIND(STRUUID() AS ?uuid)
-  BIND(IRI(CONCAT("http://data.lblod.info/id/template-info/", ?uuid)) AS ?newTemplateInfo)
+  BIND(IRI(CONCAT("http://data.lblod.info/id/template-infos/", ?uuid)) AS ?newTemplateInfo)
 }

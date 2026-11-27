@@ -1,0 +1,17 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/141d9d6b-54af-4d17-b313-8d1c30bc3f5b> {
+    ?resource ext:hasTag ?tag .
+  }
+}
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?templateInfo ext:hasTag ?tag .
+  }
+}
+WHERE {
+  ?resource ext:templateInfo ?templateInfo ;
+    ext:hasTag ?tag .
+}

@@ -1,0 +1,32 @@
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/141d9d6b-54af-4d17-b313-8d1c30bc3f5b> {
+  ?tag 
+    a gn:Tag ;
+    pav:createdOn ?createdOn ;
+    skos:prefLabel ?label ;
+    mu:uuid ?uuid .
+  }
+} 
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+  ?tag 
+    a gn:Tag ;
+    pav:createdOn ?createdOn ;
+    skos:prefLabel ?label ;
+    mu:uuid ?uuid .
+  }
+} 
+
+WHERE {
+  ?tag 
+    a gn:Tag ;
+    pav:createdOn ?createdOn ;
+    skos:prefLabel ?label ;
+    mu:uuid ?uuid .
+}

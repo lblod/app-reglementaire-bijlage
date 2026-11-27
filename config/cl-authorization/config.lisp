@@ -49,7 +49,6 @@
 )
 
 (define-graph public ("http://mu.semte.ch/graphs/public")
-    
     ("skos:Concept" -> _)
     ("skos:ConceptScheme" -> _)
     ("mobiliteit:Codelist" -> _)
@@ -61,6 +60,8 @@
     ("say:SnippetList" -> _)
     ("say:Snippet" -> _)
     ("say:SnippetVersion" -> _)
+    ("gn:Tag" -> _)
+    ("gn:TemplateInfo" -> _)
 )
 
 (define-graph organizations ("http://mu.semte.ch/graphs/organizations/")
@@ -78,7 +79,6 @@
     ("cogs:Job" -> _)
     ("nfo:DataContainer" -> _)
     ("nfo:Archive" -> _)
-    ("gn:Tag" -> _)
 )
 
 (defparameter *access-query*

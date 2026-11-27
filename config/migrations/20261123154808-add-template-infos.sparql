@@ -1,0 +1,21 @@
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX gn: <http://data.lblod.info/vocabularies/gelinktnotuleren/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?newTemplateInfo a gn:TemplateInfo ;
+      mu:uuid ?uuid .
+    ?documentContainer ext:templateInfo ?newTemplateInfo .
+    ?publishedTemplate ext:templateInfo ?newTemplateInfo .
+  }
+}
+WHERE {
+  ?documentContainer a ext:DocumentContainer.
+  OPTIONAL {
+    ?publishedTemplate prov:wasDerivedFrom ?documentContainer .
+  }
+  BIND(STRUUID() AS ?uuid)
+  BIND(IRI(CONCAT("http://data.lblod.info/id/template-infos/", ?uuid)) AS ?newTemplateInfo)
+}

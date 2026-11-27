@@ -137,6 +137,10 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/administrative-units/"
   end
 
+  match "/template-infos/*path" do
+    forward conn, path, "http://cache/template-infos/"
+  end
+
   #######################################################################
   # FILES                                                               #
   #######################################################################
